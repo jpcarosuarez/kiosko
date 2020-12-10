@@ -7,8 +7,7 @@ const Carrito = ({children}) => {
         <div className="overlay" id="carrito">
             <div className="carrito">
                 <a href="#" className="cerrar">Aceptar</a>
-                <BiBuildings /> 
-                {children}
+                {children}           
             </div>
         </div>
     )
