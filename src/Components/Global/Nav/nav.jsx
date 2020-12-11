@@ -14,7 +14,7 @@ function Nav(/*{titulo, action}*/) {
                         <NavItem text="Arriendos" />
                         <NavItem text="Remates" />
                         <NavItem text="Permutas" />
-                        <NavItem text="Alojamientos Amoblados"/>
+                        <NavItem text="Amoblados x días"/>
                     </ul>
                 </nav>
             </div>

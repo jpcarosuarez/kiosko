@@ -1,26 +1,21 @@
 import './App.css';
 import Nav from './Components/Global/Nav/nav';
-//import Carrito from './Components/Global/Carrito/carrito';
 import Menu from './Components/Global/Menu/menu';
-// import Topbar from './Components/Global/Topbar/topbar';
-//import logo from '.Components/Global/Images/logoblack.png';
-
-//import { BiCart } from "react-icons/bi";
-
+import PropiedadesDestacadas from './Components/Global/PropiedadesDestacadas/PropiedadesDestacadas'; 
 
 function App() {
-  //const cartelSaludo = () => {
-  //  alert('Hola mundo');
-  //}
+
 
   return (
     <>
       <Menu />
-      <Nav /*action={cartelSaludo}*/ />
-      
-    </>
-  );
-}
+      <Nav />
+      <PropiedadesDestacadas />
 
+    </>
+  ); 
+}
+  
 
 export default App;
+ 

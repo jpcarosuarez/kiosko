@@ -1,5 +1,4 @@
 import './carrito.css';
-import { BiBuildings } from "react-icons/bi";
 
 
 const Carrito = ({children}) => {

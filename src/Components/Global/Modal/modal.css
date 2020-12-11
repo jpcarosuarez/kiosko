@@ -28,8 +28,13 @@
   position: absolute;
   right: 20px;
   top: 20px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: aliceblue;
 
 }
 
+.carrito h3{
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-size: 32px;
+}

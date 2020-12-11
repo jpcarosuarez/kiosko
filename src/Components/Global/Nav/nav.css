@@ -1,8 +1,10 @@
-.headnav {
-  background: #11998e;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Playfair+Display&display=swap');
+
+.headnav {  
+  background: #D31027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   padding: 2rem 0;
 }
 
@@ -15,8 +17,8 @@
 
 .headnav h1 {
   color: #ffffff;
-  font-family: 'Merriweather', serif;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Alfa Slab One', cursive;
+
   font-size: 3.5rem;
   letter-spacing: 0.2rem;
   margin-bottom: 2rem;
@@ -43,9 +45,13 @@
 
 .headnav nav ul a {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: relative;
   text-decoration: none;  
+  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.2rem;
+
 
 }
 
@@ -66,5 +72,6 @@
 }
 
 .logo {
-  height: 150px;
+  height: 10rem;
+  margin-top: 1rem;
 }

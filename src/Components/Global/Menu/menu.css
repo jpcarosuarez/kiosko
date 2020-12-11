@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
 header {
-  background: #0F2027;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 header .container {
@@ -17,7 +20,7 @@ header h1 {
   color: #ffffff;
   font-family: 'Merriweather', serif;
   font-family: 'Roboto Mono', monospace;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   letter-spacing: 0.2rem;
   margin-bottom: 2rem;
 }
@@ -42,12 +45,16 @@ header nav ul li:last-child {
 }
 
 header nav ul a {
-  color: white;
+  color:  #ffffff;
   font-size: 25px;
   position: relative;
   text-decoration: none;  
-  padding-right: 30px;
+  padding-left: 30px;
+  font-weight: 500;
+  font-family: 'Nerko One', cursive;
+
 }
+
 
 header nav ul li a::after {
   content: "";
@@ -66,14 +73,19 @@ header nav ul li a:hover::after {
 }
 
 .modal h2 {
-  color: white;
+  color: #90EE90;
 }
 
 .modal p {
-  color: white;
+  color:#F8F8FF ;
 }
 .carrito h3{
-  color: white;
+  color: #90EE90;
+  font-family: 'Merriweather', serif;
+  font-size: 32px;
+}
+.modal h3{
+  color: #90EE90;
   font-family: 'Merriweather', serif;
   font-size: 32px;
 }
