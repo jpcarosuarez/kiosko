@@ -5,7 +5,7 @@ const PropiedadesDestacadas = () => {
     return (
         <section className="propiedadesDestacadas">
             <div className="container">
-                <h2>Apartamentos en Arriendo en Bogotá</h2>
+                <h2>Apartamentos Amoblados en Bogotá</h2>
                 <ul>
                     <li><ItemListContainer titulo="Apto 1" habitaciones="1" ubicacion_localidad="Chapinero" precio="75.000" /></li>
                     <li><ItemListContainer titulo="Apto 2" habitaciones="2" ubicacion_localidad="Usaquen" precio="65.000" /></li>
