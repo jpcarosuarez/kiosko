@@ -5,7 +5,7 @@ import './PropiedadesDestacadas.css';
 const PropiedadesDestacadas = () => {
 
     const [items, setItems] = useState([]);
-    // Hagan de cuenta que esta constante es una API
+
     const propiedades = [
         {
             id: 1,
@@ -50,7 +50,6 @@ const PropiedadesDestacadas = () => {
             resolve(propiedades);
         }, 2000)
     })
-
     useEffect(() => {
         getPropiedades.then(rta => setItems(rta));
         // eslint-disable-next-line react-hooks/exhaustive-deps
