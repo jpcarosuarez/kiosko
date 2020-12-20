@@ -1,16 +1,21 @@
 
-import React, { useState } from "react";
+import {useState } from 'react';
 import './ItemListContainer.css';
-import CountContainer from "../CountContainer/CountContainer";
+import CountContainer from '../CountContainer/CountContainer';
+import { IoLogoUsd } from "react-icons/io";
+import { FaBed, FaBath } from "react-icons/fa";
+import { MdGpsFixed } from "react-icons/md";
+import { RiRuler2Line } from "react-icons/ri";
 
 
 
-const ItemListContainer = ({titulo, precio, habitaciones, ubicacion_localidad }) => {
+
+const ItemListContainer = ({titulo, precio, habitaciones, ubicacion, baños, mts }) => {
     
-    //Contador //////////////////////
-    const [count, setCount] = useState(0);
-    const qty = 7;
   
+    //Contador //////////////////////
+    const qty = 7;
+    const [count, setCount] = useState(0);
     const add = () => {
       if (count < qty) {
         setCount(count + 1);
@@ -27,22 +32,28 @@ const ItemListContainer = ({titulo, precio, habitaciones, ubicacion_localidad })
   
       setCount(count - 1);
     }; 
+                        
     /////////////////////////////////////// 
     
     return (
         <article className="itemListContainer">
             <img src="https://placehold.it/400x400" alt="apartamento"/>
             <div>
-                <h3>{titulo}</h3>
-                <p>$&nbsp;{precio}</p>
-                <p>Habitaciones {habitaciones} </p>
-                <p>{ubicacion_localidad}</p>
+                <div className="precio">
+                  <h4><IoLogoUsd size={20} />{precio}</h4>
+                </div>
+
+                <h2>{titulo}</h2> 
+                <p><FaBed size={20}/> {habitaciones} </p>
+                <p><MdGpsFixed size={20}/> {ubicacion}</p>
+                <p><FaBath size={20}/> {baños}</p>
+                <p><RiRuler2Line size={20}/>{mts} m2</p>
 
                 <CountContainer count={count} add={add} less={less} />
 
             </div>
     
-        </article>
+        </article> 
     )
 }  
 

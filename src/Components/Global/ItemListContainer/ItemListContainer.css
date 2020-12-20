@@ -2,7 +2,7 @@
 
 
 .itemListContainer {
-  background: var(--blanco);
+  background: white;
   border-radius: 1.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -25,8 +25,8 @@
 
 }
 
-.itemListContainer div h3 {
-  color: #11998e;
+.itemListContainer div h2 {
+  color: #0F2027;
   font-size: 1.8rem;
   margin-bottom: 1rem;
   font-family: 'Nerko One', cursive;
@@ -35,9 +35,26 @@
 }
 
 .itemListContainer div p {
-  color: #11998e;
+  color: #0F2027;
   font-size: 1.6rem;
   font-weight: 400;
   font-family: 'Nerko One', cursive;
 
+}
+
+.precio {
+  background-color: #D31027;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  height: 1.5rem;
+  width: 6rem;
+
+}
+
+h4 {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: 'Nerko One', cursive;
+  margin: 0%;
 }

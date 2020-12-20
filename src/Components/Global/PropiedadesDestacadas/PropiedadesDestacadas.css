@@ -32,3 +32,12 @@
 ::marker{
   color: transparent;
 }
+.cargando {
+  text-align: center;
+  font-size: 3rem;
+  color: #0F2027;
+  font-family: 'Nerko One', cursive;
+  letter-spacing: 0.2rem;
+}
+
+
