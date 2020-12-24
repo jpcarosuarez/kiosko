@@ -6,6 +6,7 @@ import { IoLogoUsd } from "react-icons/io";
 import { FaBed, FaBath } from "react-icons/fa";
 import { MdGpsFixed } from "react-icons/md";
 import { RiRuler2Line } from "react-icons/ri";
+import {Link} from 'react-router-dom';
 
 
 
@@ -50,7 +51,7 @@ const ItemListContainer = ({titulo, precio, habitaciones, ubicacion, baños, mts
                 <p><RiRuler2Line size={20}/>{mts} m2</p>
 
                 <CountContainer count={count} add={add} less={less} />
-
+                <Link to="/detail">Ver más</Link> 
             </div>
     
         </article> 

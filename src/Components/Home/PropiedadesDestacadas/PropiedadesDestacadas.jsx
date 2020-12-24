@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import ItemListContainer from 'latienda/src/Components/Global/ItemListContainer/ItemListContainer';
+import ItemListContainer from '../../Global/ItemListContainer/ItemListContainer';
 import './PropiedadesDestacadas.css';
 
 const PropiedadesDestacadas = () => {
@@ -48,12 +48,28 @@ const PropiedadesDestacadas = () => {
     const getPropiedades = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(propiedades);
-        }, 2000)
+        }, 500)
     })
+
+    const getPropiedadesFromDB = async () => {
+        try {
+            const result = await getPropiedades;
+            setItems(result);
+
+        } catch(error) {
+            alert('No se pueden mostrar los inmuebles en este momento')
+        }
+    }
+
     useEffect(() => {
-        getPropiedades.then(rta => setItems(rta));
+        getPropiedadesFromDB();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
+    // useEffect(() => {
+    //     getPropiedades.then(rta => setItems(rta));
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, []);
 
 
 

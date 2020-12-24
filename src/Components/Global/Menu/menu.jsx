@@ -6,7 +6,7 @@ import { BiClinic, BiCart } from "react-icons/bi";
 import Logo from './img/logowhite.png';
 
 import Avatar from '@material-ui/core/Avatar';
-
+import {Link} from 'react-router-dom';
 
 
 function Menu() {
@@ -15,14 +15,8 @@ function Menu() {
         <header>
             <nav>
                 <ul>
-                   
-                <img className="logoblanco" src={Logo} alt="logo" />    
-
-
-
-
-                    
-
+                 <span><img className="logoblanco" src={Logo} alt="logo" /><Link to={"/"} /></span>  
+                                     
                 <Avatar alt="Juan Pablo" src="#" />
 
                 <a href="#carrito"> <BiCart size={25} /> </a>  
