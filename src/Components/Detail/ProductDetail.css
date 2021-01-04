@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+
+
+.productDetail h1 {
+    color: red;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: 'Nerko One', cursive;
+    font-weight: 500;
+    
+}
+
+.productDetail p {
+    color: #0F2027;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'Nerko One', cursive;
+}
+
+.productDetail div {
+    text-align: center;
+    padding: 1rem;
+
+}
+.productDetail img {
+    padding-left: 10px;
+}

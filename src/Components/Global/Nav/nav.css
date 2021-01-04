@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Staatliches&display=swap');
 
 .headnav {  
-  background: #D31027;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  padding: 2rem 0;
+  
+  background-color: #0b0c10;
 }
 
 .headnav .container {
@@ -17,14 +15,13 @@
 
 .headnav h1 {
   color: #ffffff;
-  font-family: 'Nerko One', cursive;
+  font-family: 'Roboto', sans-serif;  
   font-size: 3.5rem;
   letter-spacing: 0.2rem;
-  margin-bottom: 2rem;
 }
 
 .headnav nav ul {
-  display: flex;
+  display: flex; 
 }
 
 .headnav nav ul li {
@@ -47,7 +44,8 @@
   font-size: 2rem;
   position: relative;
   text-decoration: none;  
-  font-family: 'Nerko One', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Staatliches', cursive;
   letter-spacing: 0.2rem;
 
 

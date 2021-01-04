@@ -5,7 +5,7 @@ import './PropiedadesDestacadas.css';
 const PropiedadesDestacadas = () => {
 
     const [items, setItems] = useState([]);
-
+  
     const propiedades = [
         {
             id: 1,
@@ -79,13 +79,14 @@ const PropiedadesDestacadas = () => {
                 {
                     items.length ? 
                     <>
-                        <h2>Apartamentos Amoblados en Bogotá</h2>
+                        <h2>Arriendos en Bogotá</h2>
 
                         <ul>
                             {
                                 items.map((item, index) => (
                                     <li key={index}>
                                         <ItemListContainer
+                                            id={item.id}
                                             titulo={item.titulo}
                                             precio={item.precio}
                                             ubicacion={item.ubicacion}

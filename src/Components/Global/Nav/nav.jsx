@@ -6,24 +6,34 @@ import Carrito from '../Carrito/carrito';
 function Nav({titulo, action}) {
     const menuItems = [
         {
-            texto:'Ventas',
-            ruta: '/category/ventas',
+            texto:'Apartamentos',
+            ruta: '/category/apartamentos',
+        },        
+        {
+            texto:'Casas',
+            ruta: '/category/Casas',
         },
         {
-            texto:'Arriendos',
-            ruta:'/category/arriendos',
+            texto:'Fincas',
+            ruta:'/category/Fincas',
         },
         {
-            texto:'Remates',
-            ruta:'/category/remates',
+            texto:'Oficinas',
+            ruta:'/category/oficinas',
         },
         {
-            texto:'Permutas',
-            ruta:'/category/permutas',
+            texto:'Espacios',
+            ruta:'/category/espacios',
         },
+
         {
-            texto:'Amoblados x días',
-            ruta:'/category/amoblados',
+            texto:'Servicios',
+            ruta:'/category/servicios',
+        },
+
+        {
+            texto:'Partners',
+            ruta:'/category/partner',
         },
 
     ]

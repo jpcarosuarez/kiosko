@@ -10,13 +10,13 @@ import {Link} from 'react-router-dom';
 
 
 
-
-const ItemListContainer = ({titulo, precio, habitaciones, ubicacion, baños, mts }) => {
+const ItemListContainer = ({id, titulo, precio, habitaciones, ubicacion, baños, mts }) => {
     
   
     //Contador //////////////////////
     const qty = 7;
     const [count, setCount] = useState(0);
+
     const add = () => {
       if (count < qty) {
         setCount(count + 1);
@@ -38,7 +38,7 @@ const ItemListContainer = ({titulo, precio, habitaciones, ubicacion, baños, mts
     
     return (
         <article className="itemListContainer">
-            <img src="https://placehold.it/400x400" alt="apartamento"/>
+            <img src="http://placehold.it/400x400" alt="apartamento"/>
             <div>
                 <div className="precio">
                   <h4><IoLogoUsd size={20} />{precio}</h4>
@@ -49,9 +49,8 @@ const ItemListContainer = ({titulo, precio, habitaciones, ubicacion, baños, mts
                 <p><MdGpsFixed size={20}/> {ubicacion}</p>
                 <p><FaBath size={20}/> {baños}</p>
                 <p><RiRuler2Line size={20}/>{mts} m2</p>
-
                 <CountContainer count={count} add={add} less={less} />
-                <Link to="/detail">Ver más</Link> 
+                <Link to={`/detail/${id}`}>Ver Más</Link> 
             </div>
     
         </article> 

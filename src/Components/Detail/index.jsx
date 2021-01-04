@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
 import ProductDetail from './ProductDetail';
 import {useParams} from 'react-router-dom';
+import Comments from './Comments';
+
 
 const Detail = () => {
     const {id} = useParams();
@@ -10,10 +12,10 @@ const Detail = () => {
         setTimeout(() => {
             resolve({
                 id: id, 
-                nombre: "Alojamiento en Bogotá",
+                nombre: "Detalle Propiedad",
                 foto: "http://placehold.it/350x400",
                 descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam laboriosam deleniti neque! Explicabo aspernatur accusantium ex provident natus, nam neque nesciunt eaque iure dolore, architecto maiores corrupti deserunt totam. Veniam.",
-                precio: 75000
+                precio: 75000,
             })
         }, 500);
     });
@@ -34,7 +36,14 @@ const Detail = () => {
                     <ProductDetail item={propiedades} />
 
                     <section>
-                        Inmuebles Recomendados
+                                        
+                        <div>
+                            <h1>Inmuebles Recomendados</h1>
+                            <Comments />
+
+
+                        </div>
+
                     </section>
                 </div> : 
                 <p>Cargando Inmuebles...</p>

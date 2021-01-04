@@ -43,7 +43,7 @@
 }
 
 .precio {
-  background-color: #D31027;
+  background-color: #0b0c10;
   border-top-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
   height: 1.5rem;
@@ -57,4 +57,23 @@ h4 {
   font-weight: 400;
   font-family: 'Nerko One', cursive;
   margin: 0%;
+}
+
+a {
+  color: #0F2027;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Nerko One', cursive;
+  font-weight: 500;
+
+}
+
+h1 {
+  color:  #ffffff;
+  font-size: 25px;
+  position: relative;
+  text-decoration: none;  
+  padding-left: 30px;
+  font-weight: 500;
+  font-family: 'Nerko One', cursive;
 }
