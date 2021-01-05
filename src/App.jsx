@@ -1,7 +1,7 @@
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Footer from './Components/Global/Footer/Footer';
-import Topbar from './Components/Global/Topbar/Topbar';
+//import Topbar from './Components/Global/Topbar/Topbar';
 import Nav from './Components/Global/Nav/nav';
 import Menu from './Components/Global/Menu/menu';
 import Home from './Components/Home';

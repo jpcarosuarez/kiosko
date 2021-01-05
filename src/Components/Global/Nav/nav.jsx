@@ -1,9 +1,8 @@
 import './nav.css';
 import NavItem from '../NavItem/navItem';
-import Carrito from '../Carrito/carrito';
 
  
-function Nav({titulo, action}) {
+function Nav() {
     const menuItems = [
         {
             texto:'Apartamentos',
@@ -11,34 +10,31 @@ function Nav({titulo, action}) {
         },        
         {
             texto:'Casas',
-            ruta: '/category/Casas',
+            ruta: '/category/casas',
         },
         {
             texto:'Fincas',
-            ruta:'/category/Fincas',
+            ruta:'/category/fincas',
         },
         {
             texto:'Oficinas',
             ruta:'/category/oficinas',
         },
         {
-            texto:'Espacios',
+            texto:'Espacios x Hrs',
             ruta:'/category/espacios',
         },
-
         {
-            texto:'Servicios',
+            texto:'',
             ruta:'/category/servicios',
         },
-
         {
-            texto:'Partners',
-            ruta:'/category/partner',
+            texto:'Roomates',
+            ruta:'/category/roomates',
         },
 
     ]
 
-    const qty = 0;
 
     return (
         <div className="headnav">
@@ -49,9 +45,7 @@ function Nav({titulo, action}) {
                             menuItems.map((seccion, index) => <NavItem key={index} text={seccion.texto} url={seccion.ruta} />)
                         }
                     </ul>
-                    {
-                        !!qty && <Carrito action={action} qty={qty} />
-                    }
+
 
                 </nav>
             </div>

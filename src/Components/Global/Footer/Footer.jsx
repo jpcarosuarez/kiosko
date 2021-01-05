@@ -1,52 +1,23 @@
 import './Footer.css';
-import Modal from '../Modal/modal';
-import Carrito from '../Carrito/carrito';
-import Logo from './img/logoblack.png';
 
-import { BiClinic, BiCart } from "react-icons/bi";
+import Logo from './img/logowhite.png';
 
-import Avatar from '@material-ui/core/Avatar';
 import {Link} from 'react-router-dom';
 
    
 function Footer() {
 
     return (
-        <header>
-            <nav>
-                <ul>
+        <div className="footer">
+            <div>
+
                 
-                <Link to={"/"} ><img className="logoblanco" src={Logo} alt="logo" /></Link>
-                                     
-                <Avatar alt="Juan Pablo" src="#" />
-
-                <a href="#carrito"> <BiCart size={25} /> </a>  
-                
-                <Carrito>
-                <h3>Carrito de Compras</h3>
-                <p>Publicaciones</p>
-                <p>Destacados</p>
-                <p>Total </p>
-
-                </Carrito>
-                  
-                <a href="#modal"> <BiClinic size={25} /> Publica Gratis</a>
-                
-                <Modal>    
-                <h3>Publicar oferta</h3>
-                <p>Publicaciones</p>
-                <p>Destacados</p>
-                <p>Total </p>
-                </Modal>
+                <Link to={"/"} ><img className="logofoot" src={Logo} alt="logo" /></Link>
 
 
-                    
+            </div>
 
-                </ul>
-
-            </nav>
-
-        </header>
+        </div>
 
 
        

@@ -7,7 +7,7 @@
   color: #0b0c10;
   --padding: 10px;
   padding: var(--padding);
-  box-shadow: inset 0 0 0 var(--padding) #c5c6c7;
+  box-shadow: inset 0 0 0 var(--padding) white;
 
 }
 
@@ -16,13 +16,12 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, 125px);
   gap: 2rem;
-  background-color: #c5c6c7;
+  background-color: white;
 
 }
 
 .categories_grid .container .item {
 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a13ddf', endColorstr='#096dd7', GradientType=1 );
   border-radius: 1.5rem;
 }
 
@@ -66,7 +65,7 @@
   text-decoration: none;
   font-family: 'Nerko One', cursive;
   border: #66fcf1;
-  color:  #c5c6c7;
+  color:  white;
   
 }
 
