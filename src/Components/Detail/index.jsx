@@ -13,7 +13,8 @@ const Detail = () => {
             resolve({
                 id: id, 
                 nombre: "Detalle Propiedad",
-                foto: "http://placehold.it/350x400",
+                title:"",
+                img: "http://placehold.it/350x400",
                 descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam laboriosam deleniti neque! Explicabo aspernatur accusantium ex provident natus, nam neque nesciunt eaque iure dolore, architecto maiores corrupti deserunt totam. Veniam.",
                 precio: 75000,
             })

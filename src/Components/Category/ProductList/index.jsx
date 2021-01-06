@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import ProductDetail from '../../Detail/ProductDetail';
-import './ProductsList.css';
+import ProductCard from '../../Global/ProductCard/ProductCard';
+import './ProductList.css';
 import {BsListUl, BsFillGridFill} from 'react-icons/bs';
 
 const ProductsList = ({products}) => {
@@ -18,7 +18,7 @@ const ProductsList = ({products}) => {
 
             <ul className={`products_list ${wayToShow ? 'grid' : 'list'}`}>
                 {
-                    products.map(item => <li key={item.id}><ProductDetail id={item.id} titulo={item.title} precio={item.price} categoria={item.category} type={`${wayToShow ? 'grid' : 'list'}`} /></li>)
+                    products.map(item => <li key={item.id}><ProductCard id={item.id} titulo={item.nombre} precio={item.precio} categoria={item.category} type={`${wayToShow ? 'grid' : 'list'}`} /></li>)
                 }
             </ul>
         </section>

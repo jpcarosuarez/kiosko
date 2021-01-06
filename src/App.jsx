@@ -9,7 +9,7 @@ import Category from './Components/Category';
 import Detail from './Components/Detail';
 import Error404 from './Components/Global/Error404';
 import Cart from './Components/Cart/cart';
-import Checkout from './Components/Checkout/index';
+import Checkout from './Components/Checkout';
 
 import {Store} from './store';
 
@@ -38,10 +38,10 @@ function App() {
           <Route path="/detail/:id">
             <Detail />
           </Route>
-          <Route path="cart">
+          <Route path="/cart">
             <Cart />
           </Route>
-          <Route path="checkout">
+          <Route path="/checkout">
             <Checkout />
           </Route>
           <Route path="*">

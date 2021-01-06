@@ -1,18 +1,24 @@
-
-import {useEffect} from 'react';
+import {useState, useEffect} from 'react';
+import {products} from '../../products'
 import {useParams} from 'react-router-dom';
+import ProductsList from './ProductList';
+import './category.css';
 
 const Category = () => {
     const {category_name} = useParams();
-   
+    const [prods, setProds] = useState([]);
+
     useEffect(() => {
-        console.log(category_name);
+        if(category_name) {
+            setProds(products.filter(prod => prod.category === category_name))
+        }
     }, [category_name])
 
     return (
-        <>
-            <h1>{category_name}</h1>
-        </>
+        <section className="category">
+            <h2>{category_name.split('-').join(' ')}</h2>
+            <ProductsList products={prods} />
+        </section>
     )
 }
 
