@@ -1,65 +1,77 @@
 import './ProductDetail.css';
-//import Calendario from './../Global/Calendario/Calendario'
 import DatePickers from './../Global/Reservas/index';
-import CountContainer from './../Global/CountContainer/CountContainer';
-import {useState } from 'react';
+import {Store} from './../../store';
+import {useHistory} from 'react-router-dom';
+import {useState, useContext} from 'react';
 
 
 
 const ProductDetail = ({item}) => {
+    const history = useHistory();
 
-    //Contador //////////////////////
-    const qty = 7;
-    const [count, setCount] = useState(0);
+    const [data, setData] = useContext(Store);
+    const [qty, setQty] = useState(1);	
 
-    const add = () => {
-      if (count < qty) {
-        setCount(count + 1);
-      }
-      if (count === qty) {
-        alert("Solo esta permitido ese stock");
-      }
+    const handleClickResta = () => {	
+        if(qty > 1) {	
+            setQty(qty - 1);	
+        }	
+    }
+
+    const onAdd = () => {
+        setData({
+            ...data, 
+            cantidad: data.cantidad + qty,
+            items: [...data.items, item],
+        });
+        history.push('/cart');
+        // alert(`Agregaste ${qty} productos al carrito`);
     };
 
-    const less = () => {
-      if (count === 0) {
-        alert("No se puede menos de 0");
-        return;
-      }
-  
-      setCount(count - 1);
-    }; 
-                        
-    /////////////////////////////////////// 
-
-
-
-    const handleClickAdd = (e) => {
-        alert('Producto agregado al carrito');
-    }
+    console.log(data);
 
 
 
     return (
+
         <article className="productDetail">
             <div>
-                       
-                <h1>{item.nombre} - {item.id}</h1>
-                <br />
+
+                <div className="foto">
+                    <img src="http://placehold.it/400x400" alt=""/>
+
+                </div>
+
+                <div className="info" >
+
+                    <h1 className="title">{item.title} - {item.id}</h1>
+                    {
+                    !!item.description && <p className="description">{item.descripcion}</p>
+                    }
+                    <p className="price">${item.precio}</p>
+
+
+
+
+
+                </div>
+                      
                 <DatePickers />
 
-                <p>El id de este producto es {item.id}</p>
-                <br />
-                <img src={item.foto} alt=""/>
-                <img src={item.foto} alt=""/>
-                <img src={item.foto} alt=""/>
-                <p>{item.descripcion}</p>
-                <br />
-                <p> $ {item.precio}</p>
-                <br />
-                <CountContainer count={count} add={add} less={less} />
+                <div className="qty">	
+                    <button 	
+                        disabled={qty === 1 ? 'disabled' : null } 	
+                        onClick={handleClickResta}	
+                    >	
+                        -	
+                    </button>	
+                    <input type="text" value={qty} readOnly/>	
+                    <button onClick={() => setQty(qty + 1)}>+</button>	
+                </div>
 
-                <button onClick={handleClickAdd}>Agregar al carrito</button>
+
+               
+                <button className="btn" onClick={onAdd}>Agregar al carrito</button>
 
             </div>
 
