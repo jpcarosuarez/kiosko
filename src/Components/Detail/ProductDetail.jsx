@@ -1,14 +1,43 @@
 import './ProductDetail.css';
 //import Calendario from './../Global/Calendario/Calendario'
 import DatePickers from './../Global/Reservas/index';
+import CountContainer from './../Global/CountContainer/CountContainer';
+import {useState } from 'react';
 
 
 
 const ProductDetail = ({item}) => {
 
+    //Contador //////////////////////
+    const qty = 7;
+    const [count, setCount] = useState(0);
+
+    const add = () => {
+      if (count < qty) {
+        setCount(count + 1);
+      }
+      if (count === qty) {
+        alert("Solo esta permitido ese stock");
+      }
+    };
+
+    const less = () => {
+      if (count === 0) {
+        alert("No se puede menos de 0");
+        return;
+      }
+  
+      setCount(count - 1);
+    }; 
+                        
+    /////////////////////////////////////// 
+
+
+
     const handleClickAdd = (e) => {
         alert('Producto agregado al carrito');
     }
+
 
 
     return (
@@ -28,6 +57,8 @@ const ProductDetail = ({item}) => {
                 <br />
                 <p> $ {item.precio}</p>
                 <br />
+                <CountContainer count={count} add={add} less={less} />
+
                 <button onClick={handleClickAdd}>Agregar al carrito</button>
 
             </div>

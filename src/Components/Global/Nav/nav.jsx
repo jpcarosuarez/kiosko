@@ -1,8 +1,8 @@
 import './nav.css';
 import NavItem from '../NavItem/navItem';
-
+import NavCart from '../NavCart/NavCart';
  
-function Nav() {
+function Nav({titulo, action}) {
     const menuItems = [
         {
             texto:'Apartamentos',
@@ -25,11 +25,7 @@ function Nav() {
             ruta:'/category/espacios',
         },
         {
-            texto:'',
-            ruta:'/category/servicios',
-        },
-        {
-            texto:'Roomates',
+            texto:'Busco Roomates',
             ruta:'/category/roomates',
         },
 
@@ -45,6 +41,8 @@ function Nav() {
                             menuItems.map((seccion, index) => <NavItem key={index} text={seccion.texto} url={seccion.ruta} />)
                         }
                     </ul>
+
+                    <NavCart action={action} />
 
 
                 </nav>

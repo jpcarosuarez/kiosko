@@ -1,9 +1,18 @@
-const cart = () => {
-    return (
-        <div className='cart'>
-            <p>cart</p>
+import {useContext} from 'react';
+import {Store} from '../../store';
 
-        </div>
+
+const Cart = () => {
+    const [data, setData] = useContext(Store);
+
+    return (
+        <>
+            <h1>Estás en el cart</h1>
+
+            {
+               data.items.map(item => <h2>{item.title}</h2>)
+            }
+        </>
     )
 }
-export default clearTimeout;
+export default Cart;

@@ -66,12 +66,6 @@ const PropiedadesDestacadas = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // useEffect(() => {
-    //     getPropiedades.then(rta => setItems(rta));
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, []);
-
-
 
     return (
         <section className="propiedadesDestacadas">

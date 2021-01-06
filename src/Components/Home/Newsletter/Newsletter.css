@@ -1,17 +1,17 @@
 .newsletter {
-  background: var(--text);
+  background: #66fcf1;
   padding: 4rem 0;
 }
 
 .newsletter h2 {
   text-align: center;
-  color: var(--blanco);
+  color: #1f2833;
   font-size: 2.5rem;
 }
 
 .newsletter p {
   text-align: center;
-  color: var(--blanco);
+  color: #1f2833;
   font-size: 1.4rem;
 }
 
@@ -23,20 +23,22 @@
   overflow: hidden;
 }
 
+
 .newsletter form input {
   width: 70%;
   padding: 1.5rem;
   border: none;
   font-size: 1.5rem;
   outline: none;
-  background: #1f2833;
-  color: white;
+  background: white;
+  color: #1f2833;
 }
+
 
 .newsletter form input[type="submit"] {
   width: 30%;
-  background: #c5c6c7;
-  color: #66fcf1;
+  background: #45a29e;
+  color: #1f2833;
   text-transform: uppercase;
   cursor: pointer;
   transition: background 0.5s;
