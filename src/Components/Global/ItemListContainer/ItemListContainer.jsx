@@ -8,25 +8,22 @@ import {Link} from 'react-router-dom';
 
 
 
-const ItemListContainer = ({id, titulo, precio, habitaciones, ubicacion, baños, mts }) => {
-    
-  
-
+const ItemListContainer = ({id, titulo, precio, habitaciones, ubicacion, baños, mts, categoria, type='grid' }) => {   
     
     return (
-        <article className="itemListContainer">
+        <article className={`itemListContainer ${type}`}>
             <img src="http://placehold.it/400x400" alt="apartamento"/>
             <div>
                 <div className="precio">
                   <h4><IoLogoUsd size={20} />{precio}</h4>
                 </div>
 
-                <h2>{titulo}</h2> 
+                <h2>{titulo}</h2>
                 <p><FaBed size={20}/> {habitaciones} </p>
                 <p><MdGpsFixed size={20}/> {ubicacion}</p>
                 <p><FaBath size={20}/> {baños}</p>
                 <p><RiRuler2Line size={20}/>{mts} m2</p>
-                <Link to={`/detail/${id}`}>Ver Más</Link> 
+                <Link to={`/${categoria}/${id}`}>Ver detalle</Link> 
             </div>
     
         </article> 

@@ -1,7 +1,7 @@
-import {useContext} from 'react';
 import './NavCart.css';
 import {AiOutlineShoppingCart} from 'react-icons/ai';
 import {Store} from '../../../store';
+import {useContext} from 'react';
 
 const NavCart = ({action}) => {
     const [data, setData] = useContext(Store);

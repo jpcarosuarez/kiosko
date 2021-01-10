@@ -1,5 +1,5 @@
 .productCard {
-  background: var(--blanco);
+  background: #45a29e;
   border-radius: 1.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.5s;
@@ -23,14 +23,14 @@
 }
 
 .productCard div h3 {
-  color: var(--text);
+  color:#0b0c10;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   min-height: 46px;
 }
 
 .productCard div p {
-  color: var(--text);
+  color: #0b0c10;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -41,16 +41,17 @@
   padding: 0.5rem;
   outline: none;
   cursor: pointer;
-  background: var(--color-principal);
+  background: #66fcf1;
   border-radius: 1rem;
-  color: var(--blanco);
+  color: #0b0c10;
   font-size: 1.3rem;
   margin-top: 1rem;
   transition: background 0.5s;
+  text-decoration: none;
 }
 
 .productCard div a:hover {
-  background: #0758af;
+  background: #66fcf1;
 }
 
 .productCard.list {

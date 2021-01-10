@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import Nav from '../Nav/Nav';
+import Menu from '../Menu/menu';
 import WidgetCart from '../WidgetCart/WidgetCart';
 
 const NavAndWidgetCart = () => {
@@ -11,7 +11,10 @@ const NavAndWidgetCart = () => {
 
     return (
         <>
-            <Nav titulo="DoggyStore" action={openWidgetCart} />
+
+            <Menu action={openWidgetCart} /> 
+
+         
             <WidgetCart show={showWidgetCart} action={openWidgetCart} />
         </>
     )

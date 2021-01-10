@@ -1,52 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
-.headnav {  
-  
-  background-color: #1f2833;
+.headnav {
+  background: #0b0c10;
 }
 
 .headnav .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
-.headnav h1 {
-  color: #ffffff;
-  font-family: 'Roboto', sans-serif;  
+.headnav .container h1 {
+  font-family: 'Yusei Magic', sans-serif;
   font-size: 3.5rem;
   letter-spacing: 0.2rem;
+
 }
 
-.headnav nav ul {
+.headnav .container ul {
   display: flex; 
 }
 
-.headnav nav ul li {
-  margin: 0 2rem;
-  list-style: none;
-  text-decoration: none;  
-
+.headnav ul li {
+  margin: 0 1rem;
 }
 
-.headnav nav ul li:first-child {
+.headnav ul li:first-child {
   margin-left: 0;
 }
 
-.headnav nav ul li:last-child {
+.headnav ul li:last-child {
   margin-right: 0;
 }
 
-.headnav nav ul a {
+.headnav ul a {
   color: white;
-  font-size: 2rem;
-  position: relative;
+  font-size: 1.5rem;
   text-decoration: none;  
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Staatliches', cursive;
-  letter-spacing: 0.2rem;
+  font-family: 'Yusei Magic', sans-serif;
+  letter-spacing: 0.1rem;
 
 
 }
@@ -56,11 +49,12 @@
   display: block;
   width: 100%;
   height: 0.2rem;
-  background: white;
+  color: white;
   position: absolute;
   bottom: -0.5rem;
-  opacity: 0;
+  opacity: 70;
   transition: opacity 0.2s;
+
 }
 
 .headnav nav ul li a:hover::after {

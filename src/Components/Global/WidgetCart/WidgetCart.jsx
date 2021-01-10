@@ -1,16 +1,17 @@
-import {useContext} from 'react';
 import './WidgetCart.css';
-import {Store} from '../../../store';
+import Button from '@material-ui/core/Button';
 
 const WidgetCart = ({show, action}) => {
-    const [data, setData] = useContext(Store);
+    
 
     return (
         <div className={`widgetCart ${show ? 'open' : 'close'}`}>
-            {
-                data.items.map(item => <p>{item.title}</p>)
-            }
-            <button onClick={action}>Cerrar widget</button>
+            <h1>Checkout</h1>
+
+            <Button variant="contained" onClick={action}>Cerrar</Button>
+
         </div>
     )
 }
+
+export default WidgetCart;

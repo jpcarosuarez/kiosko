@@ -1,59 +1,22 @@
 import {useState, useEffect} from 'react';
 import ItemListContainer from '../../Global/ItemListContainer/ItemListContainer';
 import './PropiedadesDestacadas.css';
+import {products} from '../../../products';
+
+
 
 const PropiedadesDestacadas = () => {
 
     const [items, setItems] = useState([]);
   
-    const propiedades = [
-        {
-            id: 1,
-            titulo: 'Apto 1',
-            ubicacion: 'Chapinero',
-            habitaciones: 2,
-            precio: 85000,
-            baños:2,
-            mts: 80,
-        },
-        {
-            id: 2,
-            titulo: 'Apto 2',
-            ubicacion: 'Usaquén',
-            habitaciones: 2,
-            precio: 95000,
-            baños:1,
-            mts: 48,
-        },
-        {
-            id: 3,
-            titulo: 'Apto 3',
-            ubicacion: 'Cedritos',
-            habitaciones: 2,
-            precio: 75000,
-            baños:2,
-            mts: 95,
-        },
-        {
-            id: 4,
-            titulo: 'Apto 4',
-            ubicacion: 'Suba',
-            habitaciones: 2,
-            precio: 55000,
-            baños:1,
-            mts: 75,
-        },
-    ]
-
-    const getPropiedades = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(propiedades);
-        }, 500)
+    const getProducts = new Promise((resolve, reject) => {
+        const outstandingProducts = products.filter(item => item.outstanding);
+        resolve(outstandingProducts);
     })
 
     const getPropiedadesFromDB = async () => {
         try {
-            const result = await getPropiedades;
+            const result = await getProducts;
             setItems(result);
 
         } catch(error) {
@@ -81,13 +44,14 @@ const PropiedadesDestacadas = () => {
                                     <li key={index}>
                                         <ItemListContainer
                                             id={item.id}
-                                            titulo={item.titulo}
-                                            precio={item.precio}
+                                            img={item.img}
+                                            titulo={item.title}
                                             ubicacion={item.ubicacion}
                                             habitaciones={item.habitaciones}
                                             baños={item.baños}
                                             mts={item.mts}
-
+                                            categoria={item.category}
+                                            precio={item.price} 
                                         />
                                     </li>
                                 ))

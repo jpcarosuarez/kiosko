@@ -1,10 +1,10 @@
-const checkout = () => {
+const Checkout = () => {
     return (
-        <div className='checkout'>
-            <p>Checkout</p>
+        <div >
+            <h1>Checkout</h1>
 
         </div>
     )
 }
 
-export default checkout;
+export default Checkout;

@@ -1,26 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 .top{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
   background-color: #45a29e;  
   height: 100px;
-  display: flex;
-
+  padding: 1rem;
+  font-size: 1.2rem;
+  color:#66fcf1;
 }
 
-
-.top a {
+.top .anuncio{
+  display: flex;
   color:  #ffffff;
   font-size: 25px;
+
+}
+.top p {
+  
   text-decoration: none;  
   font-weight: 500;
-  font-family: 'Nerko One', cursive;
-
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 .top .logoTop {
   display: flex;
-  align-items: center;
-  align-content: center;
+  padding-right: 10px;
 }
 
 .top .logoTop .logoblanco {

@@ -1,14 +1,18 @@
 import './ProductCard.css';
 import {Link} from 'react-router-dom';
 
-const ProductCard = ({id, titulo, precio, categoria, type='grid'}) => {
+const ProductCard = ({id, title, price, category, negocio, habitaciones, baños, type='grid'}) => {
     return (
         <article className={`productCard ${type}`}>
             <img src="http://placehold.it/300x300" alt="Mi producto de prueba"/>
             <div>
-                <h3>{titulo}</h3>
-                <p>${precio}</p>
-                <Link to={`/${categoria}/${id}`}>Ver detalle</Link>
+                <h3>{title}</h3>
+                <p>${price}</p>
+                <p>{category} </p>
+                <p>{negocio} </p>
+                <p>{habitaciones}</p>
+                <p>{baños} </p>
+                <Link to={`/${category}/${id}`}>Ver detalle</Link>
             </div>
         </article>
     )

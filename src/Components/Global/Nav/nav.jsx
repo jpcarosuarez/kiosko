@@ -1,8 +1,9 @@
 import './nav.css';
 import NavItem from '../NavItem/navItem';
-import NavCart from '../NavCart/NavCart';
+import {Link} from 'react-router-dom';
+
  
-function Nav({titulo, action}) {
+function Nav({titulo}) {
     const menuItems = [
         {
             texto:'Apartamentos',
@@ -17,16 +18,16 @@ function Nav({titulo, action}) {
             ruta:'/category/fincas',
         },
         {
-            texto:'Oficinas',
-            ruta:'/category/oficinas',
-        },
-        {
-            texto:'Espacios x Hrs',
+            texto:'Espacios',
             ruta:'/category/espacios',
         },
         {
             texto:'Busco Roomates',
             ruta:'/category/roomates',
+        },
+        {
+            texto:'Tienda',
+            ruta:'/category/tienda',
         },
 
     ]
@@ -35,17 +36,18 @@ function Nav({titulo, action}) {
     return (
         <div className="headnav">
             <div className="container">
-                <nav>
-                    <ul>
-                        {
-                            menuItems.map((seccion, index) => <NavItem key={index} text={seccion.texto} url={seccion.ruta} />)
-                        }
-                    </ul>
-
-                    <NavCart action={action} />
+                <h1>
+                    <Link to="/">{titulo}</Link>
+                </h1>
 
 
-                </nav>
+                <ul>
+                    {
+                        menuItems.map((seccion, index) => <NavItem key={index} text={seccion.texto} url={seccion.ruta} />)
+                    }
+                </ul>
+
+
             </div>
         </div>
     )

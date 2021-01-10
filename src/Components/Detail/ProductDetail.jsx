@@ -8,7 +8,6 @@ import {useState, useContext} from 'react';
 
 const ProductDetail = ({item}) => {
     const history = useHistory();
-
     const [data, setData] = useContext(Store);
     const [qty, setQty] = useState(1);	
 
@@ -30,34 +29,29 @@ const ProductDetail = ({item}) => {
 
     console.log(data);
 
-
-
     return (
 
         <article className="productDetail">
-            <div>
+            
 
-                <div className="foto">
-                    <img src="http://placehold.it/400x400" alt=""/>
+            <div className="foto">
+                <img src="http://placehold.it/400x400" alt=""/>
 
-                </div>
+            </div>
 
-                <div className="info" >
+            <div className="info" >
 
-                    <h1 className="title">{item.title} - {item.id}</h1>
-                    {
-                    !!item.description && <p className="description">{item.descripcion}</p>
-                    }
-                    <p className="price">${item.precio}</p>
+                <h1 className="title">{item.title} </h1>
+                {
+                !!item.description && <p className="description">{item.description}</p>
+                }
+                <p className="price">${item.price}</p>
+                <p className="condition">{item.condition} </p>
 
+                
 
-
-
-
-                </div>
-                      
                 <DatePickers />
-
+                
                 <div className="qty">	
                     <button 	
                         disabled={qty === 1 ? 'disabled' : null } 	
@@ -66,15 +60,13 @@ const ProductDetail = ({item}) => {
                         -	
                     </button>	
                     <input type="text" value={qty} readOnly/>	
-                    <button onClick={() => setQty(qty + 1)}>+</button>	
+                    <button onClick={() => setQty(qty + 1)}>+</button>
+
                 </div>
 
-
-               
                 <button className="btn" onClick={onAdd}>Agregar al carrito</button>
-
-            </div>
-
+            </div>                 
+                                 
         </article>
     );
 }

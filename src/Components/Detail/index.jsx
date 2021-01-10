@@ -1,55 +1,47 @@
 import {useEffect, useState} from 'react';
 import ProductDetail from './ProductDetail';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import Comments from './Comments';
+import {products} from '../../products';
+import './Detail.css';
 
 
-const Detail = () => {
-    const {id} = useParams();
-    const [propiedades, setProduct] = useState(null);
+function Detail() {
+    const { id } = useParams();
+    const [product, setProduct] = useState(null);
 
-    const getPropiedad = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve({
-                id: id, 
-                nombre: "Detalle Propiedad",
-                title:"",
-                img: "http://placehold.it/350x400",
-                descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam laboriosam deleniti neque! Explicabo aspernatur accusantium ex provident natus, nam neque nesciunt eaque iure dolore, architecto maiores corrupti deserunt totam. Veniam.",
-                precio: 75000,
-            })
-        }, 500);
+    const getProduct = new Promise((resolve, reject) => {
+        const selectedProduct = products.filter(item => item.id === parseInt(id));
+        resolve(selectedProduct[0]);
     });
 
     useEffect(() => {
-        getPropiedad
-        .then(response => setProduct(response))
-        .catch(error => console.log(error));
+        getProduct
+            .then(response => setProduct(response))
+            .catch(error => console.log(error));
         // eslint-disable-next-line
     }, []);
-        
+
 
     return (
         <>
-            {       
-                propiedades ?
+            {product ?
                 <div className="container">
-                    <ProductDetail item={propiedades} />
 
-                    <section>
-                                        
-                        <div>
-                            <h1>Inmuebles Recomendados</h1>
-                            <Comments />
+                    <ol className="breadcrum">
+                        <li>
+                            <Link to={`/${product.category}`}>{product.category.split('-').join(' ')}</Link>
+                        </li>
+                        <li>
+                            {product.title}
+                        </li>
+                    </ol>
+                    <ProductDetail item={product} />
+                    <Comments />
 
-
-                        </div>
-
-                    </section>
-                </div> : 
-                <p>Cargando Inmuebles...</p>
-            }
+                </div> :
+                <p>Cargando Inmuebles...</p>}
         </>
-    )
+    );
 }
 export default Detail;

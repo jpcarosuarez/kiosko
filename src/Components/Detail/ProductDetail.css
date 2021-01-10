@@ -1,28 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 
+.productDetail {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-gap: 3rem;
+}
 
 
-.productDetail h1 {
-    color: red;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    font-family: 'Nerko One', cursive;
+.productDetail .info .title {
+    font-size: 3rem;
+    color: #1f2833;
+    margin-bottom: 1.5rem;
+}
+
+.productDetail .info .description {
+    font-size: 1.4rem;
+    color: #0b0c10;
+    margin-bottom: 2rem;
+}
+
+.productDetail .info .price {
+    font-size: 2.5rem;
     font-weight: 500;
-    
+    color: #0b0c10;
+    margin-bottom: 2rem;
+}
+.productDetail .qty {
+    margin-top: 2rem;
+    width: 150px;
+    margin-bottom: 2rem;
+    display: flex;
 }
 
-.productDetail p {
-    color: #0F2027;
-    font-size: 1.6rem;
-    font-weight: 400;
-    font-family: 'Nerko One', cursive;
+.productDetail .qty .button {
+    width: 20%;
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    background: #0b0c10;
+    border-radius: 1rem;
+    color: #66fcf1;
+    font-size: 1.5rem;
 }
 
-.productDetail div {
+.productDetail .qty button:disabled {
+    background: #ddd;
+    cursor: no-drop;
+}
+
+.productDetail .qty input {
+    width: 60%;
     text-align: center;
-    padding: 1rem;
+    border: none;
+    padding: 0,5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    outline: none;
 
 }
-.productDetail img {
-    padding-left: 10px;
+
+.productDetail .btn {
+    width: 150px;
+    display: block;
+    border: none;
+    padding: 1rem;
+    outline: none;
+    cursor: pointer;
+    background:#0b0c10;
+    border-radius: 1rem;
+    color: #66fcf1;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    transition: background 0.5s;
 }
+
+.productDetail .btn:hover {
+    background: #0b0c10;
+}
+
+
+

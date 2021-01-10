@@ -2,6 +2,8 @@ import './CategoriesGrid.css';
 import {Link} from 'react-router-dom';
 
 const CategoriesGrid = () => {
+    console.log('Render de grilla de categorias');
+
     return (
         <section className="categories_grid">
             <div className="container">
@@ -12,27 +14,27 @@ const CategoriesGrid = () => {
                 </div>
                 <div className="item">
                     <Link to="">
-                        Pet Friendly  
+                        Casas  
                     </Link>
                 </div>
                 <div className="item">
                     <Link to="">
-                        Roomates  
+                        Fincas  
                     </Link>
                 </div>
                 <div className="item">
                     <Link to="">
-                        Amoblados por dias  
+                        Espacios  
                     </Link>
                 </div>
                 <div className="item">
                     <Link to="">
-                        Amoblados Mensuales  
+                        Busco Roomates  
                     </Link>
                 </div>
                 <div className="item">
                     <Link to="">
-                        Reserva tu arriendo 
+                        Tienda 
                     </Link>
                 </div>
             </div>
