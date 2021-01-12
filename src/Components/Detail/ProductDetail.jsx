@@ -3,7 +3,11 @@ import DatePickers from './../Global/Reservas/index';
 import {Store} from './../../store';
 import {useHistory} from 'react-router-dom';
 import {useState, useContext} from 'react';
-
+import { IoLogoUsd } from "react-icons/io";
+import { FaBed, FaBath } from "react-icons/fa";
+import { MdGpsFixed } from "react-icons/md";
+import { RiRuler2Line } from "react-icons/ri";
+import { BiBuildingHouse } from "react-icons/bi";
 
 
 const ProductDetail = ({item}) => {
@@ -43,15 +47,22 @@ const ProductDetail = ({item}) => {
 
                 <h1 className="title">{item.title} </h1>
                 {
-                !!item.description && <p className="description">{item.description}</p>
+                !!item.description && <p className="description"> {item.description}</p>
                 }
-                <p className="price">${item.price}</p>
-                <p className="condition">{item.condition} </p>
-
+                <p className="price"><IoLogoUsd size={20} /> {item.price} x día </p>
+                <p className="Habitaciones" ><FaBed size={20}/> {item.habitaciones} </p>
+                <p className="baños" ><FaBath size={20}/> {item.baños} </p>
+                <p className="mts" ><RiRuler2Line size={20}/> {item.mts} </p>
+                <p className="ubicacion"><MdGpsFixed size={20}/> {item.ubicacion}</p>
                 
-
+                <p>Entrada</p>
                 <DatePickers />
                 
+                <p>Salida</p>
+                <DatePickers />
+
+                <h2>Huéspedes / Invitados</h2>
+
                 <div className="qty">	
                     <button 	
                         disabled={qty === 1 ? 'disabled' : null } 	
@@ -64,7 +75,7 @@ const ProductDetail = ({item}) => {
 
                 </div>
 
-                <button className="btn" onClick={onAdd}>Agregar al carrito</button>
+                <button className="btn" onClick={onAdd}>Reservar</button>
             </div>                 
                                  
         </article>

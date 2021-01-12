@@ -10,16 +10,11 @@ export const products = [
     "title": "Excelente Apartamento Chapinero",
     "description": "Hermoso apartamento de 1 habitación y un baño, sala comedor amplia, zona de lavandería, cocina abierta integral, vigilancia 24 horas, cerca a parques, Hospitales, supermercados, centros comerciales y universidades. Excelente ubicación.",
     "img": "1111.webp",
-    "negocio": [
-      "Amoblado", 
-      "Sin amoblar",
-      "Anual",
-    ],
     "price": 95000,
-    "outstanding": "",
+    "outstanding": true,
     "discount": "",
-    "ubicacion": "chapinero"
-
+    "ubicacion": "chapinero",
+    "max-huespedes": "3"
   },
   {
     "id": 2,
@@ -32,15 +27,10 @@ export const products = [
     "title": "Espectacular Casa en Galerias",
     "description": "Hermoso apartamento de 1 habitación y un baño, sala comedor amplia, zona de lavandería, cocina abierta integral, vigilancia 24 horas, cerca a parques, Hospitales, supermercados, centros comerciales y universidades. Excelente ubicación.",
     "img": "2222.webp",
-    "negocio": [
-      "Amoblado",
-      "Sin Amoblar",
-    ],
     "price": 85000,
-    "outstanding": "",
+    "outstanding": true,
     "discount": 15,
-    "ubicacion": "chapinero"
-
+    "ubicacion": "chapinero",
   },
   {
     "id": 3,
@@ -56,8 +46,7 @@ export const products = [
     "price": 95000,
     "outstanding": true,
     "discount": 15,
-    "ubicacion": "chapinero"
-
+    "ubicacion": "chapinero",
   },
   {
     "id": 4,
@@ -69,16 +58,10 @@ export const products = [
     "description": "Hermoso apartamento de 1 habitación y un baño, sala comedor amplia, zona de lavandería, cocina abierta integral, vigilancia 24 horas, cerca a parques, Hospitales, supermercados, centros comerciales y universidades. Excelente ubicación.",
     "img": "4444.png",
     "condition":"Aseguradora",
-    "size": [
-      "Arriendo Mensual",
-      "xl",
-      "xxl"
-    ],
     "price": 95000,
-    "outstanding": "",
+    "outstanding": true,
     "discount": 20,
-    "ubicacion": "chapinero"
-
+    "ubicacion": "chapinero",
   },
   {
     "id": 5,
@@ -95,8 +78,7 @@ export const products = [
     "outstanding": "",
     "discount": 15,
     "negocio":"Arriendo por Horas",
-    "ubicacion": "chapinero"
-
+    "ubicacion": "chapinero",
   },
   {
     "id": 6,
@@ -113,8 +95,7 @@ export const products = [
     "outstanding": "",
     "discount": 15,
     "negocio":"Arriendo por Horas",
-    "ubicacion": "chapinero"
-
+    "ubicacion": "chapinero",
   },
   {
     "id": 7,
@@ -126,14 +107,9 @@ export const products = [
     "title": "Amplia oficina para tu negocio",
     "description": "Hermoso apartamento de 1 habitación y un baño, sala comedor amplia, zona de lavandería, cocina abierta integral, vigilancia 24 horas, cerca a parques, Hospitales, supermercados, centros comerciales y universidades. Excelente ubicación.",
     "img": "4444.webp",
-    "size": [
-      "Arriendo Mensual",
-      "xl",
-      "xxl"
-    ],
     "price": 95000,
     "outstanding": "",
-    "discount": 20
+    "discount": 20,
   },
   {
   "id": 8,
@@ -146,15 +122,10 @@ export const products = [
   "title": "Excelente Apartamento Chapinero",
   "description": "Hermoso apartamento de 1 habitación y un baño, sala comedor amplia, zona de lavandería, cocina abierta integral, vigilancia 24 horas, cerca a parques, Hospitales, supermercados, centros comerciales y universidades. Excelente ubicación.",
   "img": "1111.webp",
-  "negocio": [
-    "Amoblado", 
-    "Sin amoblar",
-    "Anual",
-  ],
   "price": 95000,
   "outstanding": "",
   "discount": "",
-  "ubicacion": "chapinero"
+  "ubicacion": "chapinero",
 
 },
 {
@@ -168,16 +139,9 @@ export const products = [
   "title": "Espectacular Casa en Galerias",
   "description": "Hermoso apartamento de 1 habitación y un baño, sala comedor amplia, zona de lavandería, cocina abierta integral, vigilancia 24 horas, cerca a parques, Hospitales, supermercados, centros comerciales y universidades. Excelente ubicación.",
   "img": "2222.webp",
-  "negocio": [
-    "Amoblado",
-    "Sin Amoblar",
-  ],
   "price": 85000,
   "outstanding": "",
   "discount": 15,
-  "ubicacion": "chapinero"
+  "ubicacion": "chapinero",
 },
-
-
-
 ]

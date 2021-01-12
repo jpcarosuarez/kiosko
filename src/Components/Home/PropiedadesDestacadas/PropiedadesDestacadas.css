@@ -2,7 +2,6 @@
 
 .propiedadesDestacadas {
   padding: 4rem 0;
-  background-color: #45a29e;
 }
 
 .propiedadesDestacadas h2 {
@@ -20,17 +19,16 @@
   display: flex;
   justify-content: space-between;
 
-
 }
 
 .propiedadesDestacadas ul li {
   width: 20%;
-
 }
 
 ::marker{
   color: transparent;
 }
+
 .cargando {
   text-align: center;
   font-size: 3rem;

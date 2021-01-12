@@ -3,18 +3,14 @@
 
 .headnav {
   background: #0b0c10;
+
 }
 
 .headnav .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.headnav .container h1 {
-  font-family: 'Yusei Magic', sans-serif;
-  font-size: 3.5rem;
-  letter-spacing: 0.2rem;
+  top: 0px;  
 
 }
 

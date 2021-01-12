@@ -8,32 +8,32 @@ const CategoriesGrid = () => {
         <section className="categories_grid">
             <div className="container">
                 <div className="item">
-                    <Link to="">
+                    <Link to="/category/apartamentos">
                         Apartamentos  
                     </Link>
                 </div>
                 <div className="item">
-                    <Link to="">
+                    <Link to="/category/casas">
                         Casas  
                     </Link>
                 </div>
                 <div className="item">
-                    <Link to="">
+                    <Link to="/category/fincas">
                         Fincas  
                     </Link>
                 </div>
                 <div className="item">
-                    <Link to="">
+                    <Link to="/category/espacios">
                         Espacios  
                     </Link>
                 </div>
                 <div className="item">
-                    <Link to="">
+                    <Link to="/category/Roomates">
                         Busco Roomates  
                     </Link>
                 </div>
                 <div className="item">
-                    <Link to="">
+                    <Link to="/category/tienda">
                         Tienda 
                     </Link>
                 </div>

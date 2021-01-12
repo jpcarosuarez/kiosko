@@ -1,11 +1,11 @@
-import {useState, useEffect} from 'react'
-import PropiedadesDestacadas from './PropiedadesDestacadas/PropiedadesDestacadas'
+import {useState, useEffect} from 'react';
+import PropiedadesDestacadas from './PropiedadesDestacadas'
 import Slider from './Slider'
 import CategoriesGrid from './CategoriesGrid'
 import Newsletter from './Newsletter'
 
 const Home = () => {
-    const [widht, setWidth] = useState(null);
+    const [setWidth] = useState(null);
 
     const resizeFn = (e) => {
         setWidth (e.target.innerWidth);
@@ -20,7 +20,7 @@ const Home = () => {
         <>
             <Slider />
             <PropiedadesDestacadas />
-            <CategoriesGrid />
+            <CategoriesGrid />    
             <Newsletter />
 
         </>

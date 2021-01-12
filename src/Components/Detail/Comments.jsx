@@ -25,7 +25,7 @@ const Comments = () => {
 
     return (
         <section className="comments">
-            <h3>Comentarios</h3>
+            <h3>Reseñas</h3>
 
             <ul>
                 {
@@ -40,7 +40,7 @@ const Comments = () => {
             </ul>
 
             <form onSubmit={handleSubmitComment}>
-                <h4>Nuevo comentario</h4>
+                <h4>Nueva Reseña</h4>
                 <input type="text" placeholder="Nombre" name="name" value={formData.name} onChange={handleChangeFormData} />
                 <textarea name="comment" placeholder="Comentario" cols="30" rows="10" value={formData.comment} onChange={handleChangeFormData} />
                 <input type="submit" value="Enviar comentario" />

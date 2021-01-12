@@ -18,7 +18,7 @@ const ProductsList = ({products}) => {
 
             <ul className={`products_list ${wayToShow ? 'grid' : 'list'}`}>
                 {
-                    products.map(item => <li key={item.id}><ProductCard id={item.id} title={item.title} price={item.price} category={item.category} type={`${wayToShow ? 'grid' : 'list'}`} /></li>)
+                    products.map(item => <li key={item.id}><ProductCard id={item.id} title={item.title} price={item.price} ubicacion={item.ubicacion} mts={item.mts} habitaciones={item.habitaciones} baños={item.baños} category={item.category} type={`${wayToShow ? 'grid' : 'list'}`} /></li>)
                 }
             </ul>
         </section>

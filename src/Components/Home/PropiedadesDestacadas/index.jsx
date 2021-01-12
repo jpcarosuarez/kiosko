@@ -1,20 +1,18 @@
 import {useState, useEffect} from 'react';
-import ItemListContainer from '../../Global/ItemListContainer/ItemListContainer';
+import ProductCard from 'latienda/src/Components/Global/ProductCard/ProductCard';
 import './PropiedadesDestacadas.css';
 import {products} from '../../../products';
 
 
-
 const PropiedadesDestacadas = () => {
-
     const [items, setItems] = useState([]);
-  
+
     const getProducts = new Promise((resolve, reject) => {
         const outstandingProducts = products.filter(item => item.outstanding);
         resolve(outstandingProducts);
     })
 
-    const getPropiedadesFromDB = async () => {
+    const getProductsFromDB = async () => {
         try {
             const result = await getProducts;
             setItems(result);
@@ -25,9 +23,9 @@ const PropiedadesDestacadas = () => {
     }
 
     useEffect(() => {
-        getPropiedadesFromDB();
+        getProductsFromDB();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [])
 
 
     return (
@@ -42,22 +40,21 @@ const PropiedadesDestacadas = () => {
                             {
                                 items.map((item, index) => (
                                     <li key={index}>
-                                        <ItemListContainer
+                                        <ProductCard
                                             id={item.id}
                                             img={item.img}
-                                            titulo={item.title}
+                                            title={item.title}
                                             ubicacion={item.ubicacion}
                                             habitaciones={item.habitaciones}
                                             baños={item.baños}
                                             mts={item.mts}
-                                            categoria={item.category}
-                                            precio={item.price} 
+                                            category={item.category}
+                                            price={item.price} 
                                         />
                                     </li>
                                 ))
                             }
                         </ul>
-
                     </> :
                     <p className="cargando">Cargando Propiedades...</p>
 

@@ -1,6 +1,5 @@
 import './nav.css';
 import NavItem from '../NavItem/navItem';
-import {Link} from 'react-router-dom';
 
  
 function Nav({titulo}) {
@@ -36,10 +35,6 @@ function Nav({titulo}) {
     return (
         <div className="headnav">
             <div className="container">
-                <h1>
-                    <Link to="/">{titulo}</Link>
-                </h1>
-
 
                 <ul>
                     {
