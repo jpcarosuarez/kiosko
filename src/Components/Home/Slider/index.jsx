@@ -19,8 +19,9 @@ const HomeSlider = () => {
     return (
         <section className="slider">
             <Slider {...settings}>
-                <div>
+                <div >
                     <img src={Slide1} alt="Slide 1" className="slider_img" />
+              
                 </div>
                 <div>
                     <img src={Slide2} alt="Slide 1" className="slider_img" />

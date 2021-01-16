@@ -1,26 +1,42 @@
 import {useState, useEffect} from 'react';
 import ProductCard from 'latienda/src/Components/Global/ProductCard/ProductCard';
 import './PropiedadesDestacadas.css';
-import {products} from '../../../products';
+import {getFirestore} from '../../../db';
 
 
 const PropiedadesDestacadas = () => {
     const [items, setItems] = useState([]);
+    const db = getFirestore();
 
-    const getProducts = new Promise((resolve, reject) => {
-        const outstandingProducts = products.filter(item => item.outstanding);
-        resolve(outstandingProducts);
-    })
 
-    const getProductsFromDB = async () => {
-        try {
-            const result = await getProducts;
-            setItems(result);
+    // const getProducts = new Promise((resolve, reject) => {
+    //     const outstandingProducts = products.filter(item => item.outstanding);
+    //     resolve(outstandingProducts);
+    // })
 
-        } catch(error) {
-            alert('No se pueden mostrar los inmuebles en este momento')
-        }
+    const getProductsFromDB = () => {
+        db.collection('inmuebles').where("outstanding", "==", true).get()
+        .then(docs => {
+            let arr = [];
+            docs.forEach(doc => {
+                arr.push({id: doc.id, data: doc.data()})
+            })
+
+            setItems(arr);
+        })
+        .catch(e => console.log(e));
+
+        // db.collection('productos').where("outstanding", "==", true)
+        // .onSnapshot(function(querySnapshot) {
+        //     var arr = [];
+        //     querySnapshot.forEach(function(doc) {
+        //         arr.push({id: doc.id, data: doc.data()});
+        //     });
+        //     setItems(arr);
+        // });
     }
+
+
 
     useEffect(() => {
         getProductsFromDB();
@@ -34,22 +50,22 @@ const PropiedadesDestacadas = () => {
                 {
                     items.length ? 
                     <>
-                        <h2>Arriendos en Bogotá</h2>
+                        <h2>Encuentra tu arriendo facilmente</h2>
 
                         <ul>
                             {
-                                items.map((item, index) => (
-                                    <li key={index}>
+                                items.map((item) => (
+                                    <li key={item.id}>
                                         <ProductCard
                                             id={item.id}
-                                            img={item.img}
-                                            title={item.title}
-                                            ubicacion={item.ubicacion}
-                                            habitaciones={item.habitaciones}
-                                            baños={item.baños}
-                                            mts={item.mts}
-                                            category={item.category}
-                                            price={item.price} 
+                                            img={item.data.img}
+                                            titulo={item.data.title}
+                                            ubicacion={item.data.ubicacion}
+                                            habitaciones={item.data.habitaciones}
+                                            baños={item.data.baños}
+                                            area={item.data.area}
+                                            categoria={item.data.categoria}
+                                            precio={item.data.precio} 
                                         />
                                     </li>
                                 ))

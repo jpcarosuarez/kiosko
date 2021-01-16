@@ -2,7 +2,7 @@ import './nav.css';
 import NavItem from '../NavItem/navItem';
 
  
-function Nav({titulo}) {
+function Nav() {
     const menuItems = [
         {
             texto:'Apartamentos',

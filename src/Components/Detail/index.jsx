@@ -2,41 +2,42 @@ import {useEffect, useState} from 'react';
 import ProductDetail from './ProductDetail';
 import {useParams, Link} from 'react-router-dom';
 import Comments from './Comments';
-import {products} from '../../products';
 import './Detail.css';
-
+import {getFirestore} from '../../db';
 
 function Detail() {
     const { id } = useParams();
-    const [product, setProduct] = useState(null);
+    const [item, setItem] = useState(null);
+    const db = getFirestore();
 
-    const getProduct = new Promise((resolve, reject) => {
-        const selectedProduct = products.filter(item => item.id === parseInt(id));
-        resolve(selectedProduct[0]);
-    });
 
     useEffect(() => {
-        getProduct
-            .then(response => setProduct(response))
-            .catch(error => console.log(error));
-        // eslint-disable-next-line
+        db.collection('inmuebles').doc(id).get()
+        .then(doc => {
+            if(doc.exists) {
+                setItem(doc.data());
+            }
+        })
+        .catch(e => console.log(e));
+
+     
     }, []);
 
 
     return (
         <>
-            {product ?
+            {item ?
                 <div className="container">
 
                     <ol className="breadcrum">
                         <li>
-                            <Link to={`/${product.category}`}>{product.category.split('-').join(' ')}</Link>
+                            <Link to={`/${item.categoria}`}>{item.categoria.split('-').join(' ')}</Link>
                         </li>
                         <li>
-                            {product.title}
+                            {item.titulo}
                         </li>
                     </ol>
-                    <ProductDetail item={product} />
+                    <ProductDetail item={item} />
                     <Comments />
 
                 </div> :

@@ -45,16 +45,16 @@ const ProductDetail = ({item}) => {
 
             <div className="info" >
 
-                <h1 className="title">{item.title} </h1>
+                <h1 className="title">{item.titulo} </h1>
                 {
-                !!item.description && <p className="description"> {item.description}</p>
+                    !!item.descripcion && <p className="description"> {item.descripcion}</p>
                 }
-                <p className="price"><IoLogoUsd size={20} /> {item.price} x día </p>
+                <p className="price"><IoLogoUsd size={20} /> {item.precio} x día </p>
                 <p className="Habitaciones" ><FaBed size={20}/> {item.habitaciones} </p>
                 <p className="baños" ><FaBath size={20}/> {item.baños} </p>
-                <p className="mts" ><RiRuler2Line size={20}/> {item.mts} </p>
+                <p className="mts" ><RiRuler2Line size={20}/> {item.area} </p>
                 <p className="ubicacion"><MdGpsFixed size={20}/> {item.ubicacion}</p>
-                
+                <p className="categoria"><BiBuildingHouse size={20} />{item.categoria}</p>
                 <p>Entrada</p>
                 <DatePickers />
                 

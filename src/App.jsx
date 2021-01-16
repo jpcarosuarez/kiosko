@@ -3,7 +3,6 @@ import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Footer from './Components/Global/Footer/Footer';
 import Nav from './Components/Global/Nav/nav';
-//import Menu from './Components/Global/Menu/menu';
 import Home from './Components/Home';
 import Category from './Components/Category';
 import Detail from './Components/Detail';
@@ -39,10 +38,10 @@ function App() {
           <Route path="/checkout">
             <Checkout />
           </Route>
-          <Route exact path="/category/:category_name">
+          <Route exact path="/categoria/:nombre_categoria">
             <Category />  
           </Route>  
-          <Route exact path="/:category_name/:id">
+          <Route exact path="/:nombre_categoria/:id">
             <Detail />
           </Route>
           <Route path="*">
