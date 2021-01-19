@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 const Cart = () => {
 
-    const [data, setData] = useContext(Store);
+    const [data] = useContext(Store);
 
     console.log(data);
 
@@ -19,13 +19,13 @@ const Cart = () => {
                     data.items.map(item =>(
                         <li>
 
-                            <img src="{`/inmuebles/${item.item.img}}" alt=""/>
+                            <img src={`/inmuebles/${item.item.img}`} alt=""/>
                             <div>
-                                <h2>{item.item.title} </h2>
+                                <h2>{item.item.titulo} </h2>
         
                                 <p>Cantidad:{item.cantidad} </p>
-                                <p>Precio por unidad: <strong>${item.item.price}</strong></p>
-                                <p>Precio total: <strong>${item.item.price * item.cantidad}</strong></p>
+                                <p>Precio por unidad: <strong>${item.item.precio}</strong></p>
+                                <p>Precio total: <strong>${item.item.precio * item.cantidad}</strong></p>
                             </div>
                         
                         </li>

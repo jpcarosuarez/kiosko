@@ -3,8 +3,10 @@ import ProductCard from '../../Global/ProductCard/ProductCard';
 import './ProductList.css';
 import {BsListUl, BsFillGridFill} from 'react-icons/bs';
 
+
 const ProductsList = ({products}) => {
     const [wayToShow, setWayToShow] = useState(true);
+
 
     return (
         <section className="products">
@@ -18,7 +20,7 @@ const ProductsList = ({products}) => {
 
             <ul className={`products_list ${wayToShow ? 'grid' : 'list'}`}>
                 {
-                    products.map(item => <li key={item.id}><ProductCard id={item.id} title={item.title} price={item.price} ubicacion={item.ubicacion} mts={item.mts} habitaciones={item.habitaciones} baños={item.baños} category={item.category} type={`${wayToShow ? 'grid' : 'list'}`} /></li>)
+                    products.map(item => <li key={item.data.id}><ProductCard id={item.data.id} titulo={item.titulo} precio={item.precio} ubicacion={item.ubicacion} area={item.area} habitaciones={item.habitaciones} baños={item.baños} categoria={item.categoria} type={`${wayToShow ? 'grid' : 'list'}`} /></li>)
                 }
             </ul>
         </section>

@@ -25,7 +25,9 @@ const ProductDetail = ({item}) => {
         setData({
             ...data, 
             cantidad: data.cantidad + qty,
-            items: [...data.items, item],
+            items: [...data.items, {item: item, cantidad: qty}],
+            precioTotal: data.precioTotal + (item.price*qty)
+
         });
         history.push('/cart');
         // alert(`Agregaste ${qty} productos al carrito`);
@@ -39,7 +41,7 @@ const ProductDetail = ({item}) => {
             
 
             <div className="foto">
-                <img src="http://placehold.it/400x400" alt=""/>
+                <img src={`/products/${item.img}`} alt=""/>
 
             </div>
 

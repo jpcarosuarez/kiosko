@@ -5,7 +5,7 @@
 .cart h1 {
   text-align: center;
   font-size: 3rem;
-  color: blue;
+  color: #0b0c10;
 }
 
 .cart ul {
@@ -27,7 +27,7 @@
 }
 
 .cart ul li h2 {
-  color: red;
+  color: #45a29e;
   font-size: 1.8rem;
 }
 
@@ -49,8 +49,8 @@
 
 .cart .final a {
   display: inline-block;
-  background: red;
+  background: #45a29e;
   padding: 0.5rem 1rem;
   font-size: 1.8rem;
-  color: white;
+  color: #0b0c10;
 }

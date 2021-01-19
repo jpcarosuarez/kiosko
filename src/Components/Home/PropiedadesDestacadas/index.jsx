@@ -26,16 +26,7 @@ const PropiedadesDestacadas = () => {
         })
         .catch(e => console.log(e));
 
-        // db.collection('productos').where("outstanding", "==", true)
-        // .onSnapshot(function(querySnapshot) {
-        //     var arr = [];
-        //     querySnapshot.forEach(function(doc) {
-        //         arr.push({id: doc.id, data: doc.data()});
-        //     });
-        //     setItems(arr);
-        // });
     }
-
 
 
     useEffect(() => {
