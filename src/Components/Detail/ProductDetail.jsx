@@ -1,8 +1,9 @@
+import {useState, useContext} from 'react';
+
 import './ProductDetail.css';
 import DatePickers from './../Global/Reservas/index';
 import {Store} from './../../store';
 import {useHistory} from 'react-router-dom';
-import {useState, useContext} from 'react';
 import { IoLogoUsd } from "react-icons/io";
 import { FaBed, FaBath } from "react-icons/fa";
 import { MdGpsFixed } from "react-icons/md";
@@ -26,7 +27,7 @@ const ProductDetail = ({item}) => {
             ...data, 
             cantidad: data.cantidad + qty,
             items: [...data.items, {item: item, cantidad: qty}],
-            precioTotal: data.precioTotal + (item.price*qty)
+            precioTotal: data.precioTotal + (item.precio*qty)
 
         });
         history.push('/cart');
@@ -41,7 +42,7 @@ const ProductDetail = ({item}) => {
             
 
             <div className="foto">
-                <img src={`/products/${item.img}`} alt=""/>
+                <img src={`/inmuebles/${item.img}`} alt=""/>
 
             </div>
 
@@ -51,7 +52,7 @@ const ProductDetail = ({item}) => {
                 {
                     !!item.descripcion && <p className="description"> {item.descripcion}</p>
                 }
-                <p className="price"><IoLogoUsd size={20} /> {item.precio} x día </p>
+                <p className="price"><IoLogoUsd size={20} /> {item.precio} / Noche </p>
                 <p className="Habitaciones" ><FaBed size={20}/> {item.habitaciones} </p>
                 <p className="baños" ><FaBath size={20}/> {item.baños} </p>
                 <p className="mts" ><RiRuler2Line size={20}/> {item.area} </p>

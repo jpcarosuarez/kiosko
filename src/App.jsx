@@ -2,7 +2,7 @@ import {useState} from 'react';
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Footer from './Components/Global/Footer/Footer';
-//import Nav from './Components/Global/Nav/nav';
+import Nav from './Components/Global/Nav/nav';
 import Home from './Components/Home';
 import Category from './Components/Category';
 import Detail from './Components/Detail';
@@ -26,6 +26,8 @@ function App() {
       <BrowserRouter>
       
         <NavAndWidgetCart />
+        <Nav />
+
         <Switch>
           <Route exact path="/">
             <Home />

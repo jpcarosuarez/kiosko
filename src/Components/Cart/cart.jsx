@@ -23,8 +23,9 @@ const Cart = () => {
                             <div>
                                 <h2>{item.item.titulo} </h2>
         
-                                <p>Cantidad:{item.cantidad} </p>
+                                <p>Cantidad:{item.cantidad} Noches</p>
                                 <p>Precio por unidad: <strong>${item.item.precio}</strong></p>
+                                <p>Comision </p>
                                 <p>Precio total: <strong>${item.item.precio * item.cantidad}</strong></p>
                             </div>
                         

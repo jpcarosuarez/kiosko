@@ -6,27 +6,27 @@ function Nav() {
     const menuItems = [
         {
             texto:'Apartamentos',
-            ruta: '/category/apartamentos',
+            ruta: '/apartamentos',
         },        
         {
             texto:'Casas',
-            ruta: '/category/casas',
+            ruta: '/casas',
         },
         {
             texto:'Fincas',
-            ruta:'/category/fincas',
+            ruta:'/fincas',
         },
         {
             texto:'Espacios',
-            ruta:'/category/espacios',
+            ruta:'/espacios',
         },
         {
             texto:'Busco Roomates',
-            ruta:'/category/roomates',
+            ruta:'/roomates',
         },
         {
             texto:'Tienda',
-            ruta:'/category/tienda',
+            ruta:'/tienda',
         },
 
     ]

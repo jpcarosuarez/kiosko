@@ -1,5 +1,5 @@
-import {useState, useEffect} from 'react';
-import ProductCard from 'latienda/src/Components/Global/ProductCard/ProductCard';
+import {useState, useEffect, memo} from 'react';
+import ProductCard from './../../Global/ProductCard/ProductCard';
 import './PropiedadesDestacadas.css';
 import {getFirestore} from '../../../db';
 
@@ -73,4 +73,4 @@ const PropiedadesDestacadas = () => {
     )
 }
  
-export default PropiedadesDestacadas;
+export default memo(PropiedadesDestacadas);

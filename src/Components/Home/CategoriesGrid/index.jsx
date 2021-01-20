@@ -1,3 +1,5 @@
+import {memo} from 'react';
+
 import './CategoriesGrid.css';
 import {Link} from 'react-router-dom';
 
@@ -8,32 +10,32 @@ const CategoriesGrid = () => {
         <section className="categories_grid">
             <div className="container">
                 <div className="item">
-                    <Link to="/category/apartamentos">
+                    <Link to="">
                         Apartamentos  
                     </Link>
                 </div>
                 <div className="item">
-                    <Link to="/category/casas">
+                    <Link to="">
                         Casas  
                     </Link>
                 </div>
                 <div className="item">
-                    <Link to="/category/fincas">
+                    <Link to="">
                         Fincas  
                     </Link>
                 </div>
                 <div className="item">
-                    <Link to="/category/espacios">
+                    <Link to="">
                         Espacios  
                     </Link>
                 </div>
                 <div className="item">
-                    <Link to="/category/Roomates">
+                    <Link to="">
                         Busco Roomates  
                     </Link>
                 </div>
                 <div className="item">
-                    <Link to="/category/tienda">
+                    <Link to="">
                         Tienda 
                     </Link>
                 </div>
@@ -42,4 +44,4 @@ const CategoriesGrid = () => {
     )
 }
 
-export default CategoriesGrid;
+export default memo(CategoriesGrid);
