@@ -28,6 +28,11 @@ function Nav() {
             texto:'Tienda',
             ruta:'/tienda',
         },
+        {
+            texto:'Contacto',
+            ruta:'/contacto',
+
+        },
 
     ]
 

@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Kiosko Inmobiliario
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portal inmobiliario donde podras encontrar arriendos por dias y/o temporadas
 
 ## Available Scripts
 

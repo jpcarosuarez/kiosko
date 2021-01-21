@@ -41,7 +41,7 @@ const PropiedadesDestacadas = () => {
                 {
                     items.length ? 
                     <>
-                        <h2>Encuentra tu arriendo facilmente</h2>
+                        <h2>Arrienda facilmente</h2>
 
                         <ul>
                             {

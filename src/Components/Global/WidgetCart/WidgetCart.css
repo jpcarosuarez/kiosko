@@ -6,11 +6,13 @@
   position: fixed;
   right: -30%;
   top: 0;
-  background: #c5c6c7;
+  background: #1f2833;
   z-index: 2;
   box-shadow: -0.3rem 0 0.3rem rgba(0, 0, 0, 0.2);
   transition: right 0.5s;
+
 }
+
 
 .close {
   right: -30%;
@@ -24,5 +26,11 @@
   font-family: 'Yusei Magic', sans-serif;
   font-size: 3.5rem;
   letter-spacing: 0.2rem;
+  border: white;
+  color: #66fcf1;
+  text-align: center;
+}
 
+.widgetCart .centrar {
+  justify-content: center;
 }
