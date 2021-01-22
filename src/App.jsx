@@ -17,8 +17,8 @@ function App() {
   const [data, setData] = useState({
     items: [],
     cantidad: 0,
-    freeShipping: "75.000",
-    cuotas: 5,
+    valor_minimo_arriendo: "75.000",
+  
   })
 
   return (
@@ -27,7 +27,6 @@ function App() {
       
         <NavAndWidgetCart />
         <Nav />
-
         <Switch>
           <Route exact path="/">
             <Home />
@@ -41,8 +40,6 @@ function App() {
           <Route path="/checkout">
             <Checkout />
           </Route>
-
-
           <Route exact path="/:category_name">
             <Category />  
           </Route>  

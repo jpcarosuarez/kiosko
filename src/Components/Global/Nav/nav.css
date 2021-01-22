@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 .headnav {
-  background: #0b0c10;
+  background: white;
 
 }
 
@@ -30,7 +30,7 @@
 }
 
 .headnav ul a {
-  color: white;
+  color: black;
   font-size: 1.5rem;
   text-decoration: none;  
   font-family: 'Yusei Magic', sans-serif;

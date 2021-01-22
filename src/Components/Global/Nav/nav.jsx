@@ -1,32 +1,28 @@
 import './nav.css';
 import NavItem from '../NavItem/navItem';
 
- 
+
 function Nav() {
+
     const menuItems = [
+
         {
-            texto:'Apartamentos',
-            ruta: '/apartamentos',
-        },        
+            texto:'Arriendos Mensuales',
+            ruta:'/mensual',
+        },
+
         {
-            texto:'Casas',
-            ruta: '/casas',
+            texto:'Arriendos 6 meses o +',
+            ruta:'/mensual+6',
+        },
+
+        {
+            texto:'Espacios por Horas',
+            ruta:'/horas',
         },
         {
-            texto:'Fincas',
-            ruta:'/fincas',
-        },
-        {
-            texto:'Espacios',
-            ruta:'/espacios',
-        },
-        {
-            texto:'Busco Roomates',
-            ruta:'/roomates',
-        },
-        {
-            texto:'Tienda',
-            ruta:'/tienda',
+            texto:'Shop',
+            ruta:'/shop',
         },
         {
             texto:'Contacto',
@@ -36,10 +32,14 @@ function Nav() {
 
     ]
 
+    
+
 
     return (
         <div className="headnav">
             <div className="container">
+
+                <h1>Descubre el arriendo perfecto.</h1>
 
                 <ul>
                     {
@@ -49,6 +49,7 @@ function Nav() {
 
 
             </div>
+
         </div>
     )
 }

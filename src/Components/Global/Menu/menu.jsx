@@ -19,9 +19,13 @@ function Menu({action}) {
             </div>
 
             <div className="anuncio">
-                <p>Amoblados desde {data.freeShipping} | {data.cuotas} cuotas sin interés</p>
+
+                <p>Arriendos disponibles desde $ {data.valor_minimo_arriendo} </p>
 
             </div>
+
+
+            
 
             <div>
                 <NavCart action={action} />

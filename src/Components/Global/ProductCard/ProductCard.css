@@ -60,9 +60,10 @@
 }
 
 .productCard.list img {
-  width: 20%;
+  width: 30%;
+  margin: 10px;
   border-bottom-left-radius: 1.5rem;
-  border-top-right-radius: 0;
+  border-top-right-radius: 1.5rem;
 }
 
 .productCard.list div {

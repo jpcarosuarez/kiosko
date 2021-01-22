@@ -1,7 +1,7 @@
 import {useContext} from 'react';
 
 import './NavCart.css';
-import {AiOutlineShoppingCart} from 'react-icons/ai';
+import {BiBuildingHouse} from 'react-icons/bi';
 import {Store} from '../../../store';
 
 
@@ -10,8 +10,9 @@ const NavCart = ({action}) => {
 
     return (
         <div className="navCart" onClick={action}>
-            <AiOutlineShoppingCart />
-            <span>{data.cantidad}</span>
+            <BiBuildingHouse />
+            
+            <span><strong>{data.cantidad}</strong></span>
         </div>
     )
 }

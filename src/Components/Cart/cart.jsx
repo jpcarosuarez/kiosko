@@ -3,15 +3,19 @@ import {Store} from '../../store';
 import './Cart.css';
 import {Link} from 'react-router-dom';
 
+
+
 const Cart = () => {
 
     const [data] = useContext(Store);
     const [prods, setProds] = useState([]);
-    
+
     useEffect(() => {
         if(data.items.length) {
             const productos = JSON.stringify(data.items);
+            
             localStorage.setItem('productos', productos);
+
 
         }
         if(localStorage.getItem('productos')) {
@@ -23,7 +27,6 @@ const Cart = () => {
 
 
     }, [data.items])
-    
     
     
     console.log(data);
@@ -46,6 +49,7 @@ const Cart = () => {
                                 <p>Precio por noche: <strong>${item.item.precio}</strong></p>
                                 <p>Comision por plataforma: <strong>${(item.item.precio * 3) / 100 }  </strong> </p>
                                 <p>Precio total: <strong>${(item.item.precio * item.cantidad) + ((item.item.precio * 3 ) / 100 )}</strong></p>
+
 
                             </div>
                         

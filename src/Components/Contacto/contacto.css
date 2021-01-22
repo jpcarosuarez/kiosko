@@ -1,0 +1,17 @@
+.contact {
+    display: flex;
+    justify-content: flex-start;
+
+
+}
+
+.contact .cont {
+    display:flex;
+    margin-top: 50px;
+
+}
+
+.contact .cont .h2 {
+    text-align: center;
+}
+
