@@ -31,6 +31,15 @@
   text-align: center;
 }
 
+.widgetCart p {
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  border: white;
+  color: #66fcf1;
+  text-align: center;
+}
+
 .widgetCart .centrar {
   justify-content: center;
 }

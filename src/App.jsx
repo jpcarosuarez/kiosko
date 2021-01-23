@@ -18,6 +18,7 @@ function App() {
     items: [],
     cantidad: 0,
     valor_minimo_arriendo: "75.000",
+    precioTotal: 0,
   
   })
 

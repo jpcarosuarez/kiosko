@@ -13,9 +13,8 @@ const Cart = () => {
     useEffect(() => {
         if(data.items.length) {
             const productos = JSON.stringify(data.items);
-            
+         
             localStorage.setItem('productos', productos);
-
 
         }
         if(localStorage.getItem('productos')) {
@@ -48,9 +47,7 @@ const Cart = () => {
                                 <p>Cantidad: {item.cantidad} Noches</p>
                                 <p>Precio por noche: <strong>${item.item.precio}</strong></p>
                                 <p>Comision por plataforma: <strong>${(item.item.precio * 3) / 100 }  </strong> </p>
-                                <p>Precio total: <strong>${(item.item.precio * item.cantidad) + ((item.item.precio * 3 ) / 100 )}</strong></p>
-
-
+                                <p>Precio total: <strong>${((item.item.precio * item.cantidad)+((item.item.precio * 3 ) / 100 ))}</strong></p>
                             </div>
                         
                         </li>

@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 import {Store} from '../../../store';
 import NavCart from '../NavCart/NavCart';
 
-
 function Menu({action}) {
     const [data] = useContext(Store); 
 
@@ -23,9 +22,7 @@ function Menu({action}) {
                 <p>Arriendos disponibles desde $ {data.valor_minimo_arriendo} </p>
 
             </div>
-
-
-            
+           
 
             <div>
                 <NavCart action={action} />
