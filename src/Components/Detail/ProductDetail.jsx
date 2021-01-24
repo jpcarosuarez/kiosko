@@ -1,7 +1,6 @@
 import {useState, useContext} from 'react';
-
 import './ProductDetail.css';
-import DatePickers from './../Global/Reservas/index';
+import Reservation from '../Global/ReservaDias/index'
 import {Store} from './../../store';
 import {useHistory} from 'react-router-dom';
 import { IoLogoUsd } from "react-icons/io";
@@ -59,11 +58,9 @@ const ProductDetail = ({item}) => {
                 <p className="ubicacion"><MdGpsFixed size={20}/> {item.ubicacion}</p>
                 <p className="categoria"><BiBuildingHouse size={20} />{item.categoria}</p>
                 <p>Entrada</p>
-                <DatePickers />
-                
-                <p>Salida</p>
-                <DatePickers />
 
+                <Reservation />
+                
                 <h2>Huéspedes / Invitados</h2>
 
                 <div className="qty">	

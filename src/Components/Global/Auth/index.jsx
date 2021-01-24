@@ -1,14 +1,10 @@
-import firebase from 'firebase';
+import Root from '../Auth/components/root';
 
+const login =() => {
 
-
-const Auth () {
-
-    handleAuth () {
-        const provider = new firebase.auth.GoogleAuthProvider();
-        
-    }
-
-
-
+    return(
+        <Root />
+    )
 }
+
+export default login;
