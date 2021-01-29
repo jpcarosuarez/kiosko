@@ -12,8 +12,8 @@ const HomeSlider = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToShow: 3,
+        slidesToScroll: 3
     };
 
     return (
@@ -21,10 +21,30 @@ const HomeSlider = () => {
             <Slider {...settings}>
                 <div >
                     <img src={Slide1} alt="Slide 1" className="slider_img" />
-              
                 </div>
                 <div>
                     <img src={Slide2} alt="Slide 1" className="slider_img" />
+                </div>
+                <div>
+                    <img src={Slide3} alt="Slide 1" className="slider_img" />
+                </div>
+                <div>
+                    <img src={Slide3} alt="Slide 1" className="slider_img" />
+                </div>
+                <div>
+                    <img src={Slide3} alt="Slide 1" className="slider_img" />
+                </div>
+                <div>
+                    <img src={Slide3} alt="Slide 1" className="slider_img" />
+                </div>
+                <div>
+                    <img src={Slide3} alt="Slide 1" className="slider_img" />
+                </div>
+                <div>
+                    <img src={Slide3} alt="Slide 1" className="slider_img" />
+                </div>
+                <div>
+                    <img src={Slide3} alt="Slide 1" className="slider_img" />
                 </div>
                 <div>
                     <img src={Slide3} alt="Slide 1" className="slider_img" />

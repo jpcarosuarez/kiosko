@@ -9,11 +9,6 @@ const PropiedadesDestacadas = () => {
     const db = getFirestore();
 
 
-    // const getProducts = new Promise((resolve, reject) => {
-    //     const outstandingProducts = products.filter(item => item.outstanding);
-    //     resolve(outstandingProducts);
-    // })
-
     const getProductsFromDB = () => {
         db.collection('inmuebles').where("outstanding", "==", true).get()
         .then(docs => {
@@ -41,7 +36,7 @@ const PropiedadesDestacadas = () => {
                 {
                     items.length ? 
                     <>
-                        <h1>Arrienda Seguro y Simple</h1>
+                        <h1>Arrienda Simple y Fácil</h1>
 
                         <ul>
                             {

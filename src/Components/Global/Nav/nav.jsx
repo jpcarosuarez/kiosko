@@ -12,8 +12,8 @@ function Nav() {
         },
 
         {
-            texto:'Arriendos 6 meses o +',
-            ruta:'/mensual+6',
+            texto:'Arriendos Diarios',
+            ruta:'/dias',
         },
 
         {
@@ -38,8 +38,6 @@ function Nav() {
     return (
         <div className="headnav">
             <div className="container">
-
-                <h1>Descubre el arriendo perfecto.</h1>
 
                 <ul>
                     {

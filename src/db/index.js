@@ -2,6 +2,8 @@
 import firebase from 'firebase/app';
 import '@firebase/auth';
 import '@firebase/firestore';
+import "@firebase/storage";
+
 
 const app = firebase.initializeApp({
     apiKey: "AIzaSyAi-1txOSKt_0sekqL9QZBBvgFxPKiSslI",
@@ -12,6 +14,11 @@ const app = firebase.initializeApp({
     appId: "1:630764521841:web:0298371a29ba6d89074ed0"
 });
 
+
+export function getStorage(){
+    return firebase.storage(app);
+}
+
 export function getFirebase() {
     return app;
 }
@@ -19,6 +26,7 @@ export function getFirebase() {
 export function getFirestore() {
     return firebase.firestore(app);
 }
+
 
 
 export default firebase;

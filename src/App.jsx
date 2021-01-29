@@ -11,13 +11,14 @@ import Error404 from './Components/Global/Error404';
 import Cart from './Components/Cart/cart';
 import Checkout from './Components/Checkout';
 import NavAndWidgetCart from './Components/Global/NavAndWidgetCart/NavAndWidgetCart';
+import Publicar from './Components/Global/Publicar';
 import {Store} from './store';
+import SignIn from './Components/Admin';
 
 function App() {
   const [data, setData] = useState({
     items: [],
     cantidad: 0,
-    valor_minimo_arriendo: "75.000",
     precioTotal: 0,
   
   })
@@ -25,7 +26,7 @@ function App() {
   return (
     <Store.Provider value={[data, setData]}>
       <BrowserRouter>
-      
+
         <NavAndWidgetCart />
         <Nav />
         <Switch>
@@ -34,6 +35,12 @@ function App() {
           </Route>
           <Route exact path="/contacto">
             <Contact />
+          </Route>
+          <Route exact path="/publicar">
+            <Publicar />
+          </Route>
+          <Route exact path="/login">
+            <SignIn />
           </Route>
           <Route path="/cart">
             <Cart />
