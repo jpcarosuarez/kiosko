@@ -3,7 +3,6 @@ import ProductCard from './../../Global/ProductCard/ProductCard';
 import './PropiedadesDestacadas.css';
 import {getFirestore} from '../../../db';
 
-
 const PropiedadesDestacadas = () => {
     const [items, setItems] = useState([]);
     const db = getFirestore();

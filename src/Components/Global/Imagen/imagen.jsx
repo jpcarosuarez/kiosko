@@ -4,29 +4,14 @@ import { getStorage } from '../../../db';
 
 export default function Imagen({ src, alt}) {
   //Setear imagen por defecto
-  const [url, setUrl] = useState();
+  const [url, setUrl] = useState('https://plchldr.co/1/300x300');//ruta por defecto
+  useEffect(()=>{
+    getStorage().ref(src).getDownloadURL()
+      .then(val=>setUrl(val))
+      .catch(err=>console.log(err))
+  },[]);
 
-  useEffect(() => {
-    getStorage()
-      //referencia al path/nombre del archivo en el storage
-      .ref()
-      .child(`${src}`)
-      //Se obtiene una URL de la imagen
-      .getDownloadURL()
-      //devuelve una promesa con la url
-      .then((val) => setUrl(val))
-      .catch((err) => console.log(err))
-  }, []);
+  return <img src={url} alt={alt} />;
 
-  //uso la url en un tag de imagen
-  
-  
-  return (
-    <div>
-
-      <img src={url} alt={alt} />
-
-
-    </div>
-  );
 }
+

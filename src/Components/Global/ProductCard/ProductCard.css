@@ -54,26 +54,26 @@
   background:#45a29e;
 }
 
-.productCard.list {
+.productCard .list {
   display: flex;
   align-items: center;
 }
 
-.productCard.list img {
+.productCard .list img {
   width: 30%;
   margin: 10px;
   border-bottom-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
 }
 
-.productCard.list div {
+.productCard .list div {
   display: grid;
   align-items: center;
   grid-template-columns: 3fr 1fr 2fr;
   flex: 1;
 }
 
-.productCard.list div h3 {
+.productCard .list div h3 {
   margin: 0;
   min-height: auto;
   text-align: left;
