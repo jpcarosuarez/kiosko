@@ -8,7 +8,7 @@ import { FaBed, FaBath } from "react-icons/fa";
 import { MdGpsFixed } from "react-icons/md";
 import { RiRuler2Line } from "react-icons/ri";
 import { BiBuildingHouse } from "react-icons/bi";
-
+import Imagen from '../Global/Imagen/imagen'
 
 const ProductDetail = ({item}) => {
     const history = useHistory();
@@ -40,14 +40,16 @@ const ProductDetail = ({item}) => {
         <article className="productDetail">
             
 
-            <div className="foto">
-                <img src={`/inmuebles/${item.img}`} alt=""/>
-
-            </div>
 
             <div className="info" >
 
+                
+
                 <h1 className="title">{item.titulo} </h1>
+                <div className="imagenDetail">
+                    <Imagen src={item.img} />             
+
+                </div>
                 {
                     !!item.descripcion && <p className="description"> {item.descripcion}</p>
                 }

@@ -11,6 +11,7 @@ const Home = () => {
         setWidth (e.target.innerWidth);
 
     }
+    
     useEffect (() => {
         window.addEventListener('resize', resizeFn);
         return () => window.removeEventListener('resize', resizeFn);

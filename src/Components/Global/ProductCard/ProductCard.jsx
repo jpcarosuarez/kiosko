@@ -15,7 +15,7 @@ const ProductCard = ({id, titulo, img, ubicacion, area, precio, categoria, habit
         <article className={`productCard ${type}`}>
             
             <div>
-                <Imagen src={img} alt={titulo} width="300px" height="300px" />             
+                <Imagen src={img} alt={titulo}/>             
             </div>
 
             <div>

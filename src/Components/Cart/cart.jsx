@@ -40,7 +40,7 @@ const Cart = () => {
                     data.items.map(item =>(
                         <li>
 
-                            <img src={`/inmuebles/${item.item.img}`} alt=""/>
+                            <img src={item.img} alt={item.titulo}/>
                             <div>
                                 <h2>{item.item.titulo} </h2>
 

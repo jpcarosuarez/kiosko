@@ -26,7 +26,6 @@ function App() {
   return (
     <Store.Provider value={[data, setData]}>
       <BrowserRouter>
-
         <NavAndWidgetCart />
         <Nav />
         <Switch>

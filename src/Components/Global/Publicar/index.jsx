@@ -2,15 +2,19 @@ import {useState, useContext} from 'react';
 import {getFirestore} from '../../../db';
 import {Store} from '../../../store';
 import firebase from 'firebase/app';
+import './publicar.css';
 
 const Publicar = () => {
     const db = getFirestore();
     const [data, setData] = useContext(Store);
     const [publicando, completoPublicado] = useState(false);
+    
 
     const [formData, setFormData] = useState({
+        nombre : '',
+        email: '',
+        tel: '',
         categoria: '',
-        tipoOferta: '',
         direccion: '',
         area: '',
         habitaciones: '',
@@ -21,13 +25,10 @@ const Publicar = () => {
         descripcion: '',
         barrio: '',
         ciudad: '',
-        estrato: '',
-        responsable:'',
-        correo: '',
-        telefono: '',
-        disponibilidadParaMostrar: '',
+        disponibilidad: '',
         img: '',
-        outstanding: '',
+        condiciones: '',
+
 
     })
 
@@ -48,45 +49,116 @@ const Publicar = () => {
         .then(({id}) =>{
             completoPublicado(true);
             setIdInmueble(id);
+        }).then((inmuebleRef) => {
+            console.log("Inmueble registrado con ID: ", inmuebleRef.id);
         })
         .catch(e => console.log(e))
     }
-
+    
 
     return (
         <section className="checkout">
+
             <div className="container">
-                <h2>Publica Facilmente y comienza a arrendar </h2>
+
+                <div className='left-container'>
+                    <h1>
+                        Publica Facilmente y comienza a arrendar
+                    </h1>
+                    <div class='puppy'>
+                    </div>
+                </div>
                 {
                     !publicando ?
-                    <form onSubmit={handleSubmitForm}>
-                        <input type="text" value={formData.nombre} onChange={handleChangeInput} name="nombre" placeholder="Nombre" />
-                        <input type="text" value={formData.apellido} onChange={handleChangeInput} name="apellido" placeholder="Apellido" />
-                        <input type="text" value={formData.cedula} onChange={handleChangeInput} name="cedula" placeholder="Cedula" />
-                        <input type="email" value={formData.email} onChange={handleChangeInput} name="email" placeholder="E-mail" />
-                        <input type="tel" value={formData.tel} onChange={handleChangeInput} name="tel" placeholder="Teléfono" />                    
-                        <input type="text" value={formData.categoria} onChange={handleChangeInput} name="categoria" placeholder="categoria" />                    
-                        <input type="text" value={formData.tipoOferta} onChange={handleChangeInput} name="tipoOferta" placeholder="tipo de Oferta" />                    
-                        <input type="text" value={formData.direccion} onChange={handleChangeInput} name="direccion" placeholder="direccion" />                    
-                        <input type="text" value={formData.area} onChange={handleChangeInput} name="area" placeholder="area" />                    
-                        <input type="text" value={formData.habitaciones} onChange={handleChangeInput} name="habitaciones" placeholder="habitaciones" />                    
-                        <input type="text" value={formData.baños} onChange={handleChangeInput} name="baños" placeholder="baños" />                    
-                        <input type="text" value={formData.tipoPropiedad} onChange={handleChangeInput} name="tipoPropiedad" placeholder="tipo de Propiedad" />                    
-                        <input type="text" value={formData.precio} onChange={handleChangeInput} name="precio" placeholder="precio" />                    
-                        <input type="text" value={formData.titulo} onChange={handleChangeInput} name="titulo" placeholder="titulo" />                    
-                        <input type="text-area" value={formData.descripcion} onChange={handleChangeInput} name="descripcion" placeholder="descripcion" />                    
-                        <input type="text" value={formData.barrio} onChange={handleChangeInput} name="barrio" placeholder="barrio" />                    
-                        <input type="text" value={formData.ciudad} onChange={handleChangeInput} name="ciudad" placeholder="ciudad" />                    
-                        <input type="text" value={formData.estrato} onChange={handleChangeInput} name="estrato" placeholder="estrato" />                    
-                        <input type="text" value={formData.responsable} onChange={handleChangeInput} name="responsable" placeholder="responsable" />                    
-                        <input type="text" value={formData.correo} onChange={handleChangeInput} name="correo" placeholder="correo" />                    
-                        <input type="text" value={formData.telefono} onChange={handleChangeInput} name="telefono" placeholder="telefono" />                    
-                        <input type="text" value={formData.disponibilidad} onChange={handleChangeInput} name="disponibilidad" placeholder="disponibilidad" />                    
-                        <input type="image" value={formData.img} onChange={handleChangeInput} name="img" placeholder="img" />     
-                        <button >Cargar</button>
+                    <form onSubmit={handleSubmitForm}  >
+                        
+                        <div className='right-container'>
+
+                        
+                            <p>Nombre Completo</p>
+                            <input type="text" value={formData.nombre} onChange={handleChangeInput} name="nombre" placeholder="Nombre" />
+                            <br/>
+                            <p>Correo</p>
+                            <input type="email" value={formData.email} onChange={handleChangeInput} name="email" placeholder="Correo" />
+                            <br/>
+                            <p>Teléfono de Contacto</p>
+                            <input type="tel" value={formData.tel} onChange={handleChangeInput} name="tel" placeholder="Teléfono" />                    
+                            <br/>
+                            <p>Categoria</p>
+                            <br/>
+                            <select type="text" value={formData.categoria} onChange={handleChangeInput} name="categoria" placeholder="Categoria">                    
+                            <option value="mensual">Arriendo Mensual</option>
+                            <option value="dias">Arriendo por Días</option>
+                            <option value="horas">Espacios por Horas</option>                  
+                            </select>
+                            <br/>
+                            <p>Dirección</p>
+                            <input type="text" value={formData.direccion} onChange={handleChangeInput} name="direccion" placeholder="Dirección" />                    
+                            <br/>
+                            <p>Area (m2)</p>
+                            <input type="text" value={formData.area} onChange={handleChangeInput} name="area" placeholder="Area" /> 
+                            <br/>
+                            <p>Habitaciones</p><br/>
+                            <select type="option" value={formData.habitaciones} onChange={handleChangeInput} name="habitaciones" placeholder="Habitaciones">  
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5+">5+</option>                        
+                            </select>                  
+                            <br/>
+                            <p>Baño(s)</p><br/>
+                            <select type="option" value={formData.baños} onChange={handleChangeInput} name="baños" placeholder="Baños">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5+">5+</option>                        
+                            </select>  
+                            <br/>
+                            <p>Tipo de propiedad a Arrendar</p><br/>
+                            <select type="text" value={formData.tipoPropiedad} onChange={handleChangeInput} name="tipoPropiedad" placeholder="Tipo de Propiedad" >                    
+                            <option value="apartamento">Apartamento</option>
+                            <option value="casa">Casa</option>
+                            <option value="oficina">Oficina</option>
+                            <option value="local">Local</option>
+                            <option value="finca">Finca</option>                        
+                            </select> 
+                            <br/>
+                            <p>Precio</p>
+                            <input type="text" value={formData.precio} onChange={handleChangeInput} name="precio" placeholder="Precio" /> 
+                            <br/>
+                            <p>Titulo de la publicación</p> <br/>                 
+                            <input type="text" value={formData.titulo} onChange={handleChangeInput} name="titulo" placeholder="Titulo" />  
+                            <br/>
+                            <p>Descripción</p>                  
+                            <input type="text-area" value={formData.descripcion} onChange={handleChangeInput} name="descripcion" placeholder="Descripcion" />  
+                            <br/>
+                            <p>Barrio o Localidad</p>                  
+                            <input type="text" value={formData.barrio} onChange={handleChangeInput} name="barrio" placeholder="Barrio / Localidad" />
+                            <br/>
+                            <p>Ciudad / Municipio</p>                   
+                            <input type="text" value={formData.ciudad} onChange={handleChangeInput} name="ciudad" placeholder="Ciudad" /> 
+                            <p>Disponibilidad para mostrar</p><br/>
+                            <select type="text" value={formData.disponibilidad} onChange={handleChangeInput} name="disponibilidad" placeholder="Disponibilidad">                    
+                            <option value="entreSemana">Entre Semana</option>
+                            <option value="sabado">Solo Sábados</option>
+                            <option value="sabadoDomingos">Sábados y Domingos</option>
+                            <option value="todos">Todos los días</option>
+                            </select> 
+                            <br/>
+                            <p>Fotos</p>
+
+                            <input className="imagen" type="file" value={formData.img} onChange={handleChangeInput} name="img" placeholder="img" />     
+                            <br/>
+
+                            <label for="condiciones">Estoy de acuerdo con los terminos y condiciones</label>
+                            <input type="checkbox" id="condiciones" value="condiciones"/> 
+                            <button >Cargar</button>
+                        </div>
                     
                     </form> :
-                    <p>Estamos Aprobando la publicacion con el siguiente codigo: {idInmueble} <strong>Nombre:</strong> {formData.nombre} <strong>Apellido: </strong> {formData.apellido} <strong>Total </strong>{data.precioTotal}</p>
+                    <p><strong>El inmueble publicado lo podras encontrar con el siguiente codigo: </strong>  {idInmueble} </p>
                     
                 
                 }

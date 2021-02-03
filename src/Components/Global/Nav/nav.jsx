@@ -21,10 +21,6 @@ function Nav() {
             ruta:'/horas',
         },
         {
-            texto:'Shop',
-            ruta:'/shop',
-        },
-        {
             texto:'Contacto',
             ruta:'/contacto',
 

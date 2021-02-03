@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.checkout {
+    display: flex;
+    max-width: 900px;
+}
+
+.left-container {
+    background: #1f2833;
+    overflow: hidden;
+    padding: 40px 0 0 0;
+    position: relative;
+    text-align: center;
+    width: 300px;
+
+}
+
+.left-container h1 {
+    font-size: 1.5rem;
+    color: #66fcf1;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.checkout p {
+    font-size: 1.5rem;
+    color: #1f2833;
+    margin-bottom: 1.5rem; 
+}
+
+form {
+    background: lighten(#66fcf1, 5%);
+    display: flex;
+    align-items: flex-start;
+    width: 500px;
+
+}
+
+form input, select {
+    border: 1px solid #1f2833;
+    border-radius: 4px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 5px;
+}
+form input .imagen {
+    border: none;
+}
+
+button {
+    border: none;
+    border-radius: 50%;
+    height: 38px;
+    margin-right: 10px;
+    outline: none;
+    width: 38px;
+}
