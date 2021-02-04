@@ -57,7 +57,7 @@ const Publicar = () => {
     
 
     return (
-        <section className="checkout">
+        <section className="publicar">
 
             <div className="container">
 
@@ -74,10 +74,12 @@ const Publicar = () => {
                         
                         <div className='right-container'>
 
-                        
-                            <p>Nombre Completo</p>
-                            <input type="text" value={formData.nombre} onChange={handleChangeInput} name="nombre" placeholder="Nombre" />
-                            <br/>
+                            <div>
+                                <p>Nombre Completo</p>
+                                <input type="text" value={formData.nombre} onChange={handleChangeInput} name="nombre" placeholder="Nombre" />
+                                <br/>
+                            </div>
+
                             <p>Correo</p>
                             <input type="email" value={formData.email} onChange={handleChangeInput} name="email" placeholder="Correo" />
                             <br/>
@@ -147,7 +149,7 @@ const Publicar = () => {
                             <option value="todos">Todos los días</option>
                             </select> 
                             <br/>
-                            <p>Fotos</p>
+                            <p>Certificado de tradicion y libertad no mayor a 30 días</p>
 
                             <input className="imagen" type="file" value={formData.img} onChange={handleChangeInput} name="img" placeholder="img" />     
                             <br/>
