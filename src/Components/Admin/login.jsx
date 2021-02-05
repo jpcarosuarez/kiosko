@@ -71,7 +71,7 @@ class Login extends Component {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+              Ingreso
             </Typography>
             <TextField
               variant="outlined"
@@ -94,7 +94,7 @@ class Login extends Component {
             />
             {loginError && (
               <Typography component="p" className={classes.errorText}>
-                Incorrect email or password.
+                Correo o contraseña incorrecta.
               </Typography>
             )}
             <Button
@@ -105,7 +105,7 @@ class Login extends Component {
               className={classes.submit}
               onClick={this.handleSubmit}
             >
-              Sign In
+              ingresar
             </Button>
           </Paper>
         </Container>

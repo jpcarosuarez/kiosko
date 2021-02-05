@@ -6,6 +6,7 @@ import firebase from 'firebase/app';
 
 
 const Checkout = () => {
+
     const db = getFirestore();
     const [data, setData] = useContext(Store);
     const [venta, completoVenta] = useState(false);
@@ -16,12 +17,12 @@ const Checkout = () => {
         email: '',
         tel: '',
     })
+
     const[idCompra, setIdCompra] = useState('');
 
     const handleChangeInput = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value});
     }
-        
     
     const compra = {
         user: formData,
