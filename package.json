@@ -25,6 +25,7 @@
     "redux-thunk": "^2.3.0",
     "rsuite": "^4.8.6",
     "slick-carousel": "^1.8.1",
+    "svg-loaders-react": "^2.2.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
