@@ -12,8 +12,9 @@ import Cart from './Components/Cart/cart';
 import Checkout from './Components/Checkout';
 import NavAndWidgetCart from './Components/Global/NavAndWidgetCart/NavAndWidgetCart';
 import Publicar from './Components/Global/Publicar';
+import SignIn from './Components/Admin/index';
+
 import {Store} from './store';
-import SignIn from './Components/Admin/login';
 
 function App() {
   const [data, setData] = useState({

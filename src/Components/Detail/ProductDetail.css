@@ -12,6 +12,10 @@
     color: #1f2833;
     margin-bottom: 1.5rem;
 }
+.productDetail .info .imagenDetail{
+    display: flex;
+    align-items: center;
+}
 
 .productDetail .info .description {
     font-size: 1.4rem;

@@ -44,7 +44,7 @@ const PropiedadesDestacadas = () => {
                                         <ProductCard
                                             id={item.id}
                                             img={item.data.img}
-                                            titulo={item.data.title}
+                                            titulo={item.data.titulo}
                                             ubicacion={item.data.ubicacion}
                                             habitaciones={item.data.habitaciones}
                                             baños={item.data.baños}

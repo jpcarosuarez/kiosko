@@ -1,13 +1,18 @@
 .contact {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: flex-start;
-
+    align-items: stretch;
+    align-content: space-between
 
 }
 
 .contact .cont {
-    display:flex;
-    margin-top: 50px;
+    flex: 0 0 auto;
+    margin: 4px;
+    flex-wrap: wrap;
+    flex-direction: row;
 
 }
 
