@@ -15,7 +15,10 @@ function Detail() {
         db.collection('inmuebles').doc(id).get()
         .then(doc => {
             if(doc.exists) {
-                setItem(doc.data());
+                const data = doc.data();
+                data.id = id;
+                setItem(data);
+                
             }
         })
         .catch(e => console.log(e));

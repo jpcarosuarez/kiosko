@@ -17,7 +17,7 @@ const ProductDetail = ({item}) => {
     const db = getFirestore();
 
     const handleClickResta = () => {	
-        
+
         if(qty > 1) {	
             setQty(qty - 1);	
         }	
@@ -26,6 +26,8 @@ const ProductDetail = ({item}) => {
 
     const onAdd = () => {
         const itemId = item.id;
+        console.log('itemId',item.id);
+        console.log('item',item);
         const exist = data.items.some(items => items.id === itemId);
         if(exist) {
             const reservas = data.items.map ( producto => {
@@ -40,19 +42,23 @@ const ProductDetail = ({item}) => {
 
             setData({
                 ...data, 
-                cantidad: data.cantidad + qty,
+                cantidad: data.quantity + qty,
                 items:[...data.items],
-                precioTotal: data.precioTotal + (item.precio*qty)
+                precioTotal: data.precioTotal + (item.precio*qty)*1.03
 
             });
+
+
         } else {
             item.quantity = qty;
             setData({
                 ...data, 
-                cantidad: data.cantidad + qty,
+                cantidad: data.quantity + qty,
                 items: [...data.items, item],
-                precioTotal: data.precioTotal + (item.precio * qty)
+                precioTotal: data.precioTotal + (item.precio * qty)*1.03
             })
+            console.log("data",data);
+            
         }
         history.push('/cart');
         // alert(`Agregaste ${qty} productos al carrito`);	
