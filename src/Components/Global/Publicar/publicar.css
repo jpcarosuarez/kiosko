@@ -14,14 +14,13 @@
 
 .left-container {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     background: #1f2833;
     overflow: hidden;
     text-align: center;
     width: 700px;
-    height: 900px;
-    padding-top: 5rem;
-    margin-left: 200px;
+    padding: 2rem 2rem;
+    margin: auto;
 
 }
 
@@ -41,7 +40,7 @@
 
 }
 .left-container h3 {
-    color: white;
+    color: #66fcf1;
     font-size: 1rem;
     font-family: 'Yusei Magic', sans-serif;
     letter-spacing: 0.1rem;
@@ -56,7 +55,10 @@
     letter-spacing: 0.1rem;
 }
 .publicar .right-container {
-    margin: 2rem 0rem 0rem 2rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 
 }
 .publicar .right-container .Contacto {
@@ -65,7 +67,9 @@
     text-align: center;
 }
 .publicar .right-container .Contacto div{
-    margin-right: 2rem;
+    margin: 2rem 2rem;
+    
+
 }
 .publicar form input, select {
     border: 1px solid #1f2833;
@@ -80,6 +84,7 @@
 }
 
 .publicar button {
+    text-align: center;
     border: none;
     border-radius: 12%;
     height: 38px;

@@ -65,10 +65,9 @@ const Publicar = () => {
                         <h1>
                             Publica facilmente y comienza a arrendar.
                         </h1>
-                        <h2>
-                            M.A. 2018122
-                        </h2>
-                        <h3>En Kiosko Inmobiliario nos preocupamos por la seguridad y veracidad de los inmuebles. Por lo cual es sumamente importante que tengas el Certificado de Tradición y Libertad para asegurar a los futuros arrendatarios una mayor tranquilidad durante el arriendo.</h3>
+
+                        <h2>En Kiosko Inmobiliario (M.A 2018122) nos preocupamos por la seguridad y veracidad de los inmuebles para asegurar a los futuros arrendatarios una mayor tranquilidad durante el arriendo.</h2>
+                        <h3> Requisitos: Copia de la cédula y Certificado de Tradición y Libertad. </h3>
 
                     </div>
             </div>
@@ -103,82 +102,100 @@ const Publicar = () => {
                                     <br/>
                                 </div>
 
+
+
+
                             
                             </div>
 
-                            <p>Tipo de propiedad a Arrendar</p>
-                            <select type="text" value={formData.tipoPropiedad} onChange={handleChangeInput} name="tipoPropiedad" placeholder="Tipo de Propiedad" >                    
-                            <option value="apartamento">Apartamento</option>
-                            <option value="casa">Casa</option>
-                            <option value="oficina">Oficina</option>
-                            <option value="local">Local</option>
-                            <option value="finca">Finca</option>                        
-                            </select> 
-
-                            <p>Categoria de Arriendo</p>
-                            <select value={formData.categoria} onChange={handleChangeInput} name="categoria" placeholder="Categoria">                    
-                            <option value="mensual">Arriendo Mensual</option>
-                            <option value="dias">Arriendo por Días</option>
-                            <option value="horas">Espacios por Horas</option>                  
-                            </select>
-                            
+                            <div>
+                                <p>Tipo de propiedad a Arrendar</p>
+                                <select type="text" value={formData.tipoPropiedad} onChange={handleChangeInput} name="tipoPropiedad" placeholder="Tipo de Propiedad" >                    
+                                <option value="apartamento">Apartamento</option>
+                                <option value="casa">Casa</option>
+                                <option value="oficina">Oficina</option>
+                                <option value="local">Local</option>
+                                <option value="finca">Finca</option>                        
+                                </select> 
+                            </div>
+                            <div>
+                                <p>Categoria de Arriendo</p>
+                                <select value={formData.categoria} onChange={handleChangeInput} name="categoria" placeholder="Categoria">                    
+                                <option value="mensual">Arriendo Mensual</option>
+                                <option value="dias">Arriendo por Días</option>
+                                <option value="horas">Espacios por Horas</option>                  
+                                </select>
+                            </div>
+                            <div>
                             <p>Precio</p>
-                            <input type="text" value={formData.precio} onChange={handleChangeInput} name="precio" placeholder="Precio" /> 
-                            <p>Titulo de la publicación</p>                
-                            <input type="text" value={formData.titulo} onChange={handleChangeInput} name="titulo" placeholder="Titulo" />  
+                                <input type="text" value={formData.precio} onChange={handleChangeInput} name="precio" placeholder="Precio" /> 
+                                <p>Titulo de la publicación</p>                
+                                <input type="text" value={formData.titulo} onChange={handleChangeInput} name="titulo" placeholder="Titulo" />  
+    
+                            </div>
+                            <div>
+                                <p>Area (m2)</p>
+                                <input type="text" value={formData.area} onChange={handleChangeInput} name="area" placeholder="Area" />                               
+                            </div>
+                            <div>
+                                <p>Habitaciones</p><br/>
+                                <select type="option" value={formData.habitaciones} onChange={handleChangeInput} name="habitaciones" placeholder="Habitaciones">  
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5+">5+</option>                        
+                                </select>   
+                            </div>
+               
+                            <div>
+                                <p>Baño(s)</p>
+                                <select type="option" value={formData.baños} onChange={handleChangeInput} name="baños" placeholder="Baños">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5+">5+</option>                        
+                                </select> 
+                            </div>
+ 
+                            <div>
+                                <p>Descripción</p>                  
+                                <input type="text-area" value={formData.descripcion} onChange={handleChangeInput} name="descripcion" placeholder="Descripcion" />  
+                                
+                                <p>Barrio o Localidad</p>                  
+                                <input type="text" value={formData.barrio} onChange={handleChangeInput} name="barrio" placeholder="Barrio / Localidad" />
+                                
+                                <p>Ciudad / Municipio</p>                   
+                                <input type="checked" value={formData.ciudad} onChange={handleChangeInput} name="ciudad" placeholder="Ciudad" /> 
 
-                            <p>Area (m2)</p>
-                            <input type="text" value={formData.area} onChange={handleChangeInput} name="area" placeholder="Area" /> 
-                            
-                            <p>Habitaciones</p><br/>
-                            <select type="option" value={formData.habitaciones} onChange={handleChangeInput} name="habitaciones" placeholder="Habitaciones">  
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5+">5+</option>                        
-                            </select>                  
-                            
-                            <p>Baño(s)</p>
-                            <select type="option" value={formData.baños} onChange={handleChangeInput} name="baños" placeholder="Baños">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5+">5+</option>                        
-                            </select>  
-                            
-                            <p>Descripción</p>                  
-                            <input type="text-area" value={formData.descripcion} onChange={handleChangeInput} name="descripcion" placeholder="Descripcion" />  
-                            
-                            <p>Barrio o Localidad</p>                  
-                            <input type="text" value={formData.barrio} onChange={handleChangeInput} name="barrio" placeholder="Barrio / Localidad" />
-                            
-                            <p>Ciudad / Municipio</p>                   
-                            <input type="checked" value={formData.ciudad} onChange={handleChangeInput} name="ciudad" placeholder="Ciudad" /> 
+                                
+                                <p>Dirección</p>
+                                <input type="text" value={formData.direccion} onChange={handleChangeInput} name="direccion" placeholder="Dirección" />                    
+                                
+                            </div>
+                            <div>
+                                <p>Disponibilidad para mostrar</p>
+                                <select type="text" value={formData.disponibilidad} onChange={handleChangeInput} name="disponibilidad" placeholder="Disponibilidad">                    
+                                <option value="entreSemana">Entre Semana</option>
+                                <option value="sabado">Solo Sábados</option>
+                                <option value="sabadoDomingos">Sábados y Domingos</option>
+                                <option value="todos">Todos los días</option>
+                                </select>
+                            </div>
 
-                            
-                            <p>Dirección</p>
-                            <input type="text" value={formData.direccion} onChange={handleChangeInput} name="direccion" placeholder="Dirección" />                    
-                            
+ 
+                            <div>
+                                <p>Certificado de tradicion y libertad no mayor a 30 días</p>
 
-
-                            <p>Disponibilidad para mostrar</p>
-                            <select type="text" value={formData.disponibilidad} onChange={handleChangeInput} name="disponibilidad" placeholder="Disponibilidad">                    
-                            <option value="entreSemana">Entre Semana</option>
-                            <option value="sabado">Solo Sábados</option>
-                            <option value="sabadoDomingos">Sábados y Domingos</option>
-                            <option value="todos">Todos los días</option>
-                            </select> 
-
-                            <p>Certificado de tradicion y libertad no mayor a 30 días</p>
-
-                            <input className="imagen" type="file" value={formData.img} onChange={handleChangeInput} name="img" placeholder="img" />     
-                            <br/>
-
-                            <label for="condiciones">Estoy de acuerdo con los terminos y condiciones</label>
-                            <input type="checkbox" id="condiciones" value="condiciones"/> 
+                                <input className="imagen" type="file" value={formData.img} onChange={handleChangeInput} name="img" placeholder="img" />     
+                                <br/>
+                                <label for="condiciones">Estoy de acuerdo con los terminos y condiciones</label>
+                                <input type="checkbox" id="condiciones" value="condiciones"/> 
+                            </div>
                             <button >Cargar</button>
+
+
                         </div>
                     
                     </form> :

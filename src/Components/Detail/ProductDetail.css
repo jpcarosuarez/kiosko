@@ -125,6 +125,23 @@
     text-align: center;
     justify-content: center;
 }
+.productDetail .contQty .qty button {
+    font-size: 2rem;
+    color: #1f2833;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: block;
+    border: none;
+    padding: 1rem;
+    outline: none;
+    cursor: pointer;
+    background:#0b0c10;
+    border-radius: 1rem;
+    color: #66fcf1;
+    margin-top: 1rem;
+    transition: background 0.5s;
+
+}
 
 .productDetail .contBtn .btn {
     
