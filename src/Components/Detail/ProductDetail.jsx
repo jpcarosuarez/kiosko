@@ -1,4 +1,4 @@
-import {useState, useContext} from 'react';
+import {useState, useContext, useEffect} from 'react';
 import './ProductDetail.css';
 import Reservation from '../Global/ReservaDias/index'
 import {Store} from './../../store';
@@ -7,14 +7,17 @@ import { FaBed, FaBath } from "react-icons/fa";
 import { MdGpsFixed } from "react-icons/md";
 import { RiRuler2Line } from "react-icons/ri";
 import { BiBuildingHouse } from "react-icons/bi";
-import Imagen from '../Global/Imagen/imagen'
+import Imagen from '../Global/Imagen/imagen';
+import {getFirestore} from '../../db';
 
 const ProductDetail = ({item}) => {
     const history = useHistory();
     const [data, setData] = useContext(Store);
-    const [qty, setQty] = useState(1);	
+    const [qty, setQty] = useState(1);
+    const db = getFirestore();
 
     const handleClickResta = () => {	
+        
         if(qty > 1) {	
             setQty(qty - 1);	
         }	
@@ -51,7 +54,8 @@ const ProductDetail = ({item}) => {
                 precioTotal: data.precioTotal + (item.precio * qty)
             })
         }
-        
+        history.push('/cart');
+        // alert(`Agregaste ${qty} productos al carrito`);	
 
     };
 

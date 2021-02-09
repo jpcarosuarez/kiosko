@@ -1,10 +1,8 @@
 import {useContext, useEffect, useState} from 'react';
 import {Store} from '../../store';
 import './Cart.css';
-import { useHistory } from "react-router-dom";
-
 import {Link} from 'react-router-dom';
-
+import Imagen from '../Global/Imagen/imagen';
 
 
 const Cart = () => {
@@ -13,10 +11,9 @@ const Cart = () => {
     const [prods, setProds] = useState([]);
 
     useEffect(() => {
-        const productos = JSON.stringify(data.items);
 
         if(data.items.length) {
-            
+            const productos = JSON.stringify(data.items);
             localStorage.setItem('productos', productos);
 
         }
@@ -41,17 +38,16 @@ const Cart = () => {
             <ul>
 
                 {
-                    data.items.map(item =>(
-                        <li>
+                    prods.map(item =>(
+                        <li key={item.id}>
 
-                            <img src={item.img} alt={item.titulo}/>
+                            <Imagen src={item.img} alt={item.titulo}/>
                             <div>
-                                <h2>{item.item.titulo} </h2>
-
-                                <p>Cantidad: {item.cantidad} Noches</p>
-                                <p>Precio por noche: <strong>${item.item.precio}</strong></p>
-                                <p>Comision por plataforma: <strong>${(item.item.precio * 3) / 100 }  </strong> </p>
-                                <p>Precio total: <strong>${((item.precio * item.cantidad)+((item.item.precio * 3 ) / 100 ))}</strong></p>
+                                <h2>{item.titulo} </h2><br/>
+                                <p>Cantidad: {item.quantity} Noches</p>
+                                <p>Precio por noche: <strong>${item.precio}</strong></p>
+                                <p>Comision por plataforma: <strong>${(item.precio * 3) / 100 }  </strong> </p>
+                                <p>Precio total: <strong>${((item.precio * item.cantidad)+((item.precio * 3 ) / 100 ))}</strong></p>
                             </div>
 
                         </li>
