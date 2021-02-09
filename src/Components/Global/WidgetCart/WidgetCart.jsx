@@ -1,11 +1,16 @@
 import {useContext} from 'react';
 import './WidgetCart.css';
+import { useHistory } from "react-router-dom";
+
 import {Store} from '../../../store';
 import {BiBuildingHouse} from 'react-icons/bi';
 import {Link} from 'react-router-dom';
 
 const WidgetCart = ({show, action}) => {
     const [data] = useContext(Store);
+    const items = [...data.items];
+    const history = useHistory();
+
     console.log(data);
  
 
@@ -15,7 +20,8 @@ const WidgetCart = ({show, action}) => {
             <h1><BiBuildingHouse /> Checkout</h1>
 
             {
-                data.items.map(item => <p key={item.id}>{item.item.titulo} <br/> Cantidad: {item.cantidad} <br/>Precio: ${item.item.precio}</p>)
+            data.items.length ?
+                items.map((items, WidgetCart) => (<p key={items.id}> {items.titulo} <br/> Cantidad: {items.quantity} <br/>Precio: ${items.precio}</p>)) : <p> tu carrito esta vacío</p>
             }
 
             <div className="final" >

@@ -7,6 +7,15 @@
   --padding: 10px;
   padding: var(--padding);
   box-shadow: inset 0 0 0 var(--padding) white;
+  font-family: 'Yusei Magic', sans-serif;
+
+}
+.categories_grid h1 {
+  font-size: 3rem;
+  color: #1f2833;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
 
 }
 

@@ -33,7 +33,7 @@ function Detail() {
                         <li>
                             <Link to={`/${item.categoria}`}>{item.categoria.split('-').join(' ')}</Link>
                         </li>
-                        <li>
+                        <li className="titulo">
                             {item.titulo}
                         </li>
                     </ol>

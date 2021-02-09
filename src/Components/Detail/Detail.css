@@ -13,7 +13,7 @@
   letter-spacing: 0.1rem;
   color: #1f2833;
   font-weight: 600;
-
+  margin-left: 20px;
 }
 
 .breadcrum li::first-letter {

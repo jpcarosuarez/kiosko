@@ -59,18 +59,22 @@ const Publicar = () => {
 
     return (
         <section >
+            
+            <div className="left-container">
+                    <div>
+                        <h1>
+                            Publica facilmente y comienza a arrendar.
+                        </h1>
+                        <h2>
+                            M.A. 2018122
+                        </h2>
+                        <h3>En Kiosko Inmobiliario nos preocupamos por la seguridad y veracidad de los inmuebles. Por lo cual es sumamente importante que tengas el Certificado de Tradición y Libertad para asegurar a los futuros arrendatarios una mayor tranquilidad durante el arriendo.</h3>
+
+                    </div>
+            </div>
 
             <div className="publicar">
 
-                <div className="left-container">
-                    <h1>
-                        Publica facilmente y comienza a arrendar.
-                    </h1>
-                    <h2>
-                        M.A. 2018122
-                    </h2>
-                    <h3>En Kiosko Inmobiliario nos preocupamos por la seguridad y veracidad de los inmuebles. Por lo cual es sumamente importante que tengas el Certificado de Tradición y Libertad para asegurar a los futuros arrendatarios una mayor tranquilidad durante el arriendo.</h3>
-                </div>
                 {
                     !publicando ?
                     <form onSubmit={handleSubmitForm}  >
@@ -89,7 +93,7 @@ const Publicar = () => {
                                     <br/>
                                 </div>
                                 <div>
-                                    <p>Teléfono de Contacto</p>
+                                    <p>Teléfono </p>
                                     <input type="tel" value={formData.tel} onChange={handleChangeInput} name="tel" placeholder="Teléfono" />                    
                                     <br/>
                                 </div>
@@ -152,7 +156,6 @@ const Publicar = () => {
                             
                             <p>Ciudad / Municipio</p>                   
                             <input type="checked" value={formData.ciudad} onChange={handleChangeInput} name="ciudad" placeholder="Ciudad" /> 
-                            <p>Disponibilidad para mostrar</p>
 
                             
                             <p>Dirección</p>
@@ -160,7 +163,7 @@ const Publicar = () => {
                             
 
 
-
+                            <p>Disponibilidad para mostrar</p>
                             <select type="text" value={formData.disponibilidad} onChange={handleChangeInput} name="disponibilidad" placeholder="Disponibilidad">                    
                             <option value="entreSemana">Entre Semana</option>
                             <option value="sabado">Solo Sábados</option>

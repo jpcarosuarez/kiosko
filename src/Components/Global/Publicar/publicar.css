@@ -12,27 +12,27 @@
 
 }
 
-.publicar .left-container {
+.left-container {
+    display: flex;
+    flex-direction:column;
     background: #1f2833;
     overflow: hidden;
     text-align: center;
-    width: 300px;
+    width: 700px;
     height: 900px;
-    display: flex;
-    position: relative;
-    flex-direction:column;
     padding-top: 5rem;
+    margin-left: 200px;
 
 }
 
-.publicar .left-container h1 {
+.left-container h1 {
     font-size: 1.5rem;
     color: #66fcf1;
     display: inline-block;
     font-family: 'Yusei Magic', sans-serif;
     letter-spacing: 0.1rem;
 }
-.publicar .left-container h2 {
+.left-container h2 {
     color: white;
     font-size: 1rem;
     font-family: 'Yusei Magic', sans-serif;
@@ -40,7 +40,7 @@
     margin-top: 2rem;
 
 }
-.publicar .left-container h3 {
+.left-container h3 {
     color: white;
     font-size: 1rem;
     font-family: 'Yusei Magic', sans-serif;
@@ -61,11 +61,12 @@
 }
 .publicar .right-container .Contacto {
     display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
+    margin-top: 2rem;
+    text-align: center;
 }
-
-
+.publicar .right-container .Contacto div{
+    margin-right: 2rem;
+}
 .publicar form input, select {
     border: 1px solid #1f2833;
     border-radius: 4px;

@@ -4,7 +4,7 @@ import Logo from './img/logoKiosko.png';
 import {Link} from 'react-router-dom';
 import {Store} from '../../../store';
 import NavCart from '../NavCart/NavCart';
-import {BiBuildingHouse, BiUserCircle} from 'react-icons/bi';
+import {BiBuildingHouse} from 'react-icons/bi';
 import Button from '@material-ui/core/Button';
 //import SignIn from '../../Admin/index';
 import { makeStyles } from '@material-ui/core/styles';
@@ -29,9 +29,6 @@ function Menu({action}) {
         <div className="top">
             <div className={classes.root}>
                     
-                <p><BiUserCircle /> Ingresar</p>
-
-
                 <Button variant="outlined" href="/publicar"><BiBuildingHouse /><p>Publicar</p> </Button>
               
             </div>

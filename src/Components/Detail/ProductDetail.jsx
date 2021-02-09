@@ -3,7 +3,6 @@ import './ProductDetail.css';
 import Reservation from '../Global/ReservaDias/index'
 import {Store} from './../../store';
 import {useHistory} from 'react-router-dom';
-import { IoLogoUsd } from "react-icons/io";
 import { FaBed, FaBath } from "react-icons/fa";
 import { MdGpsFixed } from "react-icons/md";
 import { RiRuler2Line } from "react-icons/ri";
@@ -21,16 +20,39 @@ const ProductDetail = ({item}) => {
         }	
     }
 
-    const onAdd = () => {
-        setData({
-            ...data, 
-            cantidad: data.cantidad + qty,
-            items: [...data.items, {item: item, cantidad: qty}],
-            precioTotal: data.precioTotal + (item.precio*qty)
 
-        });
-        history.push('/cart');
-        // alert(`Agregaste ${qty} productos al carrito`);
+    const onAdd = () => {
+        const itemId = item.id;
+        const exist = data.items.some(items => items.id === itemId);
+        if(exist) {
+            const reservas = data.items.map ( producto => {
+                if( producto.id === itemId) {
+                    producto.quantity += qty;
+                    return producto;
+                } else {
+                    return producto;
+                }
+            }); 
+            data.items = [...reservas] 
+
+            setData({
+                ...data, 
+                cantidad: data.cantidad + qty,
+                items:[...data.items],
+                precioTotal: data.precioTotal + (item.precio*qty)
+
+            });
+        } else {
+            item.quantity = qty;
+            setData({
+                ...data, 
+                cantidad: data.cantidad + qty,
+                items: [...data.items, item],
+                precioTotal: data.precioTotal + (item.precio * qty)
+            })
+        }
+        
+
     };
 
     console.log(data);
@@ -45,39 +67,72 @@ const ProductDetail = ({item}) => {
 
                 
 
-                <h1 className="title">{item.titulo} </h1>
+                <h1 className="title"> {item.titulo} </h1>
+                <p className="price"> $ {item.precio} / Noche </p>
+
                 <div className="imagenDetail">
                     <Imagen src={item.img} />             
 
                 </div>
+                
                 {
                     !!item.descripcion && <p className="description"> {item.descripcion}</p>
                 }
-                <p className="price"><IoLogoUsd size={20} /> {item.precio} / Noche </p>
-                <p className="Habitaciones" ><FaBed size={20}/> {item.habitaciones} </p>
-                <p className="baños" ><FaBath size={20}/> {item.baños} </p>
-                <p className="mts" ><RiRuler2Line size={20}/> {item.area} </p>
-                <p className="ubicacion"><MdGpsFixed size={20}/> {item.ubicacion}</p>
-                <p className="categoria"><BiBuildingHouse size={20} />{item.categoria}</p>
-                <p>Entrada</p>
 
-                <Reservation />
-                
-                <h2>Huéspedes / Invitados</h2>
+                <div className="caracteristicas">
+                    <div>
+                        <p className="ubicacion"> <MdGpsFixed size={20}/> ubicacion: {item.ubicacion}</p>
+ 
+                    </div>
+                    <div>
+                        <p className="Habitaciones" > <FaBed size={20}/> Hab: {item.habitaciones} </p>
+ 
+                    </div>
+                    <div>
+                        <p className="baños" > <FaBath size={20}/> Baño(s): {item.baños} </p>
+   
+                    </div>
+                    <div>
+                        <p className="mts" > <RiRuler2Line size={20}/> Area de {item.area} m2</p>
+   
+                    </div>
+                    <div>
+                        <p className="categoria"> <BiBuildingHouse size={20} /> Categoria de Arriendo: {item.categoria}</p>
 
-                <div className="qty">	
-                    <button 	
-                        disabled={qty === 1 ? 'disabled' : null } 	
-                        onClick={handleClickResta}	
-                    >	
-                        -	
-                    </button>	
-                    <input type="text" value={qty} readOnly/>	
-                    <button onClick={() => setQty(qty + 1)}>+</button>
+                    </div>
 
                 </div>
 
-                <button className="btn" onClick={onAdd}>Reservar</button>
+                <h2>Huéspedes / Invitados</h2>
+                <div className="contQty">
+                    <div className="qty">
+        
+                        <button 	
+                            disabled={qty === 1 ? 'disabled' : null } 	
+                            onClick={handleClickResta}	
+                        >	
+                            -	
+                        </button>	
+                        <input type="text" value={qty} readOnly/>	
+                        <button onClick={() => setQty(qty + 1)}>+</button>
+
+                    </div>
+
+                </div>
+
+                <div className="reservation">
+                    <Reservation />
+
+                </div >
+                
+
+
+                <div className="contBtn">
+
+                    <button className="btn" onClick={onAdd}>Reservar</button>
+
+                </div>
+                
             </div>                 
                                  
         </article>

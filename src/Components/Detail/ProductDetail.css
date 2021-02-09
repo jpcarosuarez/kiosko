@@ -1,26 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 
 .productDetail {
-    display: grid;
-    grid-template-columns: 40% 1fr;
-    grid-gap: 3rem;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Yusei Magic', sans-serif;
+
 }
 
 .productDetail .info .title {
     font-size: 3rem;
     color: #1f2833;
     margin-bottom: 1.5rem;
+    text-align: center;
+
+
 }
-.productDetail .info .imagenDetail{
+
+.info .reservation {
+    margin-top: 1rem;
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+
+
+}
+
+.productDetail .info .imagenDetail {
+    display: flex;
+    justify-content: center ;
 }
 
 .productDetail .info .description {
+    text-align: center;    
     font-size: 1.4rem;
     color: #0b0c10;
-    margin-bottom: 2rem;
+    width: 60%;
+    margin: 2rem auto ;
+
 }
 
 .productDetail .info .price {
@@ -28,12 +47,40 @@
     font-weight: 500;
     color: #0b0c10;
     margin-bottom: 2rem;
+    margin-right: 2rem;    
+    display: flex;
+    justify-content: flex-end;
 }
-.productDetail .qty {
+
+.productDetail .info .caracteristicas {
+    display: flex;
+    margin-top: 2rem;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+.productDetail .info .caracteristicas div {
+    display: flex;
+    margin-right: 2rem;
+
+}
+.productDetail .info h2 {
+    font-size: 2rem;
+    color: #1f2833;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+
+.productDetail .info .qty {
     margin-top: 2rem;
     width: 150px;
     margin-bottom: 2rem;
     display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+
 }
 
 .productDetail .qty .button {
@@ -46,6 +93,8 @@
     border-radius: 1rem;
     color: #66fcf1;
     font-size: 1.5rem;
+    align-content: center;
+
 }
 
 .productDetail .qty button:disabled {
@@ -63,9 +112,27 @@
     outline: none;
 
 }
+.productDetail .contQty {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
 
-.productDetail .btn {
-    width: 150px;
+.productDetail .contBtn {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.productDetail .contBtn .btn {
+    
+    font-size: 2rem;
+    color: #1f2833;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    width: 250px;
     display: block;
     border: none;
     padding: 1rem;
@@ -74,7 +141,6 @@
     background:#0b0c10;
     border-radius: 1rem;
     color: #66fcf1;
-    font-size: 1.5rem;
     margin-top: 1rem;
     transition: background 0.5s;
 }

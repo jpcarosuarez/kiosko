@@ -1,6 +1,8 @@
 import {useContext, useEffect, useState} from 'react';
 import {Store} from '../../store';
 import './Cart.css';
+import { useHistory } from "react-router-dom";
+
 import {Link} from 'react-router-dom';
 
 
@@ -11,16 +13,18 @@ const Cart = () => {
     const [prods, setProds] = useState([]);
 
     useEffect(() => {
+        const productos = JSON.stringify(data.items);
+
         if(data.items.length) {
-            const productos = JSON.stringify(data.items);
-         
+            
             localStorage.setItem('productos', productos);
 
         }
         if(localStorage.getItem('productos')) {
             setProds(JSON.parse(localStorage.getItem('productos')));
 
-        } else {
+        } 
+        else {
             setProds(data.items);
         }
 
@@ -47,9 +51,9 @@ const Cart = () => {
                                 <p>Cantidad: {item.cantidad} Noches</p>
                                 <p>Precio por noche: <strong>${item.item.precio}</strong></p>
                                 <p>Comision por plataforma: <strong>${(item.item.precio * 3) / 100 }  </strong> </p>
-                                <p>Precio total: <strong>${((item.item.precio * item.cantidad)+((item.item.precio * 3 ) / 100 ))}</strong></p>
+                                <p>Precio total: <strong>${((item.precio * item.cantidad)+((item.item.precio * 3 ) / 100 ))}</strong></p>
                             </div>
-                        
+
                         </li>
 
                     ))

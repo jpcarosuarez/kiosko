@@ -1,4 +1,4 @@
-import {useState, useContext} from 'react';
+import {useState, useContext, useEffect} from 'react';
 import {Store} from '../../store';
 import './checkout.css';
 import {getFirestore} from '../../db';
@@ -17,6 +17,24 @@ const Checkout = () => {
         email: '',
         tel: '',
     })
+    const [prods, setProds] = useState([]);
+
+    useEffect(() => {
+        if(data.items.length) {
+            const productos = JSON.stringify(data.items);
+         
+            localStorage.setItem('productos', productos);
+
+        }
+        if(localStorage.getItem('productos')) {
+            setProds(JSON.parse(localStorage.getItem('productos')));
+
+        } else {
+            setProds(data.items);
+        }
+
+
+    }, [data.items])
 
     const[idCompra, setIdCompra] = useState('');
 
@@ -44,7 +62,27 @@ const Checkout = () => {
     return (
         <section className="checkout">
             <div className="container">
-                <h2>Datos de Reserva</h2>
+                <h1>Confirmacion de Reserva</h1>
+
+                {
+                    data.items.map(item =>(
+                        <li>
+
+                            <img src={item.img} alt={item.titulo}/>
+                            <div>
+                                <h2>{item.item.titulo} </h2>
+
+                                <p>Cantidad: {item.cantidad} Noches</p>
+                                <p>Precio por noche: <strong>${item.item.precio}</strong></p>
+                                <p>Comision por plataforma: <strong>${(item.item.precio * 3) / 100 }  </strong> </p>
+                                <p>Precio total: <strong>${((item.item.precio * item.cantidad)+((item.item.precio * 3 ) / 100 ))}</strong></p>
+                            </div>
+                        
+                        </li>
+
+                    ))
+
+                }
                 {
                     !venta ?
                     <form onSubmit={handleSubmitForm}>
@@ -57,7 +95,10 @@ const Checkout = () => {
                     </form> :
                     <p>La reserva se realizó correctamente, tu numero de seguimiento es: {idCompra} </p>
                 }
-                  
+
+
+
+
             </div>
         </section>
     )
