@@ -19,7 +19,7 @@ import {Store} from './store';
 function App() {
   const [data, setData] = useState({
     items: [],
-    cantidad: 0,
+    quantity: 0,
     precioTotal: 0,
   
   })

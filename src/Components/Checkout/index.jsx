@@ -3,7 +3,7 @@ import {Store} from '../../store';
 import './checkout.css';
 import {getFirestore} from '../../db';
 import firebase from 'firebase/app';
-
+import Imagen from '../Global/Imagen/imagen';
 
 const Checkout = () => {
 
@@ -68,14 +68,14 @@ const Checkout = () => {
                     data.items.map(item =>(
                         <li>
 
-                            <img src={item.img} alt={item.titulo}/>
+                            <Imagen src={item.img} alt={item.titulo}/>
                             <div>
-                                <h2>{item.item.titulo} </h2>
+                                <h2>{item.titulo} </h2>
 
-                                <p>Cantidad: {item.cantidad} Noches</p>
-                                <p>Precio por noche: <strong>${item.item.precio}</strong></p>
-                                <p>Comision por plataforma: <strong>${(item.item.precio * 3) / 100 }  </strong> </p>
-                                <p>Precio total: <strong>${((item.item.precio * item.cantidad)+((item.item.precio * 3 ) / 100 ))}</strong></p>
+                                <p>Cantidad: {item.quantity} Noches</p>
+                                <p>Precio por noche: <strong>${item.precio}</strong></p>
+                                <p>Comision por plataforma: <strong>${(item.precio*item.quantity * 3) / 100 }  </strong> </p>
+                                <p>Precio total: <strong>${((item.precio * item.quantity)+((item.precio*item.quantity * 3 ) / 100 ))}</strong></p>
                             </div>
                         
                         </li>
