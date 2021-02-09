@@ -1,10 +1,29 @@
 # Kiosko Inmobiliario
 
-Portal inmobiliario donde podras encontrar arriendos por dias y/o temporadas
+Proyecto inmobiliario realizado con React JS, SASS y Firebase donde podras encontrar arriendos por dias y/o temporadas
 
-## Available Scripts
+## Instrucciones
 
-In the project directory, you can run:
+Clonar el Codigo y agregar las siguientes dependencias mediante NPM install
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
+    "firebase": "^8.2.2",
+    "react": "^17.0.1",
+    "react-calendar": "^3.2.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.1.0",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-slick": "^0.27.13",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "rsuite": "^4.8.6",
+    "slick-carousel": "^1.8.1",
+    "svg-loaders-react": "^2.2.1",
+
+
 
 ### `npm start`
 
