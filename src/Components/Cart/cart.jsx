@@ -58,7 +58,7 @@ const Cart = () => {
 
             </ul>
             <div className="final">
-                <p>Precio total: {data.precioTotal}</p>
+                <p>Precio total: $ {data.precioTotal}</p>
                 <Link to="/checkout">Finalizar compra</Link>
             </div>
 

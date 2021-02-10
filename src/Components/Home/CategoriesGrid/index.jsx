@@ -1,7 +1,6 @@
 import {memo} from 'react';
 import './CategoriesGrid.css';
 import {Link} from 'react-router-dom';
-import {remodelacion} from './img/remodelacion.jpg'
 
 const CategoriesGrid = () => {
     console.log('Render de grilla de categorias');
@@ -9,38 +8,38 @@ const CategoriesGrid = () => {
     return (
         <section className="categories_grid">
 
-            <h1> Servicios </h1>
+            <h1>  </h1>
 
             <div className="container">
                 <div className="item">
 
                     <Link to="">
-                        Seguros 
+                        Chapinero
                     </Link>
                 </div>
                 <div className="item">
                     <Link to="">
-                        Agentes  
+                        Usaquen
                     </Link>
                 </div>
                 <div className="item">
                     <Link to="">
-                        Remodelaciones  
+                        Teusaquillo  
                     </Link>
                 </div>
                 <div className="item">
                     <Link to="">
-                        Espacios  
+                        Medellin 
                     </Link>
                 </div>
                 <div className="item">
                     <Link to="">
-                        Busco Roomates  
+                        Suba 
                     </Link>
                 </div>
                 <div className="item">
                     <Link to="">
-                        Tienda 
+                        Kennedy 
                     </Link>
                 </div>
             </div>

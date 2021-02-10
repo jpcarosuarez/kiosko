@@ -1,22 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
-
-
 .categories_grid {
   color: #0b0c10;
-  --padding: 10px;
-  padding: var(--padding);
-  box-shadow: inset 0 0 0 var(--padding) white;
+  box-shadow: inset 0 0 0 white;
   font-family: 'Yusei Magic', sans-serif;
 
 }
+
 .categories_grid h1 {
   font-size: 3rem;
   color: #1f2833;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   text-align: center;
-
 }
 
 .categories_grid .container {
@@ -24,13 +20,35 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, 125px);
   gap: 2rem;
-  background-color: white;
-
+  background-color: #0b0c10;
+  padding: 100px;
 }
 
 .categories_grid .container .item {
-
   border-radius: 1.5rem;
+}
+.categories_grid .container .categoria1 {
+  border-radius: 1.5rem;
+}
+.categories_grid .container .item img {
+  max-width: 350px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  background-color: #45a29e;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s, font-size 0.5s, background 0.5s;
+  text-decoration: none;
+  font-family: 'Yusei Magic', sans-serif;
+  border: #66fcf1;
+  color:  white;
 }
 
 .categories_grid .container .item:first-child {

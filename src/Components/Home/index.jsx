@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react';
 import PropiedadesDestacadas from './PropiedadesDestacadas'
-import Slider from './Slider'
+//import Slider from './Slider'
 import CategoriesGrid from './CategoriesGrid'
-import Newsletter from './Newsletter'
+import Requisitos from './Requisitos'
 
 const Home = () => {
     const [setWidth] = useState(null);
@@ -19,10 +19,9 @@ const Home = () => {
 
     return (
         <>
-            <Slider />
             <PropiedadesDestacadas />
             <CategoriesGrid />    
-            <Newsletter />
+            <Requisitos />
 
         </>
  

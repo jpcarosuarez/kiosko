@@ -1,22 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
 .contact {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: space-between
+    font-family: 'Yusei Magic', sans-serif;
 
 }
 
 .contact .cont {
-    flex: 0 0 auto;
-    margin: 4px;
-    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+}
+
+.contact .cont .formularioContacto {
+    display: flex;
     flex-direction: row;
+    margin-top: 2rem;
 
 }
-
+.contact .cont .formularioContacto {
+    font-size: 1.5rem;
+    color: #1f2833;
+    font-size: 1rem;
+    font-family: 'Yusei Magic', sans-serif;
+    letter-spacing: 0.1rem;
+}
 .contact .cont .h2 {
-    text-align: center;
+    color: #66fcf1;
+    font-size: 1rem;
+    font-family: 'Yusei Magic', sans-serif;
+    letter-spacing: 0.1rem;
+    margin-top: 2rem;
 }
 
+.contact .cont .formularioContacto .botonSubmit {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #66fcf1;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Yusei Magic', sans-serif;
+    font-weight:300;
+    color:#66fcf1;
+    text-align:center;
+    transition: all 0.2s;
+    background-color: #1f2833;
+}
+
+.contact .cont .formularioContacto .botonSubmit:hover {
+    color:#000000;
+    background-color: #c5c6c7;
+}
