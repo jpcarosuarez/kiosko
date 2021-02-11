@@ -46,6 +46,8 @@ const PropiedadesDestacadas = () => {
                                             img={item.data.img}
                                             titulo={item.data.titulo}
                                             ubicacion={item.data.ubicacion}
+                                            direccion={item.data.direccion}
+                                            ciudad={item.data.ciudad}
                                             habitaciones={item.data.habitaciones}
                                             baños={item.data.baños}
                                             area={item.data.area}

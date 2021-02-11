@@ -2,6 +2,7 @@ import {useState, useContext, useEffect} from 'react';
 import './ProductDetail.css';
 import Reservation from '../Global/ReservaDias/index'
 import {Store} from './../../store';
+
 import {useHistory} from 'react-router-dom';
 import { FaBed, FaBath } from "react-icons/fa";
 import { MdGpsFixed } from "react-icons/md";
@@ -11,6 +12,7 @@ import Imagen from '../Global/Imagen/imagen';
 import {getFirestore} from '../../db';
 
 const ProductDetail = ({item}) => {
+
     const history = useHistory();
     const [data, setData] = useContext(Store);
     const [qty, setQty] = useState(1);
@@ -21,8 +23,13 @@ const ProductDetail = ({item}) => {
         if(qty > 1) {	
             setQty(qty - 1);	
         }	
-    }
+    };
 
+    const onChangeReservation = (dates) => {
+        
+        console.log(dates[0]);
+        console.log(dates[1]);
+    };
 
     const onAdd = () => {
         const itemId = item.id;
@@ -80,11 +87,13 @@ const ProductDetail = ({item}) => {
                 <h1 className="title"> {item.titulo} </h1>
                 <p className="price"> $ {item.precio} / Noche </p>
 
-                <div className="imagenDetail">
-                    <Imagen src={item.img} />             
 
+                <div className="imagenDetail">
+                    <Imagen src={item.img} className="sliderProduct_img"/>             
+                    <Imagen src={item.img} className="sliderProduct_img"/>             
                 </div>
-                
+
+
                 {
                     !!item.descripcion && <p className="description"> {item.descripcion}</p>
                 }
@@ -131,7 +140,7 @@ const ProductDetail = ({item}) => {
                 </div>
 
                 <div className="reservation">
-                    <Reservation />
+                    <Reservation onChange={onChangeReservation} />
 
                 </div >
                 

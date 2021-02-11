@@ -5,8 +5,8 @@ import './reserva.css';
 const now = new Date();
 const yesterdayBegin = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
 const todayEnd = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
-
-export default function Reservation() {
+ 
+export default function Reservation(props) {
   const [value, onChange] = useState([yesterdayBegin, todayEnd]);
 
   return (
@@ -22,7 +22,7 @@ export default function Reservation() {
             dayAriaLabel="Dia"
             monthAriaLabel="Mes"
             nativeInputAriaLabel="Fecha"
-            onChange={onChange}
+            onChange={props.onChange}
             value={value}
             yearAriaLabel="Año"
           />

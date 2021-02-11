@@ -1,7 +1,9 @@
+import {useEffect} from "react";
 import firebase from "../../db";
 
 
 const SignIn = () => { 
+
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -23,6 +25,7 @@ const SignIn = () => {
     console.log("Sign in with G");
     const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(googleAuthProvider);
+
   }
 
   function signOut() {
@@ -44,24 +47,18 @@ const SignIn = () => {
       //var uid = user.uid;
       //var providerData = user.providerData;
       console.log(email);
-      gLogButt.hidden = true;
-      sOButt.hidden = false;
+
       // ...
     } else {
       // User is signed out.
       // ...
       currentUser = " ";
       console.log(email);
-      gLogButt.hidden = false;
-      sOButt.hidden = true;
+
     }
   });
 
-  var gLogButt = document.getElementById("gLoginButton");
-  gLogButt.addEventListener("click", loginWithG);
 
-  var sOButt = document.getElementById("sOutButton");
-  sOButt.addEventListener("click", signOut);
 
 
   return (
@@ -69,8 +66,8 @@ const SignIn = () => {
     <article className="firebaseui-auth-container">
       <div>
         <h1>Ingresar a Kiosko Inmobiliario</h1> <br />
-        <button onClick={gLogButt}>Gmail</button> <br />
-        <button onClik={sOButt}>Salir</button>
+        <button>Gmail</button> <br />
+        <button>Salir</button>
       </div>
     </article>
 

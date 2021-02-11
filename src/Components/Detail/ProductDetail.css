@@ -9,7 +9,46 @@
     font-family: 'Yusei Magic', sans-serif;
 
 }
+.productDetail .info .sliderProduct {
+  background: #1f2833;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
+
+.productDetail .info .sliderProduct_img {
+  max-width: 1920px;
+  height: 150px;
+}
+
+.productDetail .info .slick-slide {
+  outline: none;
+}
+
+.productDetail .info .sliderProduct .slick-dots {
+  bottom: 1.5rem;
+}
+
+.productDetail .info .sliderProduct .slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0 1rem;
+}
+
+.productDetail .info .sliderProduct .slick-dots li button {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+
+.productDetail .info .sliderProduct .slick-dots li.slick-active button {
+  background: #66fcf1;
+}
+
+.productDetail .info .sliderProduct .slick-dots li button:before {
+  display: none;
+}
 .productDetail .info .title {
     font-size: 3rem;
     color: #1f2833;

@@ -1,93 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-.publicar {
-    display: flex;
-    max-width: 900px;
-
-}
 
 .left-container {
     display: flex;
-    flex-direction: column;
+    align-content: center;
+}
+
+.left-container div {
     background: #1f2833;
     overflow: hidden;
     text-align: center;
     width: 700px;
-    padding: 2rem 2rem;
-    margin: auto;
-
+    padding: 2rem 2rem 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem 2rem;
+    border-radius: 12px;
 }
 
-.left-container h1 {
+.left-container,.right-container h1 {
     font-size: 1.5rem;
     color: #66fcf1;
     display: inline-block;
     font-family: 'Yusei Magic', sans-serif;
     letter-spacing: 0.1rem;
 }
+
 .left-container h2 {
     color: white;
     font-size: 1rem;
     font-family: 'Yusei Magic', sans-serif;
     letter-spacing: 0.1rem;
     margin-top: 2rem;
-
 }
+
 .left-container h3 {
     color: #66fcf1;
     font-size: 1rem;
     font-family: 'Yusei Magic', sans-serif;
     letter-spacing: 0.1rem;
     margin-top: 2rem;
-
 }
-.publicar p {
+
+.publicar {
+    display: flex;
+}
+
+.publicar .right-container {
+    padding-top: 2rem;
+    margin: 2rem 2rem;
+    background-color: #c5c6c7;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.publicar .right-container div p {
     font-size: 1.5rem;
-    color: #1f2833;
+    color: #0b0c10;
     font-size: 1rem;
     font-family: 'Yusei Magic', sans-serif;
     letter-spacing: 0.1rem;
+    margin-right: 2rem;
 }
-.publicar .right-container {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
 
-}
-.publicar .right-container .Contacto {
-    display: flex;
-    margin-top: 2rem;
-    text-align: center;
-}
-.publicar .right-container .Contacto div{
+.publicar .right-container div div{  
     margin: 2rem 2rem;
-    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
 
 }
-.publicar form input, select {
+
+.publicar form div input, select {
+    text-align: center;
     border: 1px solid #1f2833;
     border-radius: 4px;
     height: 38px;
     line-height: 38px;
     padding-left: 5px;
-}
-
-.publicar form input .imagen {
-    border: none;
+    font-family: 'Yusei Magic', sans-serif;
+    margin-left: 2rem;
 }
 
 .publicar button {
     text-align: center;
     border: none;
-    border-radius: 12%;
+    border-radius: 12px;
     height: 38px;
-    margin-right: 10px;
     outline: none;
+    width: 150px;
 }
