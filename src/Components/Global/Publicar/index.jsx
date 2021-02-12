@@ -127,15 +127,8 @@ const Publicar = () => {
                                     <p>Precio</p>
                                     <input type="text" value={formData.precio} onChange={handleChangeInput} name="precio" placeholder="Precio" /> 
                                 </div>
-                                <div>  
-                                    <p>Titulo de la publicación</p>                
-                                    <input type="text" value={formData.titulo} onChange={handleChangeInput} name="titulo" placeholder="Titulo" />  
-        
-                                </div>
-                                <div>
-                                    <p>Area (m2)</p>
-                                    <input type="text" value={formData.area} onChange={handleChangeInput} name="area" placeholder="Area" />                               
-                                </div>
+
+
                                 <div>
                                     <p>Habitaciones</p><br/>
                                     <select type="option" value={formData.habitaciones} onChange={handleChangeInput} name="habitaciones" placeholder="Habitaciones">  
@@ -157,10 +150,20 @@ const Publicar = () => {
                                     <option value="5+">5+</option>                        
                                     </select> 
                                 </div>
+
+                                <div>
+                                    <p>Area (m2)</p>
+                                    <input type="text" value={formData.area} onChange={handleChangeInput} name="area" placeholder="Area" />                               
+                                </div>
+                                <div>  
+                                    <p><strong>Titulo de la publicación </strong>  / Que hace especial tu propiedad</p>                
+                                    <input type="text" value={formData.titulo} onChange={handleChangeInput} name="titulo" placeholder="Titulo" />  
+        
+                                </div>
     
                                 <div>
-                                    <p>Descripción</p>                  
-                                    <input type="text-area" value={formData.descripcion} onChange={handleChangeInput} name="descripcion" placeholder="Descripcion" />  
+                                    <p><strong>Descripción </strong> / Enfócate en lo interesante del inmueble </p>                
+                                    <input type="textarea" value={formData.descripcion} onChange={handleChangeInput} name="descripcion" placeholder="Descripcion del inmueble" />  
                                 </div>
 
                        

@@ -4,32 +4,30 @@
 
 .left-container {
     display: flex;
-    align-content: center;
-}
+    justify-content: center
+;}
 
 .left-container div {
-    background: #1f2833;
     overflow: hidden;
     text-align: center;
     width: 700px;
-    padding: 2rem 2rem 2rem 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 2rem 2rem;
     border-radius: 12px;
 }
 
-.left-container,.right-container h1 {
+
+.left-container, .right-container h1 {
     font-size: 1.5rem;
-    color: #66fcf1;
+    color: #1f2833;
     display: inline-block;
     font-family: 'Yusei Magic', sans-serif;
     letter-spacing: 0.1rem;
 }
 
 .left-container h2 {
-    color: white;
+    color:#1f2833;
     font-size: 1rem;
     font-family: 'Yusei Magic', sans-serif;
     letter-spacing: 0.1rem;
@@ -37,7 +35,7 @@
 }
 
 .left-container h3 {
-    color: #66fcf1;
+    color: #45a29e;
     font-size: 1rem;
     font-family: 'Yusei Magic', sans-serif;
     letter-spacing: 0.1rem;
@@ -94,4 +92,8 @@
     height: 38px;
     outline: none;
     width: 150px;
+}
+
+.publicar form div input:active {
+    border-color: aqua;
 }

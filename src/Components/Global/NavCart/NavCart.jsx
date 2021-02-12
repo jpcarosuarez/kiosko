@@ -7,15 +7,17 @@ import {Store} from '../../../store';
 
 const NavCart = ({action}) => {
     const [data, setData] = useContext(Store);
-    const items = [...data.items];
-
+    
+    let total = 0;
+    data.items.forEach(element => { total += element.quantity;});
     return (
         <div className="navCart" onClick={action}>
             <BiBuildingHouse />
-            {
-            data.items.length ?
-                items.map((items) => (<span key={items.id}><strong>{items.quantity}</strong></span>)): <span><strong>0</strong></span>
-            }
+           <span> <strong>{total}</strong></span>
+           
+          
+            
+            
             
         </div>
     )

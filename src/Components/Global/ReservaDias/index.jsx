@@ -12,7 +12,7 @@ export default function Reservation(props) {
   return (
     <div className="Sample">
       <header>
-        <h1>Ingreso / Salida</h1>
+        <h1>Selecciona la fecha de ingreso y de Salida </h1>
       </header>
       <div className="Sample__container">
         <main className="Sample__container__content">
