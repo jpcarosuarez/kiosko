@@ -1,6 +1,5 @@
-import {useEffect} from "react";
 import firebase from "../../db";
-
+import './ingreso.css';
 
 const SignIn = () => { 
 
@@ -63,11 +62,14 @@ const SignIn = () => {
 
   return (
 
-    <article className="firebaseui-auth-container">
-      <div>
-        <h1>Ingresar a Kiosko Inmobiliario</h1> <br />
-        <button>Gmail</button> <br />
-        <button>Salir</button>
+    <article >
+      <div className="formularioIngreso">
+        <h1>Ingresar a Kiosko</h1> 
+        <div className="botones">
+          <button onClick={loginWithG}>Ingresar con Gmail</button>
+          <button onClick={signOut}>Salir</button>
+        </div>
+
       </div>
     </article>
 

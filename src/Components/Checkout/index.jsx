@@ -76,6 +76,8 @@ const Checkout = () => {
                                 <p>Precio por noche: <strong>${item.precio}</strong></p>
                                 <p>Comision por plataforma: <strong>${(item.precio*item.quantity * 3) / 100 }  </strong> </p>
                                 <p>Precio total: <strong>${((item.precio * item.quantity)+((item.precio*item.quantity * 3 ) / 100 ))}</strong></p>
+                            
+                            
                             </div>
                         
                         </li>
@@ -86,18 +88,50 @@ const Checkout = () => {
                 {
                     !venta ?
                     <form onSubmit={handleSubmitForm}>
-                        <input type="text" value={formData.nombre} onChange={handleChangeInput} name="nombre" placeholder="Nombre" />
-                        <input type="text" value={formData.apellido} onChange={handleChangeInput} name="apellido" placeholder="Apellido" />
-                        <input type="text" value={formData.cedula} onChange={handleChangeInput} name="cedula" placeholder="Cedula" />
-                        <input type="email" value={formData.email} onChange={handleChangeInput} name="email" placeholder="E-mail" />
-                        <input type="tel" value={formData.tel} onChange={handleChangeInput} name="tel" placeholder="Teléfono" />                    
+                        <div>
+                            <p>Nombre</p>
+                            <input type="text" value={formData.nombre} onChange={handleChangeInput} name="nombre" placeholder="Nombre" />
+
+                        </div>
+                        <div>
+                            <p>Apellido</p>
+                            <input type="text" value={formData.apellido} onChange={handleChangeInput} name="apellido" placeholder="Apellido" />
+
+                        </div>
+
+                        <div>
+                            <p>Tipo de identificación </p>
+                            <select value={formData.tipoIdentificacion}>
+                                <option selected value="cc">C.C</option>
+                                <option value="ce">C.E</option>
+                                <option value="pasaporte">Pasaporte</option>
+                                <option value="nit">Nit</option>                   
+                            </select>
+
+                            <input type="text" value={formData.cedula} onChange={handleChangeInput} name="numIdentificacion" placeholder="Número" />
+
+                        </div>
+
+                        <div>
+                            <p>Fecha de nacimiento</p>
+                            <input type="date" value={formData.fechaNacimiento} onChange={handleChangeInput} name="fechaNacimiento" placeholder="Fecha de Nacimiento" />
+                        </div>
+                            
+                        <div>
+                            <p>Correo</p>
+                            <input type="email" value={formData.email} onChange={handleChangeInput} name="email" placeholder="E-mail" />
+
+                        </div>
+                        <div>
+                            <p>Teléfono</p>
+                            <input type="tel" value={formData.tel} onChange={handleChangeInput} name="tel" placeholder="Teléfono" />                    
+
+                        </div>
+                                                                                   
                         <button>Reservar</button>
                     </form> :
                     <p>La reserva se realizó correctamente, tu numero de seguimiento es: {idCompra} </p>
                 }
-
-
-
 
             </div>
         </section>

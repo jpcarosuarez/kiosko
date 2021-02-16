@@ -12,7 +12,7 @@ import Cart from './Components/Cart/cart';
 import Checkout from './Components/Checkout';
 import NavAndWidgetCart from './Components/Global/NavAndWidgetCart/NavAndWidgetCart';
 import Publicar from './Components/Global/Publicar';
-import SignIn from './Components/Admin/index';
+import SignIn from './Components/Ingreso/index';
 
 import {Store} from './store';
 
@@ -30,6 +30,9 @@ function App() {
         <NavAndWidgetCart />
         <Nav />
         <Switch>
+          <Route exact path="/login">
+            <SignIn />
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
@@ -38,9 +41,6 @@ function App() {
           </Route>
           <Route exact path="/publicar">
             <Publicar />
-          </Route>
-          <Route exact path="/login">
-            <SignIn />
           </Route>
           <Route path="/cart">
             <Cart />

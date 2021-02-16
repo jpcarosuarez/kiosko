@@ -30,7 +30,7 @@ function Menu({action}) {
             <div className={classes.root}>
                     
                 <Button variant="outlined" href="/publicar"><BiBuildingHouse /><p>Publicar</p> </Button>
-              
+                <Button href="/login"><p>Ingresar</p></Button>
             </div>
 
             <div className="logoTop">
@@ -38,6 +38,9 @@ function Menu({action}) {
                    
 
             </div>
+
+
+            
 
             <div>
                 <NavCart action={action} />

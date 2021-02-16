@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+
+
+.formularioIngreso  {
+    display: flex;
+    justify-content: center;
+    height: 750px;
+    font-family: 'Yusei Magic', sans-serif;
+
+
+}
+
+.formularioIngreso h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5;
+    text-align: center;
+
+}
+.formularioIngreso .botones {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.formularioIngreso .botones button {
+    padding: 1rem;
+    background-color: #1f2833;
+    color: white;
+    border-radius: 25px;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.5;
+    height: 150px;
+}

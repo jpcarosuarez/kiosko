@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
 .checkout {
   display: flex;
   align-content: center;
@@ -19,8 +21,22 @@
   width: 50%;
 }
 
+.checkout form select {
+  color: #0b0c10;
+  font-family: 'Yusei Magic', sans-serif;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  margin: 1rem;
+}
 .checkout form input,
 .checkout form button {
   padding: 1rem;
   margin-bottom: 1rem;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  color: #1f2833;
+  display: inline-block;
+  font-family: 'Yusei Magic', sans-serif;
+  letter-spacing: 0.1rem;
 }

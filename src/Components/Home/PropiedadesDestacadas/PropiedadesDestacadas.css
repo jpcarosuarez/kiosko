@@ -17,13 +17,14 @@
 
 .propiedadesDestacadas ul {
   display: flex;
-  justify-content: space-between;
+  margin: 20px;
 
 }
 
 .propiedadesDestacadas ul li {
   width: 300px;
-  
+  margin: 10px;
+
 }
 
 ::marker{

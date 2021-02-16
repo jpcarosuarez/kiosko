@@ -1,33 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 .productCard {
-  background: #1f2833;
-  border-radius: 1.5rem;
+  background: white;
+  border-radius: 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.5s;
   height: 100%;
   position: relative;
   font-family: 'Yusei Magic', sans-serif;
-
 }
 
 .productCard:hover {
-  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 1rem #66fcf1;
+  transition: 0.3s linear 0.2s;
+  
+
 }
 
 .productCard img {
-  height: 180px;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
+  width: 300px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  
 }
 
-.productCard div {
+.productCard .info {
   padding: 0.5rem;
   text-align: center;
 }
 
-.productCard div h1 {
-  color:#66fcf1 ;
+
+
+.productCard .info h1 {
+  color:#0b0c10 ;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   min-height: 46px;
@@ -35,36 +39,35 @@
 
 }
 
-.productCard div p {
-  color:#c5c6c7 ;
+.productCard .info p {
+  color:#45a29e ;
   font-size: 1.5rem;
   font-weight: 600;
   font-family: 'Yusei Magic', sans-serif;
 
 }
 
-.productCard div a {
+.productCard .info a {
   display: block;
   border: none;
   outline: none;
   cursor: pointer;
   color: #1f2833;
   font-size: 1.3rem;
-  transition: background 0.5s;
   text-decoration: none;
   padding: 0.5rem;
 
 }
-.productCard div .button {
+.productCard .info .button {
   background: #66fcf1 ;
-  margin-bottom: 1rem;
   border-radius: 1rem;
-  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
 
 }
 
-.productCard div .button:hover {
-  background:#45a29e;
+.productCard .info .button:hover {
+  color:#45a29e;
 }
 
 .productCard .list {

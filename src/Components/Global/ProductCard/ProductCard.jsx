@@ -15,15 +15,15 @@ const ProductCard = ({id, titulo, img, ubicacion, ciudad, direccion, area, preci
                          
         <article className={`productCard ${type}`}>
             
-            <div>
+            <div className="imagen">
                 <Imagen src={img} alt={titulo}/>             
             </div>
 
-            <div>
+            <div className="info">
                 <div className="titulo" >
                     <h1>{titulo}</h1>   
                 </div>
-                <div>
+                <div className="info">
                     <p><MdGpsFixed size={20}/> {ubicacion}</p>
                     <p>{ciudad} {direccion}</p>
                     <p><IoLogoUsd size={20} /> {precio}</p>
