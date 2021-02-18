@@ -6,7 +6,6 @@ import {BsListUl, BsFillGridFill} from 'react-icons/bs';
 const ProductsList = ({inmuebles}) => {
     const [wayToShow, setWayToShow] = useState(true);
 
-
     return (
         <section className="products">
             <div>

@@ -23,7 +23,7 @@ const ProductCard = ({id, titulo, img, ubicacion, ciudad, direccion, area, preci
                 <div className="titulo" >
                     <h1>{titulo}</h1>   
                 </div>
-                <div className="info">
+                <div className="detalle">
                     <p><MdGpsFixed size={20}/> {ubicacion}</p>
                     <p>{ciudad} {direccion}</p>
                     <p><IoLogoUsd size={20} /> {precio}</p>

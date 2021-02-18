@@ -1,0 +1,11 @@
+.BottomBar {
+    list-style-type: none;
+    margin: 1px;
+    padding: 1px;
+    overflow: hidden;
+    background-color: #8842d5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+   

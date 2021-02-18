@@ -17,7 +17,6 @@
 }
 
 .productCard img {
-  width: 300px;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   
@@ -28,8 +27,6 @@
   text-align: center;
 }
 
-
-
 .productCard .info h1 {
   color:#0b0c10 ;
   font-size: 1.5rem;
@@ -38,13 +35,27 @@
   font-family: 'Yusei Magic', sans-serif;
 
 }
-
-.productCard .info p {
+.productCard .detalle {
+  display: grid;
+  margin: 20px;
+  align-items: center;
+  grid-template-columns: 2fr 2fr 2fr 2fr ;
+  grid-template-rows: 2fr 2fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    ". . . ."
+    ". . . .";
+}
+.productCard .detalle p {
   color:#45a29e ;
   font-size: 1.5rem;
   font-weight: 600;
   font-family: 'Yusei Magic', sans-serif;
 
+}
+
+.productCard .detalle svg{
+  color: #0b0c10 ;
 }
 
 .productCard .info a {
@@ -61,8 +72,7 @@
 .productCard .info .button {
   background: #66fcf1 ;
   border-radius: 1rem;
-  display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 
 }
 
@@ -70,27 +80,31 @@
   color:#45a29e;
 }
 
-.productCard .list {
+.productCard.list {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
 }
 
-.productCard .list img {
-  width: 100%;
-  border-bottom-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
+.productCard.list img {
+  border-radius: 1rem;
+  margin: 1.5rem;
 }
 
-.productCard .list div {
+.productCard.list .detalle {
   display: grid;
+  margin: 20px;
   align-items: center;
-  grid-template-columns: 3fr 1fr 2fr;
-  flex: 1;
+  grid-template-columns: 2fr 2fr 2fr 2fr ;
+  grid-template-rows: 2fr 2fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    ". . . ."
+    ". . . .";
 }
 
-.productCard .list div h3 {
-  margin: 0;
-  min-height: auto;
-  text-align: left;
+.productCard.list .titulo h1 {
+  margin: 10px;
+  text-align: center;
   font-size: 2rem;
+  
 }

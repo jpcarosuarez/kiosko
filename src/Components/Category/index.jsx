@@ -28,7 +28,7 @@ const Category = () => {
     return (
         <section className="category">
             
-            <h2>{category_name.split('-').join(' ')}</h2>
+            <h2>Alquiler por {category_name.split('-').join(' ')}</h2>
             <ProductsList inmuebles={inmuebles} />
         </section>
     )

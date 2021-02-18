@@ -29,18 +29,16 @@ function Menu({action}) {
         <div className="top">
             <div className={classes.root}>
                     
-                <Button variant="outlined" href="/publicar"><BiBuildingHouse /><p>Publicar</p> </Button>
+                <Button variant="outlined" href="/publicar"><p><BiBuildingHouse /> Publicar</p> </Button>
                 <Button href="/login"><p>Ingresar</p></Button>
+                <Button href="/dashboard"><p>Dashboard</p></Button>
+
             </div>
 
             <div className="logoTop">
                 <Link to={"/"} ><img className="logoblanco" src={Logo} alt="logo" /></Link>
                    
-
             </div>
-
-
-            
 
             <div>
                 <NavCart action={action} />

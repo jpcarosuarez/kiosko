@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+.dashboardGrid {
+  width: 100%;
+
+}
+
+.grid-container {
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 1.1fr 0.9fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    "avisos avisos publicatu-alojamiento pagos-y-Cobros"
+    "perfil calendario mensajes mensajes"
+    "foro foro servicios tareas";
+}
+
+.grid-container h1 {
+  color: #45a29e;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5rem;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+.grid-container .avisos { 
+  grid-area: avisos; 
+  border-radius: 2rem;
+  height: 250px;
+  text-align: center;
+  border: solid 2px #1f2833;
+}
+
+
+
+.grid-container .mensajes { 
+  grid-area: mensajes; 
+  border: solid 2px #1f2833;
+  border-radius: 2rem;
+  height: 250px;
+  text-align: center;
+}
+
+.grid-container .pagos-y-Cobros { 
+  grid-area: pagos-y-Cobros; 
+  border: solid 2px #1f2833;  border-radius: 2rem;
+  height: 250px;
+  text-align: center;
+}
+
+.grid-container .publicatu-alojamiento { 
+  grid-area: publicatu-alojamiento; 
+  border: solid 2px #1f2833;  border-radius: 2rem;
+  height: 250px;
+  text-align: center;
+
+}
+
+.grid-container .foro { 
+  grid-area: foro; 
+  border: solid 2px #1f2833;  
+  border-radius: 2rem;
+  height: 250px;
+  text-align: center;
+}
+
+.grid-container .calendario { 
+  grid-area: calendario; 
+  border: solid 2px #1f2833;
+  border-radius: 2rem;
+  height: 250px;
+  text-align: center;
+}
+
+.grid-container .perfil { 
+  grid-area: perfil; 
+  border: solid 2px #1f2833;  
+  border-radius: 2rem;
+  height: 250px;
+  text-align: center;
+}
+
+.grid-container .servicios { 
+  grid-area: servicios; 
+  border: solid 2px #1f2833;
+  border-radius: 2rem;
+  height: 250px;
+  text-align: center;
+}
+
+.grid-container .tareas { 
+  grid-area: tareas; 
+  border: solid 2px #1f2833;
+  border-radius: 2rem;
+  height: 250px;
+  text-align: center;
+
+}

@@ -90,7 +90,6 @@ const ProductDetail = ({item}) => {
 
                 <div className="imagenDetail">
                     <Imagen src={item.img} className="sliderProduct_img"/>             
-                    <Imagen src={item.img} className="sliderProduct_img"/>             
                 </div>
 
 

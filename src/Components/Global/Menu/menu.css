@@ -4,17 +4,16 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  background-color: #45a29e;  
-  height: 120px;
+  background-color: white;  
+  height: 160px;
   padding: 1rem;
   font-size: 1.2rem;
-  color:#66fcf1;
 }
 
-.top .anuncio{
-  display: flex;
-  color:  #ffffff;
-  font-size: 25px;
+.top p {
+  color:  #1f2833;
+  font-size: 15px;
+  text-align: center;
 
 }
 .top p {
@@ -32,15 +31,11 @@
 .top .logoTop .logoblanco {
   display: flex;
   padding-top: 1rem;
-  border-top: 15px solid #66fcf1;
   height: 90px;
 
 }
 
 
 
-.top .button svg {
-  font-size: 50px;
-}
 
 

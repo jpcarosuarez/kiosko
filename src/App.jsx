@@ -13,7 +13,7 @@ import Checkout from './Components/Checkout';
 import NavAndWidgetCart from './Components/Global/NavAndWidgetCart/NavAndWidgetCart';
 import Publicar from './Components/Global/Publicar';
 import SignIn from './Components/Ingreso/index';
-
+import Dashboard from './Components/AdminPanel/Dashboard/index';
 import {Store} from './store';
 
 function App() {
@@ -29,6 +29,9 @@ function App() {
       <BrowserRouter>
         <NavAndWidgetCart />
         <Nav />
+        <Route exact path="/dashboard">
+            <Dashboard />
+        </Route>
         <Switch>
           <Route exact path="/login">
             <SignIn />
