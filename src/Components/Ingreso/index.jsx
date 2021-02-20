@@ -1,9 +1,11 @@
+import {useContext} from 'react';
 import firebase from "../../db";
 import './ingreso.css';
+import {Store} from '../../store';
 
 const SignIn = () => { 
-
-
+  const [data, setData] = useContext(Store); 
+  
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyAi-1txOSKt_0sekqL9QZBBvgFxPKiSslI",
@@ -24,14 +26,13 @@ const SignIn = () => {
     console.log("Sign in with G");
     const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(googleAuthProvider);
-
   }
 
   function signOut() {
     console.log("Signing Out");
     firebase.auth().signOut();
   }
-
+  
   var currentUser;
 
   firebase.auth().onAuthStateChanged(function(user) {
@@ -46,15 +47,15 @@ const SignIn = () => {
       //var uid = user.uid;
       //var providerData = user.providerData;
       console.log(email);
-
+      window.location="/dashboard";
       // ...
     } else {
       // User is signed out.
       // ...
-      currentUser = " ";
+      data.currentUser="";
       console.log(email);
-
     }
+
   });
 
 

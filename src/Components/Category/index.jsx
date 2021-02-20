@@ -20,15 +20,17 @@ const Category = () => {
                 
                 setInmuebles(arr)
             })
+            
 
         }
+
 
     }, [category_name])
 
     return (
         <section className="category">
-            
-            <h2>Alquiler por {category_name.split('-').join(' ')}</h2>
+            <h1>Encuentra y Arrienda Facil</h1>
+            <h2>Tipo de Arriendo : {category_name.split('-').join(' ')}</h2>
             <ProductsList inmuebles={inmuebles} />
         </section>
     )

@@ -9,6 +9,8 @@ import Button from '@material-ui/core/Button';
 //import SignIn from '../../Admin/index';
 import { makeStyles } from '@material-ui/core/styles';
 
+
+
 const useStyles = makeStyles((theme) => ({
 
     root: {
@@ -16,22 +18,22 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(1),
         color: 'white',
         display: 'flex',
-
       },
-    },
+    }
 }));
+
 
 function Menu({action}) {
     const [data, setData] = useContext(Store); 
     const classes = useStyles();
+    
 
     return (
         <div className="top">
             <div className={classes.root}>
                     
                 <Button variant="outlined" href="/publicar"><p><BiBuildingHouse /> Publicar</p> </Button>
-                <Button href="/login"><p>Ingresar</p></Button>
-                <Button href="/dashboard"><p>Dashboard</p></Button>
+                <Button href="/login" ><p>Dashboard</p></Button>
 
             </div>
 

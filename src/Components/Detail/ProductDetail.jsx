@@ -111,7 +111,7 @@ const ProductDetail = ({item}) => {
    
                     </div>
                     <div>
-                        <p className="mts" > <RiRuler2Line size={20}/> Area de {item.area} m2</p>
+                        <p className="mts" > <RiRuler2Line size={20}/> Area {item.area} m2</p>
    
                     </div>
                     <div>

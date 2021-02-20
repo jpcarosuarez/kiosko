@@ -21,7 +21,7 @@ function App() {
     items: [],
     quantity: 0,
     precioTotal: 0,
-  
+    currentUser: " ",
   })
 
   return (
@@ -29,10 +29,10 @@ function App() {
       <BrowserRouter>
         <NavAndWidgetCart />
         <Nav />
-        <Route exact path="/dashboard">
-            <Dashboard />
-        </Route>
         <Switch>
+          <Route exact path="/dashboard">
+            <Dashboard />
+          </Route>
           <Route exact path="/login">
             <SignIn />
           </Route>
@@ -51,10 +51,10 @@ function App() {
           <Route path="/checkout">
             <Checkout />
           </Route>
-          <Route exact path="/:category_name">
+          <Route exact path="/category/:category_name">
             <Category />  
           </Route>  
-          <Route exact path="/:category_name/:id">
+          <Route exact path="/category/:category_name/:id">
             <Detail />
           </Route>
           <Route path="*">
