@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Footer from './Components/Global/Footer/Footer';
 import Nav from './Components/Global/Nav/nav';
@@ -15,6 +14,7 @@ import Publicar from './Components/Global/Publicar';
 import SignIn from './Components/Ingreso/index';
 import Dashboard from './Components/AdminPanel/Dashboard/index';
 import {Store} from './store';
+import './App.css';
 
 function App() {
   const [data, setData] = useState({
@@ -51,10 +51,10 @@ function App() {
           <Route path="/checkout">
             <Checkout />
           </Route>
-          <Route exact path="/category/:category_name">
+          <Route exact path="/:category_name">
             <Category />  
           </Route>  
-          <Route exact path="/category/:category_name/:id">
+          <Route exact path="/:category_name/:id">
             <Detail />
           </Route>
           <Route path="*">

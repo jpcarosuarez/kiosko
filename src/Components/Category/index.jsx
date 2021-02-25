@@ -30,7 +30,7 @@ const Category = () => {
     return (
         <section className="category">
             <h1>Encuentra y Arrienda Facil</h1>
-            <h2>Tipo de Arriendo : {category_name.split('-').join(' ')}</h2>
+            <h2>Tipo de Arriendo : {category_name}</h2>
             <ProductsList inmuebles={inmuebles} />
         </section>
     )
