@@ -5,31 +5,41 @@
 .formularioIngreso  {
     display: flex;
     justify-content: center;
-    height: 750px;
+    flex-direction: column;
     font-family: 'Yusei Magic', sans-serif;
-
-
 }
+.formularioIngreso .ingreso {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
 
 .formularioIngreso h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 0.5;
     text-align: center;
-
 }
+.formularioIngreso p {
+    font-size: 1rem;
+    letter-spacing: 0.5;
+    text-align: center;
+    font-weight: bold;
+}
+
 .formularioIngreso .botones {
     display: flex;
     justify-content: center;
-    margin: 20px;
 }
 
 .formularioIngreso .botones button {
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: #1f2833;
     color: white;
-    border-radius: 25px;
+    border-radius: 1rem;
     font-family: 'Yusei Magic', sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
     letter-spacing: 0.5;
-    height: 150px;
 }

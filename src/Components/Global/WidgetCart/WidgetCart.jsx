@@ -26,7 +26,7 @@ const WidgetCart = ({show, action}) => {
 
             <div className="final" >
                 <p>Precio total: {data.precioTotal}</p>
-                <Link to="/checkout"><p>Finalizar compra</p> </Link>
+                <Link to="/checkout">Finalizar compra</Link>
             </div>
 
             

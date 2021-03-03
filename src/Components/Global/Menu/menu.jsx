@@ -8,6 +8,7 @@ import {BiBuildingHouse} from 'react-icons/bi';
 import Button from '@material-ui/core/Button';
 //import SignIn from '../../Admin/index';
 import { makeStyles } from '@material-ui/core/styles';
+import { FaSearchLocation } from 'react-icons/fa'
 
 
 
@@ -39,6 +40,15 @@ function Menu({action}) {
 
             <div className="logoTop">
                 <Link to={"/"} ><img className="logoblanco" src={Logo} alt="logo" /></Link>
+                
+
+                <form>
+                    <input type="text" placeholder="Buscar.." name="search" />
+                    <button type="submit"><FaSearchLocation /></button>
+                </form>
+                
+                    
+                
                    
             </div>
 

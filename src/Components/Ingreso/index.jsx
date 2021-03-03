@@ -66,13 +66,49 @@ const SignIn = () => {
     <article >
       <div className="formularioIngreso">
         <h1>Ingresar a Kiosko</h1> 
+        
         <div className="botones">
           <button onClick={loginWithG}>Ingresar con Gmail</button>
           <button onClick={signOut}>Salir</button>
         </div>
 
+        <div className="ingreso">
+          <form>
+            <label>
+              <p>Tipo de Documento</p>
+              <select>
+                <option value="cc">C.C</option>
+                <option value="ce">C.E</option>
+                <option value="Nit">Nit</option>
+              </select>
+            </label>
+            <label>
+              <p>Número</p>
+              <input type="text" name="numero" />
+
+            </label>
+            <label>
+              <p>Contraseña</p>
+              <input type="text" name="contraseña"/>
+            </label>
+            <input type="submit" value="Ingresar" />
+
+          </form>
+
+        </div>
+
+
+
       </div>
+      
+
+    
+      
+
+      
     </article>
+
+
 
 
   )

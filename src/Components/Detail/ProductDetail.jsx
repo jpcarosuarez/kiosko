@@ -2,7 +2,7 @@ import {useState, useContext, useEffect} from 'react';
 import './ProductDetail.css';
 import Reservation from '../Global/ReservaDias/index'
 import {Store} from './../../store';
-
+import {Link} from 'react-router-dom';
 import {useHistory} from 'react-router-dom';
 import { FaBed, FaBath } from "react-icons/fa";
 import { MdGpsFixed } from "react-icons/md";
@@ -30,7 +30,7 @@ const ProductDetail = ({item}) => {
         console.log(dates[0]);
         console.log(dates[1]);
     };
-
+ 
     const onAdd = () => {
         const itemId = item.id;
         console.log('itemId',item.id);
@@ -148,6 +148,13 @@ const ProductDetail = ({item}) => {
                 <div className="contBtn">
 
                     <button className="btn" onClick={onAdd}>Reservar</button>
+
+                </div>
+                <div className="arrendar">
+                    <p>Requisito de Arriendo</p>
+                    <p>Si es Arriendo menor a 60 dias = Pago Contado</p>
+                    <p>Si es Arriendo mayor a 60 dias = Pago Contado  o estudio arrendamiento </p>
+                    <Link to="/arrendar">Arrendar</Link>
 
                 </div>
                 

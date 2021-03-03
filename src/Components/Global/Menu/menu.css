@@ -8,6 +8,8 @@
   height: 160px;
   padding: 1rem;
   font-size: 1.2rem;
+  font-family: 'Yusei Magic', sans-serif;
+
 }
 
 .top p {
@@ -25,17 +27,44 @@
 
 .top .logoTop {
   display: flex;
+  flex-direction: column;
 }
-
+.top .logoTop form {
+  display: flex;
+  justify-content: center;
+}
 
 .top .logoTop .logoblanco {
   display: flex;
-  padding-top: 1rem;
-  height: 90px;
-
+  height: 70px;
 }
 
+.top .logoTop input[type=text] {
+  display: flex;  
+  justify-content: center;
+  padding: 0.5rem;
+  font-size: 17px;
+  border-radius: 0.5rem;
+  background-color: #66fcf1;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: #1f2833;
+}
 
+.top .logoTop button {
+  font-size: 17px;
+  background-color: #1f2833;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.top .logoTop button:hover {
+  background: #ccc;
+  color: #1f2833
+}
 
-
+.top .logoTop button svg {
+  color: #66fcf1;
+  margin: auto;
+}
 

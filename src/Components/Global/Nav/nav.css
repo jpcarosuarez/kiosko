@@ -8,7 +8,7 @@
 
 
 .headnav {
-  background: #66fcf1;
+  background: black;
   padding-bottom: 10px;
   padding-top: 5px;
   width: 100%;
@@ -40,7 +40,7 @@
 }
 
 .headnav ul a {
-  color: black;
+  color: #66fcf1;
   font-size: 1.5rem;
   text-decoration: none;  
   font-family: 'Yusei Magic', sans-serif;
