@@ -13,6 +13,7 @@ import NavAndWidgetCart from './Components/Global/NavAndWidgetCart/NavAndWidgetC
 import Publicar from './Components/Global/Publicar';
 import SignIn from './Components/Ingreso/index';
 import Dashboard from './Components/AdminPanel/Dashboard/index';
+import Estudio from './Components/Estudio';
 import {Store} from './store';
 import './App.css';
 
@@ -30,6 +31,9 @@ function App() {
         <NavAndWidgetCart />
         <Nav />
         <Switch>
+          <Route exact path="/estudio">
+            <Estudio />
+          </Route>     
           <Route exact path="/dashboard">
             <Dashboard />
           </Route>

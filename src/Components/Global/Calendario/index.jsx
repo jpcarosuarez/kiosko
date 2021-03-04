@@ -47,19 +47,19 @@ class ScheduleCalendar extends Component {
   
     render() {
       return (
-        <Container>
-          <Grid container direction="row" justify="center" alignItems="center">
-            <EventsModal
-              changeDate={this.changeDate}
-              activeDate={this.state.activeDate}
-              events={this.getEvents(this.state.activeDate)}
-              deleteEvent={this.deleteEvent}
-              addEvent={this.addEvent}
-            />
-          </Grid>
-        </Container>
-      );
-    }
+      <Container>
+        <Grid container direction="row" justify="center" alignItems="center">
+          <EventsModal
+            changeDate={this.changeDate}
+            activeDate={this.state.activeDate}
+            events={this.getEvents(this.state.activeDate)}
+            deleteEvent={this.deleteEvent}
+            addEvent={this.addEvent}
+          />
+        </Grid>
+      </Container>
+    );
   }
+}
   
-  export default ScheduleCalendar;
+export default ScheduleCalendar;

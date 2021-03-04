@@ -26,11 +26,10 @@ const Category = () => {
 
 
     }, [category_name])
-
+    // react-hooks/exhaustive-deps
     return (
         <section className="category">
-            <h1>Encuentra y Arrienda Facil</h1>
-            <h2>Tipo de Arriendo : {category_name}</h2>
+            <h2>Encuentra y Arrienda Fácil</h2>
             <ProductsList inmuebles={inmuebles} />
         </section>
     )

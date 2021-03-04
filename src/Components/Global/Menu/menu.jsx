@@ -8,8 +8,7 @@ import {BiBuildingHouse} from 'react-icons/bi';
 import Button from '@material-ui/core/Button';
 //import SignIn from '../../Admin/index';
 import { makeStyles } from '@material-ui/core/styles';
-import { FaSearchLocation } from 'react-icons/fa'
-
+import { FaSearchLocation } from 'react-icons/fa';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -35,6 +34,7 @@ function Menu({action}) {
                     
                 <Button variant="outlined" href="/publicar"><p><BiBuildingHouse /> Publicar</p> </Button>
                 <Button href="/login" ><p>Dashboard</p></Button>
+                <Button href="/estudio"><p>Estudio</p> </Button>
 
             </div>
 
@@ -43,7 +43,7 @@ function Menu({action}) {
                 
 
                 <form>
-                    <input type="text" placeholder="Buscar.." name="search" />
+                    <input type="text" placeholder="Buscar apartamento en.." name="search" />
                     <button type="submit"><FaSearchLocation /></button>
                 </form>
                 

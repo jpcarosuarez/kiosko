@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
 .category {
   min-height: 100vh;
   padding: 4rem;
 }
 
 .category h2 {
+  font-family: 'Yusei Magic', sans-serif;
   text-align: center;
   font-size: 3rem;
   color:#45a29e;
+  font-weight: 500;
+  letter-spacing: 0.5;
+
 }
 
 .category h2::first-letter {
