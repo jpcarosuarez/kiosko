@@ -34,7 +34,6 @@ function Menu({action}) {
                     
                 <Button variant="outlined" href="/publicar"><p><BiBuildingHouse /> Publicar</p> </Button>
                 <Button href="/login" ><p>Dashboard</p></Button>
-                <Button href="/estudio"><p>Estudio</p> </Button>
 
             </div>
 

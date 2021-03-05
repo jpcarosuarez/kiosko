@@ -2,7 +2,6 @@ import {useState, useContext, useEffect} from 'react';
 import './ProductDetail.css';
 import Reservation from '../Global/ReservaDias/index'
 import {Store} from './../../store';
-import {Link} from 'react-router-dom';
 import {useHistory} from 'react-router-dom';
 import { FaBed, FaBath } from "react-icons/fa";
 import { MdGpsFixed } from "react-icons/md";
@@ -10,6 +9,8 @@ import { RiRuler2Line } from "react-icons/ri";
 import { BiBuildingHouse } from "react-icons/bi";
 import Imagen from '../Global/Imagen/imagen';
 import {getFirestore} from '../../db';
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
 
 const ProductDetail = ({item}) => {
 
@@ -17,6 +18,24 @@ const ProductDetail = ({item}) => {
     const [data, setData] = useContext(Store);
     const [qty, setQty] = useState(1);
     const db = getFirestore();
+
+    const useStyles = makeStyles({
+        root: {
+          background: 'linear-gradient(to right, #36d1dc, #5b86e5)',
+          borderRadius: 3,
+          border: 0,
+          color: 'white',
+          margin:'1.5rem',
+          height: 48,
+          padding: '0 30px',
+          boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+        },
+        label: {
+          textTransform: 'capitalize',
+        },
+    });
+
+    const classes = useStyles();
 
     const handleClickResta = () => {	
 
@@ -146,15 +165,20 @@ const ProductDetail = ({item}) => {
 
 
                 <div className="contBtn">
-
-                    <button className="btn" onClick={onAdd}>Reservar</button>
+                    <Button 
+                        onClick={onAdd} 
+                        classes={{ root: classes.root, // class name, e.g. `classes-nesting-root-x`
+                        label: classes.label, // class name, e.g. `classes-nesting-label-x`
+                        }}>Reservar
+                    </Button>
 
                 </div>
                 <div className="arrendar">
-                    <p>Requisito de Arriendo</p>
-                    <p>Si es Arriendo menor a 60 dias = Pago Contado</p>
-                    <p>Si es Arriendo mayor a 60 dias = Pago Contado  o estudio arrendamiento </p>
-                    <Link to="/arrendar">Arrendar</Link>
+                    <Button  
+                        classes={{ root: classes.root, // class name, e.g. `classes-nesting-root-x`
+                        label: classes.label, // class name, e.g. `classes-nesting-label-x`
+                        }} href="/estudio">Formulario de Arriendo
+                    </Button>
 
                 </div>
                 

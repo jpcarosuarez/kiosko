@@ -38,17 +38,20 @@
   display: flex;
   height: 70px;
 }
-
+::placeholder {
+  color: white;
+  font-size: 1rem;
+}
 .top .logoTop input[type=text] {
   display: flex;  
   justify-content: center;
   padding: 0.5rem;
   font-size: 17px;
   border-radius: 0.5rem;
-  background-color: #66fcf1;
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
   border: 1px solid #1f2833;
   text-align: center;
-  color: #1f2833;
+  color: white;
 }
 
 .top .logoTop button {
@@ -60,7 +63,7 @@
   margin-left: 5px;
 }
 .top .logoTop button:hover {
-  background-color: #66fcf1;
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
   color: #1f2833;
 }
 
@@ -71,6 +74,5 @@
 
 .top .logoTop button svg:hover {
   color: #1f2833;
-  background-color: #66fcf1;
 
 }
