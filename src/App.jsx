@@ -31,12 +31,12 @@ function App() {
         <NavAndWidgetCart />
         <Nav />
         <Switch>
-          <Route exact path="/estudio">
-            <Estudio />
-          </Route>     
           <Route exact path="/dashboard">
             <Dashboard />
           </Route>
+          <Route exact path="/estudio">
+            <Estudio />
+          </Route>     
           <Route exact path="/login">
             <SignIn />
           </Route>

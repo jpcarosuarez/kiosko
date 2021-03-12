@@ -30,7 +30,6 @@ const Publicar = () => {
         condiciones: '',
         whatsapp:'',
 
-
     })
 
     const[idInmueble, setIdInmueble] = useState('');
@@ -65,10 +64,8 @@ const Publicar = () => {
                         <h1>
                             Publica facilmente y comienza a arrendar.
                         </h1>
-
                         <h2>En Kiosko Inmobiliario (M.A 2018122) nos preocupamos por la seguridad y veracidad de los inmuebles para asegurar a los futuros arrendatarios una mayor tranquilidad durante el arriendo.</h2>
                         <h3> Requisitos: Copia de la cédula y Certificado de Tradición y Libertad. </h3>
-
                     </div>
             </div>
 
@@ -79,7 +76,6 @@ const Publicar = () => {
                     <form onSubmit={handleSubmitForm}  >
                         
                         <div className='right-container'>
-
                             <div >
                                 <h1>Datos de Contacto</h1>
                                 <div>
@@ -101,10 +97,8 @@ const Publicar = () => {
                                     <p>WhatsApp</p>
                                     <input type="tel" value={formData.whatsapp} onChange={handleChangeInput} name="whatsapp" placeholder="WhatsApp" />
                                     <br/>
-                                </div>
-                            
+                                </div>                          
                                 <h1>Datos del Inmueble</h1>
-
                                 <div>
                                     <p>Tipo de propiedad a Arrendar</p>
                                     <select type="text" value={formData.tipoPropiedad} onChange={handleChangeInput} name="tipoPropiedad" placeholder="Tipo de Propiedad" >                    
@@ -127,8 +121,6 @@ const Publicar = () => {
                                     <p>Precio</p>
                                     <input type="text" value={formData.precio} onChange={handleChangeInput} name="precio" placeholder="Precio" /> 
                                 </div>
-
-
                                 <div>
                                     <p>Habitaciones</p><br/>
                                     <select type="option" value={formData.habitaciones} onChange={handleChangeInput} name="habitaciones" placeholder="Habitaciones">  
@@ -138,8 +130,7 @@ const Publicar = () => {
                                     <option value="4">4</option>
                                     <option value="5+">5+</option>                        
                                     </select>   
-                                </div>
-                
+                                </div>                
                                 <div>
                                     <p>Baño(s)</p>
                                     <select type="option" value={formData.baños} onChange={handleChangeInput} name="baños" placeholder="Baños">
@@ -150,7 +141,6 @@ const Publicar = () => {
                                     <option value="5+">5+</option>                        
                                     </select> 
                                 </div>
-
                                 <div>
                                     <p>Area (m2)</p>
                                     <input type="text" value={formData.area} onChange={handleChangeInput} name="area" placeholder="Area" />                               
@@ -159,14 +149,11 @@ const Publicar = () => {
                                     <p><strong>Titulo de la publicación </strong>  / Que hace especial tu propiedad</p>                
                                     <input type="text" value={formData.titulo} onChange={handleChangeInput} name="titulo" placeholder="Titulo" />  
         
-                                </div>
-    
+                                </div>    
                                 <div>
                                     <p><strong>Descripción </strong> / Enfócate en lo interesante del inmueble </p>                
                                     <input type="textarea" value={formData.descripcion} onChange={handleChangeInput} name="descripcion" placeholder="Descripcion del inmueble" />  
-                                </div>
-
-                       
+                                </div>                      
                                 <div>
                                     <p>Barrio o Localidad</p>                  
                                     <input type="text" value={formData.barrio} onChange={handleChangeInput} name="barrio" placeholder="Barrio / Localidad" />
@@ -190,8 +177,6 @@ const Publicar = () => {
                                     </select>
                                 </div>
                             </div>
-
- 
                             <div>
                                 <h1>Requisitos</h1>
 
@@ -202,21 +187,14 @@ const Publicar = () => {
                             </div>
                             <div>
                                 <p>Imagenes</p>
-
                                 <input type="file" value={formData.img} onChange={handleChangeInput} name="img" placeholder="img" />     
-
                             </div>
-
                             <div>
                                 <label for="condiciones">Estoy de acuerdo con los terminos y condiciones</label>
                                 <input type="checkbox" id="condiciones" value="condiciones"/> 
                             </div>
-
                             <button >Cargar</button>
-
-
-                        </div>
-                    
+                        </div>                    
                     </form> :
                     <p><strong>El inmueble publicado lo podras encontrar con el siguiente codigo: </strong>  {idInmueble} </p>
                     

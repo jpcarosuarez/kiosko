@@ -130,11 +130,11 @@ const Estudio = () => {
 
                 </label>
                 <label>
-                    <p>Firma aceptando el estudio de arrendamiento (Inquilino)</p>
-                    <SignaturePad           
-                    clearButton={true}                 
-                    />
+                    <p>Como constancia de haber leído, entendido y aceptado lo anterior, declaro que la información que he suministrado es exacta en todas sus partes y firmo el presente documento. </p>
 
+                    <div className="signature-pad">
+                        <SignaturePad penColor="red" />
+                    </div>
                 </label>
 
                 <label>
@@ -203,7 +203,7 @@ const Estudio = () => {
 
                 </label>
                 <label>
-                    <p>Firma aceptando el estudio de arrendamiento (Codeudor)</p>
+                    <p>Como constancia de haber leído, entendido y aceptado lo anterior, declaro que la información que he suministrado es exacta en todas sus partes y firmo el presente documento. </p>
                     <div className="signature-pad">
                         <SignaturePad />
                     </div>

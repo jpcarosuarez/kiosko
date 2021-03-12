@@ -1,15 +1,16 @@
-import PropiedadesDestacadas from './PropiedadesDestacadas'
-//import Slider from './Slider'
-import CategoriesGrid from './CategoriesGrid'
-//import Requisitos from './Requisitos'
-
+import PropiedadesDestacadas from './PropiedadesDestacadas';
+//import Slider from './Slider';
+import CategoriesGrid from './CategoriesGrid';
+//import Requisitos from './Requisitos';
+import Steps from './Steps';
 const Home = () => {
 
     return (
         <>
             <PropiedadesDestacadas />
-            <CategoriesGrid />    
+            <Steps />
 
+            <CategoriesGrid />    
         </>
  
     )
