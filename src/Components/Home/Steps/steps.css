@@ -1,55 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 .comoFunciona {
-    opacity: 0.75;
+    width: 1200px;
+    align-items: center;
+    margin: 2rem;
+    border-radius: 0.5rem;  
 
-   display: flex;
-   width: 1200px;
-   align-items: center;
-   margin: 2rem;
-   border-radius: 25px;
-   border: 1px solid #1f2833 ;
-   background: url(./img/fondoSteps.jpg) bottom center no-repeat;
 }
 
 .comoFunciona h1 {
-    color: white;
+    color: #1f2833;
     text-align: center;
     font-size: 3rem;
     font-family: 'Yusei Magic', sans-serif;
     letter-spacing: 0.5;
-    background-color: #1f2833;
-    opacity: 0.75;
-    padding: 1rem;
-    border-radius: 1rem;
+    background-color: #66fcf1;
+    padding: 2rem;
+    border-radius: 0.5rem;  
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    border: solid 1px #1f2833;
 
-    
+}
+.comoFunciona h3 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Yusei Magic', sans-serif;
+    letter-spacing: 0.5;
+    background-color: #1f2833;
+    opacity: 0.8;
+    border-radius: 100%;
+    padding: 0.5em;
+
+}
+.comoFunciona h2 {
+    color: #1f2833;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Yusei Magic', sans-serif;
 }
 
 .steps {
     margin: 2rem;
-    background-color: black;
-    opacity: 0.75;
     display: flex;
-    width: 900px;
-    height: 900px;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.steps .step1 {
-    background-color: aqua;
-    opacity: 0.75;
-    display: flex;
+
+
+svg {
+    font-size: 3rem;
+    color: white;
 }
 
-.steps .step2 {
-    background-color: aqua;
-    opacity: 0.75;
+.step1, .step2, .step3, .step4 {
+    border: solid 1px #1f2833;
     display: flex;
+    text-align: center;
+    margin: 3rem;
+    border-radius: 1rem;
+    opacity: 0.8;
+    background-color: #66fcf1;
+    padding: 2rem;
+
+
 }
 
-.steps .step3 {
-    background-color: aqua;
-    opacity: 0.75;
-    display: flex;
+.comoFunciona .steps .circulo {
+    width: 200px;
+    color: #1f2833;
+    /* width and height can be anything, as long as they're equal */
 }
