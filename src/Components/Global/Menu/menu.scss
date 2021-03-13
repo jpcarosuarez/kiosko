@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+/* Variables de Header */
+$header-background-color: #45a29e;
+$header-font-color: #ffffff;
+$header-font-size: 25px;
+$header-font-family: 'Yusei Magic', sans-serif;
+$header-height: 120px;
+$header-padding: 1rem;
+
+.top{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: $header-background-color;  
+  height: $header-height;
+  padding: $header-padding;
+  font-size: 1.2rem;
+  //color:#66fcf1; no se esta usando
+
+  .anuncio{
+    display: flex;
+    color:  $header-font-color;
+    font-size: $header-font-size;
+  }
+
+  p {
+    text-decoration: none;  
+    font-weight: 500;
+    font-family: $header-font-family;
+  }
+
+  .logoTop {
+    display: flex;
+  }
+
+  .logoTop .logoblanco {
+    display: flex;
+    padding-top: 1rem;
+    border-top: 15px solid #66fcf1;
+    height: 90px;
+  }
+
+  .button svg {
+    font-size: 50px;
+  }
+  
+}

@@ -1,4 +1,4 @@
-import './menu.css';
+import './menu.scss';
 import {useContext} from 'react';
 import Logo from './img/logoKiosko.png';
 import {Link} from 'react-router-dom';
