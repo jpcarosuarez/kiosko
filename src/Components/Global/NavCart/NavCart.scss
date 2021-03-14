@@ -1,0 +1,24 @@
+.navCart {
+
+    cursor: pointer;
+
+    svg {
+            color: white;
+            font-size: 60px;
+
+    }
+    
+    span {
+        position: absolute;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        background: white;
+        color: black;
+        text-indent: 0rem;
+        padding:0rem;
+    }
+
+}

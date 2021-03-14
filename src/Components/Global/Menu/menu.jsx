@@ -8,46 +8,43 @@ import {BiBuildingHouse, BiUserCircle} from 'react-icons/bi';
 import Button from '@material-ui/core/Button';
 //import SignIn from '../../Admin/index';
 import { makeStyles } from '@material-ui/core/styles';
+import { Nav } from 'react-bootstrap';
+// const useStyles = makeStyles((theme) => ({
 
-const useStyles = makeStyles((theme) => ({
+//     root: {
+//       '& > *': {
+//         margin: theme.spacing(1),
+//         color: 'white',
+//         display: 'flex',
 
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
-        color: 'white',
-        display: 'flex',
-
-      },
-    },
-}));
+//       },
+//     },
+// }));
 
 function Menu({action}) {
     const [data, setData] = useContext(Store); 
-    const classes = useStyles();
+    // const classes = useStyles();
 
     return (
-        <div className="top">
-            <div className={classes.root}>
-                    
-                <p><BiUserCircle /> Ingresar</p>
+    
+        <Nav fill="true" className="justify-content-between top">
+            <Nav.Item className="menu-left-side">
+                <Button variant="outlined" className="btn-ingresar"><BiUserCircle />Ingresar</Button>
+                <Button variant="outlined" href="/publicar" className="btn-publicar"><BiBuildingHouse />Publicar</Button>
+            </Nav.Item>
 
-
-                <Button variant="outlined" href="/publicar"><BiBuildingHouse /><p>Publicar</p> </Button>
-              
-            </div>
-
-            <div className="logoTop">
+            <Nav.Item className="logoTop">
                 <Link to={"/"} ><img className="logoblanco" src={Logo} alt="logo" /></Link>
-                   
+            </Nav.Item>
 
-            </div>
+            <Nav.Item className="">
+            </Nav.Item>
 
-            <div>
+            <Nav.Item className="menu-right-side">
                 <NavCart action={action} />
-
-            </div>
-
-        </div>
+            </Nav.Item>
+        </Nav>
+        
        
     )
 }

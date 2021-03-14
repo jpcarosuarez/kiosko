@@ -8,7 +8,7 @@ const Home = () => {
     const [setWidth] = useState(null);
 
     const resizeFn = (e) => {
-        setWidth (e.target.innerWidth);
+        //setWidth (e.target.innerWidth);
 
     }
     
