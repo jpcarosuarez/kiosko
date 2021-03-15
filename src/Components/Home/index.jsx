@@ -7,9 +7,9 @@ const Home = () => {
 
     return (
         <>
+
             <PropiedadesDestacadas />
             <Steps />
-
             <CategoriesGrid />    
         </>
  

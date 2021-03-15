@@ -8,18 +8,19 @@ const CategoriesGrid = () => {
     return (
         <section className="categories_grid">
 
-            <h1>  </h1>
 
             <div className="container">
+                <h1>Servicios</h1>
+
                 <div className="item">
 
                     <Link to="">
-                        Chapinero
+                        Administramos tu inmueble 
                     </Link>
                 </div>
                 <div className="item">
                     <Link to="">
-                        Usaquen
+                        Corretaje
                     </Link>
                 </div>
                 <div className="item">

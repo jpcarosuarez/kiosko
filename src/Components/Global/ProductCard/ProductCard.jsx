@@ -11,9 +11,9 @@ const ProductCard = ({id, titulo, img, ubicacion, ciudad, categoria, direccion, 
    
     
     return (
-                         
+        <Link to={`/${categoria}/${id}`}>
+                 
         <article className={`productCard ${type}`}>
-            
             <div className="imagen">
                 <Imagen src={img} alt={titulo}/>             
             </div>
@@ -33,13 +33,14 @@ const ProductCard = ({id, titulo, img, ubicacion, ciudad, categoria, direccion, 
 
 
                 <div className="button" >
-                    <Link to={`/${categoria}/${id}`}>Ver detalle</Link>
+                    Ver detalle
 
                 </div>
             </div>
-
   
         </article>
+        </Link>
+
     )
 }
 
