@@ -26,6 +26,8 @@ function App() {
   return (
       <Store.Provider value={[data, setData]}>
         <BrowserRouter>
+          <Container fluid>
+
           <NavAndWidgetCart />
           <Nav />
           <Switch>
@@ -58,6 +60,7 @@ function App() {
             </Route>
           </Switch>
           <Footer />
+          </Container>
         </BrowserRouter>
 
       </Store.Provider>

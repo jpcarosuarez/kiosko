@@ -8,7 +8,7 @@ $header-font-family: 'Yusei Magic', sans-serif;
 $header-height: 120px;
 $header-padding: 1rem;
 
-.top{
+.top {
  
   background-color: $header-background-color;  
   height: $header-height;
@@ -57,21 +57,20 @@ $header-padding: 1rem;
   .logoTop {
 
     .logoblanco {
-        padding-top: 1rem;
-        border-top: 15px solid #66fcf1;
+        padding-top: 0.5rem;
         height: 90px;
       }
     
   }
 
   .menu-right-side{
+
     color:white;
-    .navCart{
+
+    .navCart {
         //margin-top: 10px;
     }
 
   }
-
-    
 
 }
