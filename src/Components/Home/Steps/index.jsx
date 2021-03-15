@@ -2,7 +2,7 @@ import {memo} from 'react';
 import './steps.css';
 import { BiBuildingHouse } from 'react-icons/bi';
 import { FaTruckMoving} from 'react-icons/fa';
-
+import {FiUserCheck} from 'react-icons/fi';
 import {TiThumbsUp} from 'react-icons/ti';
 
 
@@ -52,7 +52,7 @@ const ComoFunciona = () => {
                     <div className="circulo">
                         <h2>Regístrate y publica el espacio que quieres arrendar</h2>
                     </div>
-                    <h3><BiBuildingHouse /></h3>
+                    <h3><FiUserCheck /></h3>
                 </div>
                 <div className="step2">
                     <div className="circulo">
