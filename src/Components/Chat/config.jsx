@@ -1,0 +1,11 @@
+const config = {
+    apiKey: "AIzaSyAi-1txOSKt_0sekqL9QZBBvgFxPKiSslI",
+    authDomain: "kiosko-inmobiliario-b8f96.firebaseapp.com",
+    databaseURL: 'https://videochat-b8f96.firebaseio.com',
+    projectId: "kiosko-inmobiliario-b8f96",
+    storageBucket: "kiosko-inmobiliario-b8f96.appspot.com",
+    messagingSenderId: "630764521841",
+    appId: "1:630764521841:web:0298371a29ba6d89074ed0"
+}
+
+export default config;

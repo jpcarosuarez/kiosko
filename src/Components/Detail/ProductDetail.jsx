@@ -162,7 +162,9 @@ const ProductDetail = ({item}) => {
 
                 </div >
                 
-
+                <div>
+                    <Button variant="outlined" href="/chat"><h1>Video Chat </h1> </Button>
+                </div>
 
                 <div className="contBtn">
                     <Button 

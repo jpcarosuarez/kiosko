@@ -11,6 +11,7 @@ import Cart from './Components/Cart/cart';
 import Checkout from './Components/Checkout';
 import NavAndWidgetCart from './Components/Global/NavAndWidgetCart/NavAndWidgetCart';
 import Publicar from './Components/Global/Publicar';
+import Chat from './Components/Chat';
 import SignIn from './Components/Ingreso/index';
 import Dashboard from './Components/AdminPanel/Dashboard/index';
 import Estudio from './Components/Estudio';
@@ -33,6 +34,9 @@ function App() {
         <Switch>
           <Route exact path="/dashboard">
             <Dashboard />
+          </Route>
+          <Route exact path="/chat">
+            <Chat />
           </Route>
           <Route exact path="/estudio">
             <Estudio />
