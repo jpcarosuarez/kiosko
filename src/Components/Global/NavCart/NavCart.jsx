@@ -1,6 +1,6 @@
 import {useContext} from 'react';
 
-import './NavCart.css';
+import './NavCart.scss';
 import {BiBuildingHouse} from 'react-icons/bi';
 import {Store} from '../../../store';
 
@@ -13,12 +13,7 @@ const NavCart = ({action}) => {
     return (
         <div className="navCart" onClick={action}>
             <BiBuildingHouse />
-           <span> <strong>{total}</strong></span>
-           
-          
-            
-            
-            
+           <span><strong>{total}</strong></span>      
         </div>
     )
 }

@@ -16,14 +16,11 @@
 }
 
 .propiedadesDestacadas ul {
-  display: flex;
   margin: 20px;
-
 }
 
 .propiedadesDestacadas ul li {
   margin: 10px;
-
 }
 
 ::marker{

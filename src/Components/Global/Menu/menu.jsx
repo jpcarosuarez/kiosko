@@ -1,62 +1,57 @@
-import './menu.css';
+import './menu.scss';
 import {useContext} from 'react';
 import Logo from './img/logoKiosko.png';
 import {Link} from 'react-router-dom';
 import {Store} from '../../../store';
 import NavCart from '../NavCart/NavCart';
-import {BiBuildingHouse} from 'react-icons/bi';
-import Button from '@material-ui/core/Button';
+import {BiBuildingHouse, BiUserCircle} from 'react-icons/bi';
 //import SignIn from '../../Admin/index';
-import { makeStyles } from '@material-ui/core/styles';
-import { FaSearchLocation } from 'react-icons/fa';
+//import { makeStyles } from '@material-ui/core/styles';
+import { Nav, Button } from 'react-bootstrap';
 
+// const useStyles = makeStyles((theme) => ({
 
-const useStyles = makeStyles((theme) => ({
+//     root: {
+//       '& > *': {
+//         margin: theme.spacing(1),
+//         color: 'white',
+//         display: 'flex',
 
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
-        color: 'white',
-        display: 'flex',
-      },
-    }
-}));
-
+//       },
+//     },
+// }));
 
 function Menu({action}) {
     const [data, setData] = useContext(Store); 
-    const classes = useStyles();
-    
+    // const classes = useStyles();
 
     return (
-        <div className="top">
-            <div className={classes.root}>
-                    
-                <Button variant="outlined" href="/publicar"><p><BiBuildingHouse /> Publicar</p> </Button>
-                <Button href="/login" ><p>Dashboard</p></Button>
+    
+        <Nav fill="true" className="justify-content-between top">
+            <Nav.Item className="menu-left-side">
+                <Button variant="outlined"href="/login" className="btn-ingresar"><BiUserCircle />Ingresar</Button>
+                <Button variant="outlined" href="/publicar" className="btn-publicar"><BiBuildingHouse />Publicar</Button>
+            </Nav.Item>
 
-            </div>
-
-            <div className="logoTop">
+            <Nav.Item className="logoTop">
                 <Link to={"/"} ><img className="logoblanco" src={Logo} alt="logo" /></Link>
-                
+            </Nav.Item>
 
-                <form>
-                    <input type="text" placeholder="Buscar apartamento en.." name="search" />
-                    <button type="submit"><FaSearchLocation /></button>
-                </form>
-                
-                    
-                
-                   
-            </div>
+            <Nav.Item className="nav-item dropdown">
+                <img
+                    src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg"
+                    class="rounded-circle"
+                    height="22"
+                    alt=""
+                    loading="lazy"
+                />
+            </Nav.Item>
 
-            <div>
+            <Nav.Item className="menu-right-side">
                 <NavCart action={action} />
-
-            </div>
-
-        </div>
+            </Nav.Item>
+        </Nav>
+        
        
     )
 }

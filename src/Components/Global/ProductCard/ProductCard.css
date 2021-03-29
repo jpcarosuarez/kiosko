@@ -4,19 +4,18 @@
   background: white;
   border-radius: 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-  height: 100%;
   position: relative;
   font-family: 'Yusei Magic', sans-serif;
+  width: 18rem;
 }
 
 .productCard:hover {
   box-shadow: 0 0 1rem #66fcf1;
-  transition: 0.3s linear 0.2s;
-  border: solid 1px #1f2833;
-
+  transition: 0.2s linear 0.2s;
+  border: solid 1px #66fcf1;
 }
 
-.productCard img {
+.imgCard {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   
@@ -28,7 +27,7 @@
 }
 
 .productCard .info h1 {
-  color:#0b0c10 ;
+  color: #0b0c10;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   min-height: 46px;
@@ -86,7 +85,7 @@
   justify-content: space-around;
 }
 
-.productCard.list img {
+.productCard.list .imgCard {
   border-radius: 1rem;
   margin: 1.5rem;
 }

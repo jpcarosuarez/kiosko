@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import ProductsList from './ProductList';
 import './category.css';
 import {getFirestore} from '../../db';
+import { Container, Row, Col, Form, Button, Dropdown } from 'react-bootstrap';
 
 const Category = () => {
     const {category_name} = useParams();
@@ -28,10 +29,10 @@ const Category = () => {
     }, [category_name])
     // react-hooks/exhaustive-deps
     return (
-        <section className="category">
+        <Container className="category">
             <h2>Encuentra y Arrienda Fácil</h2>
             <ProductsList inmuebles={inmuebles} />
-        </section>
+        </Container>
     )
 }
 

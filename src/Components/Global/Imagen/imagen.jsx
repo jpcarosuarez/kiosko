@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getStorage } from '../../../db';
 import { SpinningCircles } from 'svg-loaders-react'
 import './imagen.css';
+import { Container, Carousel, Spinner, Row, Card, } from 'react-bootstrap';
 
 export default function Imagen({ src, alt}) {
   const [url, setUrl] = useState("http://placehold.it/300x300");//ruta por defecto
@@ -18,13 +19,21 @@ export default function Imagen({ src, alt}) {
 
   return (
     
-    <div className="imagen">
-      {loading ? (
-        <SpinningCircles fill="Aquamarine" size="small" />
-        ) : (
-          <img src={url} alt={alt} />
-        )}
-    </div>
+    <Carousel>
+
+      <Carousel.Item>
+        <img
+        src={url} 
+        alt={alt} 
+        />
+        <Carousel.Caption>
+
+        </Carousel.Caption>
+      </Carousel.Item>
+
+
+
+    </Carousel>
   );
 
 

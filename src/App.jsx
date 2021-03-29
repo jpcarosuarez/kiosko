@@ -16,7 +16,9 @@ import SignIn from './Components/Ingreso/index';
 import Dashboard from './Components/AdminPanel/Dashboard/index';
 import Estudio from './Components/Estudio';
 import {Store} from './store';
-import './App.css';
+import { Container} from 'react-bootstrap';
+
+import './App.scss';
 
 function App() {
   const [data, setData] = useState({
@@ -29,47 +31,51 @@ function App() {
   return (
     <Store.Provider value={[data, setData]}>
       <BrowserRouter>
-        <NavAndWidgetCart />
-        <Nav />
-        <Switch>
-          <Route exact path="/dashboard">
-            <Dashboard />
-          </Route>
-          <Route exact path="/chat">
-            <Chat />
-          </Route>
-          <Route exact path="/estudio">
-            <Estudio />
-          </Route>     
-          <Route exact path="/login">
-            <SignIn />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/contacto">
-            <Contact />
-          </Route>
-          <Route exact path="/publicar">
-            <Publicar />
-          </Route>
-          <Route path="/cart">
-            <Cart />
-          </Route>
-          <Route path="/checkout">
-            <Checkout />
-          </Route>
-          <Route exact path="/:category_name">
-            <Category />  
-          </Route>  
-          <Route exact path="/:category_name/:id">
-            <Detail />
-          </Route>
-          <Route path="*">
-            <Error404 />
-          </Route>
-        </Switch>
-        <Footer />
+        <Container fluid>
+
+          <NavAndWidgetCart />
+          <Nav />
+          <Switch>
+            <Route exact path="/dashboard">
+              <Dashboard />
+            </Route>
+            <Route exact path="/chat">
+              <Chat />
+            </Route>
+            <Route exact path="/estudio">
+              <Estudio />
+            </Route>     
+            <Route exact path="/login">
+              <SignIn />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/contacto">
+              <Contact />
+            </Route>
+            <Route exact path="/publicar">
+              <Publicar />
+            </Route>
+            <Route path="/cart">
+              <Cart />
+            </Route>
+            <Route path="/checkout">
+              <Checkout />
+            </Route>
+            <Route exact path="/:category_name">
+              <Category />  
+            </Route>  
+            <Route exact path="/:category_name/:id">
+              <Detail />
+            </Route>
+            <Route path="*">
+              <Error404 />
+            </Route>
+          </Switch>
+          <Footer />
+
+        </Container>
       </BrowserRouter>
 
     </Store.Provider>

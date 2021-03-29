@@ -1,9 +1,11 @@
 import {NavLink} from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
+
 
 const NavItem = ({text, url = "#"}) => (
-    <li>
+    <Nav>
         <NavLink to={url} activeClassName="active">{text}</NavLink>
-    </li>
+    </Nav>
 )
 
 export default NavItem;

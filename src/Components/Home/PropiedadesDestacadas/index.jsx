@@ -2,6 +2,7 @@ import {useState, useEffect, memo} from 'react';
 import ProductCard from './../../Global/ProductCard/ProductCard';
 import './PropiedadesDestacadas.css';
 import {getFirestore} from '../../../db';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const PropiedadesDestacadas = () => {
     const [items, setItems] = useState([]);
@@ -30,12 +31,13 @@ const PropiedadesDestacadas = () => {
 
 
     return (
-        <section className="propiedadesDestacadas">
-            <div className="container">
+        <Container className="propiedadesDestacadas">
+            <h1>Arrienda Simple y Fácil</h1>
+
+            <Col className="container">
                 {
                     items.length ? 
                     <>
-                        <h1>Arrienda Simple y Fácil</h1>
 
                         <ul>
                             {
@@ -64,8 +66,9 @@ const PropiedadesDestacadas = () => {
                 }
                 
 
-            </div>
-        </section>
+            </Col>
+            
+        </Container>
     )
 }
  
